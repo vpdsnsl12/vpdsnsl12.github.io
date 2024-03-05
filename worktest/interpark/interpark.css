@@ -1,0 +1,462 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+.flex{display: flex;}
+header {
+    width: 1700px;
+    margin: auto;
+}
+
+.header_top {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    margin-right: 40px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #9a9898;
+    border-radius: 40px;
+    padding: 5px 30px;
+}
+
+.kensaku {
+    outline: none;
+    width: 550px;
+    border: none;
+    font-size: 22px;
+}
+
+.kensaku_img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.login ul {
+    display: flex;
+}
+
+.login ul li {
+    margin-right: 20px;
+}
+
+.header_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    margin-top: 30px;
+    display: flex;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.nav_left ul {
+    display: flex;
+    border-right: 1px solid #c3c3c3;
+    margin: 20px 0;
+}
+
+.nav_left ul li {
+    padding: 0px 20px;
+}
+
+.nav_right ul {
+    margin: 20px 0;
+    display: flex;
+}
+
+.nav_right ul li {
+    padding: 0px 20px;
+    color: rgb(32, 97, 202);
+}
+
+.s_add img {
+    width: 250px;
+}
+
+.line {
+    border-bottom: 1px solid #e1dede;
+    width: 100%;
+}
+
+main {
+    width: 1700px;
+    margin: auto;
+}
+
+.main_top ul {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.main_top ul li img {
+    margin: 40px;
+    border-radius: 30px;
+}
+
+.main_center .main_text {
+    text-align: center;
+    font-size: 35px;
+}
+
+.nav_tour {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.nav_tour li a {
+    border: 1px solid #e8e5e5;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.tour_list {
+    display: flex;
+    justify-content: center;
+}
+
+.tour_list li {
+    border: 1px solid #d6d6d6;
+    margin: 30px;
+    border-radius: 40px;
+}
+
+.tour_list li img {
+    width: 500px;
+    height: 300px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.togeter {
+    margin: 30px;
+    font-size: 22px;
+}
+
+.blue {
+    font-weight: 700;
+    color: rgb(27, 114, 255);
+}
+
+.nedan {
+    font-weight: 700;
+}
+
+.discount {
+    margin: 100px 0;
+}
+
+.discount ul {
+    display: flex;
+    justify-content: center;
+}
+
+.discount ul li a {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    border-radius: 40px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 60px;
+}
+
+.discount ul li img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.mini_text {
+    text-align: center;
+    margin-top: 5px;
+    color: #afadad;
+}
+
+.main_bottom ul {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.main_bottom ul li a {
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    margin: 10px 30px;
+    align-items: center;
+
+    display: flex;
+}
+
+.main_bottom ul li a figure img {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 200px;
+    height: 200px;
+    vertical-align: top;
+}
+
+.set {
+    margin: 20px 80px 20px 20px;
+    font-size: 20px;
+}
+
+.more {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.more a {
+    font-size: 18px;
+    border: 1px solid #d1d1d1;
+    border-radius: 40px;
+    padding: 20px 30px;
+    font-weight: 700;
+}
+
+.add {
+    margin-bottom: 150px;
+}
+
+.add ul {
+    display: flex;
+    justify-content: center;
+}
+
+.add ul li {
+    margin: 10px;
+}
+
+.add_mini {
+    width: 530px;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+}
+
+.main_text {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.gray {
+    font-size: 18px;
+    color: #9a9898;
+    text-decoration: line-through;
+}
+
+article {
+    width: 1700px;
+    margin: auto;
+}
+
+.atricle_list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.atricle_list li {
+    width: 370px;
+    height: 470px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    margin: 24px;
+}
+
+.bg_img {
+    background-size: cover;
+    background-position: center;
+}
+
+#bg_a {
+    background-image: url(../img/interpark/노란풀산.jpg);
+}
+
+#bg_b {
+    background-image: url(../img/interpark/겨울등산.jpg);
+}
+
+#bg_c {
+    background-image: url(../img/interpark/바닷가.jpg);
+}
+
+#bg_d {
+    background-image: url(../img/interpark/비에이.jpg);
+}
+
+.bg_img a {
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+#bg_b,
+#bg_c,
+#bg_d {
+    color: white;
+}
+
+.article_live_list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 130px;
+}
+
+.article_live_list li {
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.article_live_list li a img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 530px;
+}
+
+.set_naiyou {
+    margin: 20px;
+}
+
+.set_naiyou h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.set_naiyou span {
+    color: #9a9898;
+}
+
+.article_info_list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.article_info_list li {
+    border: 1px solid #d6d4d4;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.article_info_list li h3 {
+    font-size: 20px;
+}
+
+.setitem {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.setitem img {
+    width: 70px;
+    margin-left: 100px;
+}
+
+.footer_bg {
+    text-align: center;
+    background-color: rgb(0, 86, 86);
+}
+
+.footer_bg figure img {
+    width: 1000px;
+    vertical-align: top;
+}
+
+.footer_top ul {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #cbcbcb;
+    padding: 15px;
+}
+
+.footer_top ul li {
+    border-right: 1px solid #cacaca;
+    padding: 0 30px;
+}
+
+#tokubetu {
+    border: none;
+}
+
+.footer_bottom {
+    width: 1370px;
+    margin: auto;
+}
+
+.footer_set {
+    color: #6c6c6c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_set h4 {
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+}
+
+.togeter_set {
+    display: flex;
+}
+
+.footer_set {
+    margin: 40px 0;
+}
+
+.shaigo {
+    padding-bottom: 40px;
+    color: #9a9898;
+}

@@ -1,0 +1,239 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+.headertop {
+  background-color: black;
+  padding: 20px;
+}
+
+nav {
+  margin-right: 10%;
+}
+
+.login {
+  display: flex;
+  justify-content: end;
+  margin-left: 30px;
+}
+
+.login li {
+  margin-right: 40px;
+  color: white;
+  font-weight: 700;
+}
+
+.line {
+  border-bottom: 1px solid #dddddd;
+}
+
+.headerMenu {
+  margin-left: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.headerMenu ul {
+  display: flex;
+  margin-left: 50px;
+}
+
+.headerMenu ul li {
+  margin-right: 40px;
+  font-weight: 700;
+}
+
+.mainheader {
+  margin-left: 15%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.maintext {
+  font-size: 40px;
+}
+
+.bgimg {
+  background-image: url("../img/dotori/배너인테리어.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bottomtext {
+  margin-left: 15%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.minitext {
+  font-size: 22px;
+}
+
+.bigtext {
+  font-size: 40px;
+}
+
+.ktimg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.msg {
+  font-size: 22px;
+  margin-bottom: 80px;
+}
+
+.imgsize {
+  width: 350px;
+}
+
+.articlelist {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.articlelist ul {
+  display: flex;
+  justify-content: center;
+}
+
+.articlelist ul li {
+  padding: 40px 80px;
+}
+
+#hayoung {
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+
+#hayoung .msg {
+  margin-bottom: 50px;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 20px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.poster {
+  display: flex;
+  justify-content: center;
+}
+
+.poster li {
+  margin: 20px 65px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.blank a {
+  padding: 80px 0;
+}
+
+.event {
+  margin-left: 15%;
+}
+
+.eventlist {
+  margin: 0;
+  display: flex;
+}
+
+.eventlist li {
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  margin-right: 120px;
+}
+
+.eventlist li b {
+  font-size: 40px;
+}
+
+.add {
+  width: 89%;
+  margin-bottom: 120px;
+}
+
+.best {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 150%;
+}
+
+.set {
+  width: 100%;
+  display: flex;
+}
+
+.half {
+  width: 50%;
+}
+
+.half figure img {
+  width: 60%;
+  margin-left: 25%;
+}
+
+.halftwo {
+  width: 50%;
+}
+
+.imglist {
+  display: flex;
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+.width {
+  width: 50%;
+}
+
+.imgsizetwo {
+  width: 85%;
+}
+
+.bottomtexttwo {
+  margin-left: 15%;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.nedan a {
+  font-size: 22px;
+}
