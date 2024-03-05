@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./pizza.css" />
+  </head>
+  <body>
+    <header class="flex">
+      <h1>
+        <a href="#"><img src="./pizza_imgs/logo (2).png" alt="" /></a>
+      </h1>
+      <nav>
+        <ul class="flex">
+          <li class="main-menu">
+            <a href="#">브랜드</a>
+            <ul class="sub-menu">
+              <li><a href="#">브랜드 스토리</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="main-menu">
+            <a href="#">메뉴</a>
+            <ul class="sub-menu">
+              <li><a href="#">피자</a></li>
+              <li><a href="#">사이드</a></li>
+              <li><a href="#">세트</a></li>
+            </ul>
+          </li>
+          <li class="main-menu">
+            <a href="#">매장</a>
+            <ul class="sub-menu">
+              <li><a href="#">매장 찾기</a></li>
+              <li><a href="#">우수 가맹점</a></li>
+            </ul>
+          </li>
+          <li class="main-menu">
+            <a href="#">뉴스</a>
+            <ul class="sub-menu">
+              <li><a href="#">새소식</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="main-menu">
+            <a href="#">창업</a>
+            <ul class="sub-menu">
+              <li><a href="#">창업 경쟁력</a></li>
+              <li><a href="#">창업 안내</a></li>
+              <li><a href="#">창업비용 및 절차</a></li>
+              <li><a href="#">가맹 FAQ</a></li>
+              <li><a href="#">창업문의</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="sec1">
+      <ul class="tab">
+        <li><a href="#sec1" class="on tab-1">MAIN</a></li>
+        <li><a href="#sec2" class="tab-2">BEST MENU</a></li>
+        <li><a href="#sec3" class="tab-3">VIDEO</a></li>
+        <li><a href="#sec4" class="tab-4">SEARCH</a></li>
+      </ul>
+      <div class="text-wrap">
+        <p class="diagonal-text">
+          꽉 찬 토핑! <br />
+          이러니까 아무도 <br />
+          못 비비지!
+        </p>
+        <span>있었지만 없었던 피자, 프레드 피자!</span>
+      </div>
+    </section>
+    <section id="sec2">
+      <div class="bg-w">
+        <img src="./pizza_imgs/23165363-흰색-배경.jpg" alt="" />
+      </div>
+      <h2>Fred Best Menu</h2>
+      <p><a href="#;">주문 바로가기</a></p>
+      <div class="swiper mySwiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./pizza_imgs/doublebulgogi.png" alt="" />
+            <div class="txt-box">
+              <em>더블불고기피자</em>
+              <small>Double Bulgogi Pizza</small>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./pizza_imgs/megadelux.png" alt="" />
+            <div class="txt-box">
+              <em>메가디럭스피자</em>
+              <small>Mega Deluxe Pizza</small>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./pizza_imgs/pepperoni.png" alt="" />
+            <div class="txt-box">
+              <em>페퍼로니피자</em>
+              <small>Pepperoni Pizza</small>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./pizza_imgs/supercombination.png" alt="" />
+            <div class="txt-box">
+              <em>슈퍼콤비네이션피자</em>
+              <small>Super Combination Pizza</small>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./pizza_imgs/shrimflex.png" alt="" />
+            <div class="txt-box">
+              <em>쉬림플렉스피자</em>
+              <small>Shrimflex Pizza</small>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./pizza_imgs/basilbutter.png" alt="" />
+            <div class="txt-box">
+              <em>바질버터관자피자</em>
+              <small>Basil Butter Scallop Pizza</small>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section id="sec3">
+      <div class="text-slide flex">
+        <p class="red">THE MOST DELICIOUS CHOICE!</p>
+        <p class="w-red">THE MOST DELICIOUS CHOICE!</p>
+        <p class="red">THE MOST DELICIOUS CHOICE!</p>
+      </div>
+      <div class="text-slide text-slide2 flex">
+        <p class="w-red">THE MOST DELICIOUS CHOICE!</p>
+        <p class="red">THE MOST DELICIOUS CHOICE!</p>
+        <p class="w-red">THE MOST DELICIOUS CHOICE!</p>
+      </div>
+      <h2>Promotion Video</h2>
+      <div class="video flex">
+        <video src="./pizza_imgs/videoplayback.mp4" autoplay muted loop></video>
+      </div>
+    </section>
+    <section id="sec4">
+      <div class="position flex">
+        <h3>Search Store</h3>
+        <p>가까운 프레드 피자 매장을 검색해보세요!</p>
+        <div class="input flex">
+          <input type="text" placeholder="매장 찾기 바로가기." />
+          <a href="#" class="black"
+            ><img src="./pizza_imgs/search_white.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </section>
+    <footer class="flex">
+      <div class="footer-left">
+        <ul class="flex">
+          <li>
+            <a href="#"><b>개인정보처리방침</b></a>
+          </li>
+          <li><a href="#">이메일 무단 수집 거부</a></li>
+        </ul>
+        <ul class="flex">
+          <li>프레드피자(주)</li>
+          <li>대표이사:강태성</li>
+          <li>사업자등록번호:891--88--02080</li>
+          <li>부산광역시 남구 진남로 29번길 28 프레드피자</li>
+        </ul>
+        <ul class="flex">
+          <li>이메일: fredpizza_official-@naver.com</li>
+          <li>마케팅 협업 제안: fredpizza.creative-@gmail.com</li>
+          <li>가맹문의 및 고객지원: 1811--9809</li>
+        </ul>
+        <span>Copyright ©프레드피자(주) All Rights Reserved.</span>
+      </div>
+      <div class="footer-right">
+        <ul class="flex">
+          <li>
+            <a href="#"><img src="./pizza_imgs/instagram.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./pizza_imgs/facebook.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./pizza_imgs/kakao.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./pizza_imgs/youtube.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <h5><p>0</p></h5>
+    </footer>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper1", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        freeMode: true,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      $(".tab li a").click(function () {
+        $(".tab li a").removeClass("on");
+        $(this).addClass("on");
+
+        let href = $(this).attr("href");
+        // alert("잘했어요")
+        let secTop = $(href).offset().top;
+        $("html").stop().animate({ scrollTop: secTop });
+      });
+      window.addEventListener("scroll", function () {
+        // 특정 위치에서 동작 수행
+        let triggerPosition = 500; // 예: 스크롤이 500px 지점에 도달하면 동작
+        if (window.scrollY > triggerPosition) {
+          console.log("스크롤 위치 10px 도달!");
+          // 여기에 원하는 동작을 추가할 수 있습니다.
+          document.querySelector("header").classList.add("on");
+          document.querySelector(".text-wrap").classList.add("on");
+        } else if (window.scrollY < triggerPosition) {
+          // 여기에 원하는 동작을 추가할 수 있습니다.
+          document.querySelector("header").classList.remove("on");
+          document.querySelector(".text-wrap").classList.remove("on");
+        }
+      });
+      // $(window).scroll(function () {
+      //   let scrollTop = $(this).scrollTop();
+      //   $("h5").text(scrollTop);
+      // });
+    </script>
+  </body>
+</html>
