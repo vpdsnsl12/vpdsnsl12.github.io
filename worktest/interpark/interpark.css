@@ -317,19 +317,19 @@ article {
 }
 
 #bg_a {
-    background-image: url(../img/interpark/노란풀산.jpg);
+    background-image: url(./interpark/노란풀산.jpg);
 }
 
 #bg_b {
-    background-image: url(../img/interpark/겨울등산.jpg);
+    background-image: url(./interpark/겨울등산.jpg);
 }
 
 #bg_c {
-    background-image: url(../img/interpark/바닷가.jpg);
+    background-image: url(./interpark/바닷가.jpg);
 }
 
 #bg_d {
-    background-image: url(../img/interpark/비에이.jpg);
+    background-image: url(./interpark/비에이.jpg);
 }
 
 .bg_img a {

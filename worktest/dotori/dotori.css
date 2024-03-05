@@ -76,7 +76,7 @@ nav {
 }
 
 .bgimg {
-  background-image: url("../img/dotori/배너인테리어.jpg");
+  background-image: url("./dotori/배너인테리어.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
