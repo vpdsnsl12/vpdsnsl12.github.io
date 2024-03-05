@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="42" viewBox="0 0 18 42">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_1373" data-name="사각형 1373" width="18" height="20" transform="translate(-23871 -22584)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_8655" data-name="그룹 8655" transform="translate(23871 22584)">
+    <g id="마스크_그룹_165" data-name="마스크 그룹 165" clip-path="url(#clip-path)">
+      <path id="Icon_material-headset-mic" data-name="Icon material-headset-mic" d="M12.3,1.5A7.8,7.8,0,0,0,4.5,9.3V14.3a2.6,2.6,0,0,0,2.6,2.6h1.54V11.029H6.233V9.3a6.064,6.064,0,1,1,12.128,0v1.733H15.955V16.9h2.406v.866H12.3V19.5h5.2a2.6,2.6,0,0,0,2.6-2.6V9.3A7.8,7.8,0,0,0,12.3,1.5Z" transform="translate(-23874.414 -22584.48)" fill="#173cb5"/>
+    </g>
+    <g id="마스크_그룹_166" data-name="마스크 그룹 166" transform="translate(0 22)" clip-path="url(#clip-path)">
+      <path id="Icon_material-headset-mic-2" data-name="Icon material-headset-mic" d="M12.3,1.5A7.8,7.8,0,0,0,4.5,9.3V14.3a2.6,2.6,0,0,0,2.6,2.6h1.54V11.029H6.233V9.3a6.064,6.064,0,1,1,12.128,0v1.733H15.955V16.9h2.406v.866H12.3V19.5h5.2a2.6,2.6,0,0,0,2.6-2.6V9.3A7.8,7.8,0,0,0,12.3,1.5Z" transform="translate(-23874.414 -22584.48)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

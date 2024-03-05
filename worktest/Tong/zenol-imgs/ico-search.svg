@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="40" viewBox="0 0 19 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_1371" data-name="사각형 1371" width="19" height="19" transform="translate(-23961 -22583)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_8656" data-name="그룹 8656" transform="translate(23961 22583)">
+    <g id="마스크_그룹_163" data-name="마스크 그룹 163" clip-path="url(#clip-path)">
+      <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-23963.5 -22585.5)">
+        <path id="패스_645" data-name="패스 645" d="M17.85,11.175A6.675,6.675,0,1,1,11.175,4.5a6.675,6.675,0,0,1,6.675,6.675Z" fill="none" stroke="#173cb5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_646" data-name="패스 646" d="M28.6,28.6l-3.63-3.63" transform="translate(-9.086 -9.086)" fill="none" stroke="#173cb5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="마스크_그룹_164" data-name="마스크 그룹 164" transform="translate(0 21)" clip-path="url(#clip-path)">
+      <g id="Icon_feather-search-2" data-name="Icon feather-search" transform="translate(-23963.5 -22585.5)">
+        <path id="패스_25419" data-name="패스 25419" d="M17.85,11.175A6.675,6.675,0,1,1,11.175,4.5a6.675,6.675,0,0,1,6.675,6.675Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_25420" data-name="패스 25420" d="M28.6,28.6l-3.63-3.63" transform="translate(-9.086 -9.086)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
