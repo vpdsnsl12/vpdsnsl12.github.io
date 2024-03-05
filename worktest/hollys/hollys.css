@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "JalnanGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: JalnanGothic;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+.flex {
+  display: flex;
+}
+
+/* header */
+header {
+  border-bottom: 2px solid red;
+}
+
+.header-top {
+  width: 70%;
+  padding: 30px 0;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.red {
+  color: red;
+}
+
+.header-top ul li {
+  font-size: 10px;
+}
+
+header li {
+  padding: 0 10px;
+}
+
+nav {
+  width: 60%;
+  margin: auto;
+  padding: 15px 0;
+}
+
+nav a {
+  display: block;
+}
+
+nav ul {
+  justify-content: space-between;
+}
+
+.main-menu {
+  padding-left: 2px;
+  position: relative;
+}
+
+.main-menu > a {
+  padding: 10px 20px;
+}
+
+.main-menu:hover > a {
+  transition: 0.35s;
+  background-color: red;
+  color: white;
+}
+
+.sub-menu {
+  font-size: 13px;
+  padding: 25px 0 10px;
+  width: 100%;
+  position: absolute;
+  display: none;
+  z-index: 999;
+}
+
+.sub-menu li {
+  text-align: center;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.sub-menu li:hover > a {
+  color: white;
+}
+
+.menu-bg {
+  position: absolute;
+  left: 0;
+  z-index: 998;
+  display: none;
+  width: 100%;
+  height: 170px;
+  background-color: rgb(250, 179, 174);
+  border-bottom: 2px solid red;
+}
+
+/* main */
+.main {
+  width: 80%;
+  margin: auto;
+}
+
+/* slide */
+.slide-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-wrap {
+  width: 200%;
+}
+
+.slide img {
+  width: 100%;
+}
+
+/* product */
+h2 {
+  padding: 30px 0;
+}
+
+.product-list {
+  border-bottom: 2px solid red;
+}
+
+.product-list ul {
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.product-list ul li {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.product-list li:hover a img {
+  transform: scale(1.2);
+}
+
+.product-list img {
+  transition: 0.35s;
+  width: 100%;
+}
+
+/* notice */
+.notice {
+  padding: 40px 0;
+}
+
+.notice img {
+  padding: 10px 0 10px 0;
+}
+
+.notice ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 10px 0;
+}
+
+.notice ul li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+  display: block;
+}
+
+.hollys-live {
+  padding: 30px;
+  border-top: 2px solid red;
+}
+
+.hollys-live ul li {
+  padding-right: 5px;
+}
+
+/* footer */
+footer {
+  background-color: rgb(204, 38, 38);
+  color: white;
+}
+
+.f-menu li {
+  padding: 10px 20px 10px 0;
+}
+
+.f-menu {
+  flex-wrap: wrap;
+}
+
+.copyright li {
+  padding-bottom: 10px;
+}
+
+/* 모바일 */
+@media screen and (max-width: 576px) {
+  .bar {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+
+  .header-top {
+    justify-content: center;
+  }
+
+  .bar span {
+    display: block;
+    width: 30px;
+    background: #000;
+    height: 1px;
+    margin: 10px;
+  }
+
+  nav .main-menu,
+  .left,
+  .gnb {
+    display: none;
+  }
+
+  .product-list ul li {
+    width: 50%;
+  }
+
+  .notice {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 7px;
+    padding: 20px 0 20px 20px;
+  }
+}
+
+/* 테블릿 */
+@media screen and (min-width: 577px) {
+  .main-menu > a {
+    font-size: 0.8rem;
+  padding: 5px 10px;
+
+  }
+
+  .product-list ul li {
+    width: 33.3%;
+  }
+
+  .notice {
+    width: 80%;
+    margin: auto;
+  }
+
+  footer {
+    font-size: 10px;
+    padding: 20px 0 20px 100px;
+  }
+}
+
+/* 컴퓨터 */
+@media screen and (min-width: 1200px) {
+  .main-menu > a {
+    font-size: 1rem;
+  padding: 10px 20px;
+  }
+
+  .product-list ul li {
+    width: 25%;
+  }
+
+  .product-list ul li {
+    display: block;
+  }
+
+  .notice {
+    width: 100%;
+    display: flex;
+  }
+
+  .notice > div {
+    flex: 1;
+    padding: 40px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 20px 0 20px 200px;
+  }
+}
