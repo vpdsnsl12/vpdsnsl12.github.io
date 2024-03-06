@@ -1,0 +1,905 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        vertical-align: top;
+    }
+
+    .flex {
+        display: flex
+    }
+
+    @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+
+}
+
+body {
+    background-image: url(./imgs/bg-map-20200701.jpg);
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    .header-inner {
+        width: 90%;
+        height: 120px;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            a {
+                background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                display: inline-block;
+                overflow: hidden;
+                font-size: 0;
+                line-height: 0;
+                -webkit-background-size: 838px 458px;
+                background-size: 838px 458px;
+                text-indent: -9999px;
+                vertical-align: middle;
+                width: 110px;
+                height: 28px;
+                background-position: -641px -288px
+            }
+
+        }
+
+
+    }
+}
+
+.tab {
+    position: absolute;
+    border: 1px solid #000;
+    z-index: 20;
+    right: 4%;
+    top: 35%;
+
+    ul {
+        position: fixed;
+
+        li {
+            margin: 15px;
+
+            a {
+                background-color: rgb(199, 199, 199);
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                display: block;
+
+                &.on {
+                    background-color: #ffffff00;
+                    border: 4px solid #2b2b2b;
+                    width: 23px;
+                    height: 23px;
+                    margin-left: -5px;
+                }
+            }
+        }
+    }
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    &#sec1 {
+        background-color: rgb(235, 235, 235);
+
+
+        .swiper {
+            width: 100%;
+            height: 100vh;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:nth-child(1) {
+                        margin-top: -90px;
+
+                        .text-left {
+                            position: relative;
+                            left: -15%;
+
+                            h2 {
+                                position: relative;
+                                background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                background-size: 838px 458px;
+                                width: 391px;
+                                height: 120px;
+                                display: block;
+                                background-position: -447px 0px;
+                            }
+
+                            p {
+                                text-align: left;
+                                margin: 40px 0 120px;
+                                line-height: 30px;
+                            }
+
+                            li {
+                                background-color: white;
+                                width: 170px;
+                                height: 60px;
+                                border-radius: 30px;
+                                margin-right: 20px;
+
+                                &.f-but a {
+                                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    background-size: 838px 458px;
+                                    text-indent: -9999px;
+                                    vertical-align: middle;
+                                    background-position: -652px -122px;
+                                    width: 124px;
+                                    height: 26px;
+                                    margin-top: 15px;
+                                }
+
+                                &.t-but a {
+                                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    background-size: 838px 458px;
+                                    text-indent: -9999px;
+                                    vertical-align: middle;
+                                    width: 124px;
+                                    height: 26px;
+                                    background-position: -641px -230px;
+                                    margin-top: 15px;
+                                }
+                            }
+
+                        }
+
+                        div.maru {
+                            position: absolute;
+                            top: 72px;
+                            right: 10%;
+                            width: 500px;
+                            height: 500px;
+                            border-radius: 100%;
+                            z-index: 1;
+                            background-color: gold;
+                            position: absolute;
+                            left: 55%;
+                            top: 35%;
+                        }
+
+                        div.apple {
+                            display: inline-block;
+                            overflow: hidden;
+                            font-size: 0;
+                            line-height: 0;
+                            background-size: 1538px 1284px;
+                            text-indent: -9999px;
+                            vertical-align: middle;
+                            width: 340px;
+                            height: 645px;
+                            position: absolute;
+                            left: 59%;
+                            top: 25%;
+
+                            span.img1 {
+                                position: absolute;
+                                top: 0;
+                                right: 5%;
+                                width: 310px;
+                                height: 645px;
+                                border-radius: 36px;
+                                background-color: #f9f9f9;
+                                z-index: 2;
+                            }
+
+                            span.img2 {
+                                position: absolute;
+                                z-index: 3;
+                                top: 2%;
+                                left: 7%;
+                                background-image: url(./imgs/img-sprite-pc-20210406.png);
+                                width: 286px;
+                                height: 621px;
+                                background-position: -550px -662px;
+                                display: inline-block;
+                                overflow: hidden;
+                                font-size: 0;
+                                line-height: 0;
+                                background-size: 1538px 1284px;
+                                text-indent: -9999px;
+                                vertical-align: middle;
+                            }
+
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        margin-top: -90px;
+
+                        .text-left {
+                            position: relative;
+                            left: -15%;
+
+                            h2 {
+                                position: relative;
+                                background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                background-size: 838px 458px;
+                                width: 391px;
+                                height: 120px;
+                                display: block;
+                                background-position: -447px 0px;
+                            }
+
+                            p {
+                                text-align: left;
+                                margin: 40px 0 120px;
+                                line-height: 30px;
+                            }
+
+                            li {
+                                background-color: white;
+                                width: 170px;
+                                height: 60px;
+                                border-radius: 30px;
+                                margin-right: 20px;
+
+                                &.f-but a {
+                                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    background-size: 838px 458px;
+                                    text-indent: -9999px;
+                                    vertical-align: middle;
+                                    background-position: -652px -122px;
+                                    width: 124px;
+                                    height: 26px;
+                                    margin-top: 15px;
+                                }
+
+                                &.t-but a {
+                                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    background-size: 838px 458px;
+                                    text-indent: -9999px;
+                                    vertical-align: middle;
+                                    width: 124px;
+                                    height: 26px;
+                                    background-position: -641px -230px;
+                                    margin-top: 15px;
+                                }
+                            }
+
+                        }
+
+                        div.maru {
+                            position: absolute;
+                            top: 72px;
+                            right: 10%;
+                            width: 500px;
+                            height: 500px;
+                            border-radius: 100%;
+                            z-index: 1;
+                            background-color: rgb(238, 72, 72);
+                            position: absolute;
+                            left: 55%;
+                            top: 35%;
+                        }
+
+                        div.apple {
+                            display: inline-block;
+                            overflow: hidden;
+                            font-size: 0;
+                            line-height: 0;
+                            background-size: 1538px 1284px;
+                            text-indent: -9999px;
+                            vertical-align: middle;
+                            width: 340px;
+                            height: 645px;
+                            position: absolute;
+                            left: 59%;
+                            top: 25%;
+
+                            span.img1 {
+                                position: absolute;
+                                top: 0;
+                                right: 5%;
+                                width: 310px;
+                                height: 645px;
+                                border-radius: 36px;
+                                background-color: #f9f9f9;
+                                z-index: 2;
+                            }
+
+                            span.img2 {
+                                position: absolute;
+                                z-index: 3;
+                                top: 2%;
+                                left: 7%;
+                                background-image: url(./imgs/img-sprite-pc-20210406.png);
+                                width: 286px;
+                                height: 621px;
+                                background-position: -1040px 0px;
+                                display: inline-block;
+                                overflow: hidden;
+                                font-size: 0;
+                                line-height: 0;
+                                background-size: 1538px 1284px;
+                                text-indent: -9999px;
+                                vertical-align: middle;
+                            }
+
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        margin-top: -90px;
+
+                        .text-left {
+                            position: relative;
+                            left: -15%;
+
+                            h2 {
+                                position: relative;
+                                background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                background-size: 838px 458px;
+                                width: 391px;
+                                height: 120px;
+                                display: block;
+                                background-position: -447px 0px;
+                            }
+
+                            p {
+                                text-align: left;
+                                margin: 40px 0 120px;
+                                line-height: 30px;
+                            }
+
+                            li {
+                                background-color: white;
+                                width: 170px;
+                                height: 60px;
+                                border-radius: 30px;
+                                margin-right: 20px;
+
+                                &.f-but a {
+                                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    background-size: 838px 458px;
+                                    text-indent: -9999px;
+                                    vertical-align: middle;
+                                    background-position: -652px -122px;
+                                    width: 124px;
+                                    height: 26px;
+                                    margin-top: 15px;
+                                }
+
+                                &.t-but a {
+                                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    background-size: 838px 458px;
+                                    text-indent: -9999px;
+                                    vertical-align: middle;
+                                    width: 124px;
+                                    height: 26px;
+                                    background-position: -641px -230px;
+                                    margin-top: 15px;
+                                }
+                            }
+
+                        }
+
+                        div.maru {
+                            position: absolute;
+                            top: 72px;
+                            right: 10%;
+                            width: 500px;
+                            height: 500px;
+                            border-radius: 100%;
+                            z-index: 1;
+                            background-color: rgb(84, 177, 253);
+                            position: absolute;
+                            left: 55%;
+                            top: 35%;
+                        }
+
+                        div.apple {
+                            display: inline-block;
+                            overflow: hidden;
+                            font-size: 0;
+                            line-height: 0;
+                            background-size: 1538px 1284px;
+                            text-indent: -9999px;
+                            vertical-align: middle;
+                            width: 340px;
+                            height: 645px;
+                            position: absolute;
+                            left: 59%;
+                            top: 25%;
+
+                            span.img1 {
+                                position: absolute;
+                                top: 0;
+                                right: 5%;
+                                width: 310px;
+                                height: 645px;
+                                border-radius: 36px;
+                                background-color: #f9f9f9;
+                                z-index: 2;
+                            }
+
+                            span.img2 {
+                                position: absolute;
+                                z-index: 3;
+                                top: 2%;
+                                left: 7%;
+                                background-image: url(./imgs/img-sprite-pc-20210406.png);
+                                width: 286px;
+                                height: 621px;
+                                background-position: -1040px -623px;
+                                display: inline-block;
+                                overflow: hidden;
+                                font-size: 0;
+                                line-height: 0;
+                                background-size: 1538px 1284px;
+                                text-indent: -9999px;
+                                vertical-align: middle;
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 70px;
+            height: 5px;
+            display: inline-block;
+            border-radius: 0;
+            background: var(--swiper-pagination-bullet-inactive-color, #000);
+            opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: var(--swiper-pagination-bullet-opacity, 1);
+            background: rgb(58, 58, 58);
+        }
+    }
+
+    &#sec2 {
+        background-color: #ffe054;
+
+        .position {
+            position: relative;
+            top: 18%;
+            left: 25%;
+            width: 500px;
+            height: 500px;
+
+
+            h3 {
+                background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                display: inline-block;
+                overflow: hidden;
+                font-size: 0;
+                line-height: 0;
+                background-size: 838px 458px;
+                text-indent: -9999px;
+                vertical-align: middle;
+                width: 203px;
+                height: 106px;
+                background-position: -447px -122px;
+                position: relative;
+            }
+
+            ul {
+                li {
+                    padding-top: 40px;
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .imgs-phone {
+            position: absolute;
+            top: 50%;
+            right: 23%;
+            width: 522px;
+            height: 660px;
+            background-image: url(./imgs/img-sprite-pc-20210406.png);
+            background-position: 0px -624px;
+            transform: translate(0, -50%);
+            background-size: 1538px 1284px;
+        }
+
+        span.guri {
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+
+            img {
+                width: 300px;
+            }
+        }
+
+        span.tabe {
+            position: absolute;
+            left: 20%;
+            bottom: 5%;
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+
+    &#sec3 {
+        background-color: #ff4242;
+
+        .position {
+            position: relative;
+            top: 18%;
+            left: 25%;
+            width: 500px;
+            height: 500px;
+
+
+            h3 {
+                background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                display: inline-block;
+                overflow: hidden;
+                font-size: 0;
+                line-height: 0;
+                background-size: 838px 458px;
+                text-indent: -9999px;
+                vertical-align: middle;
+                width: 192px;
+                height: 106px;
+                background-position: -447px -230px;
+                position: relative;
+            }
+
+            ul {
+                li {
+                    color: white;
+                    font-weight: 500;
+                    padding-top: 40px;
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .imgs-phone {
+            position: absolute;
+            top: 50%;
+            right: 23%;
+            width: 488px;
+            height: 660px;
+            background-image: url(./imgs/img-sprite-pc-20210406.png);
+            background-position: -550px 0px;
+            transform: translate(0, -50%);
+            background-size: 1538px 1284px;
+        }
+
+        span.guri {
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+
+            img {
+                width: 300px;
+            }
+        }
+
+        span.tabe {
+            position: absolute;
+            left: 20%;
+            bottom: 5%;
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+
+    &#sec4 {
+        background-color: rgb(255, 255, 255);
+
+        .position {
+            position: relative;
+            top: 18%;
+            left: 25%;
+            width: 500px;
+            height: 500px;
+
+
+            h3 {
+                background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                display: inline-block;
+                overflow: hidden;
+                font-size: 0;
+                line-height: 0;
+                background-size: 838px 458px;
+                text-indent: -9999px;
+                vertical-align: middle;
+                width: 429px;
+                height: 106px;
+                background-position: 0px -352px;
+                position: relative;
+            }
+
+            ul {
+                padding-top: 50px;
+
+                li {
+                    font-weight: 500;
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .imgs-phone {
+            position: absolute;
+            left: 60%;
+            top: 50%;
+            margin-left: -240px;
+            z-index: 1;
+            width: 548px;
+            height: 622px;
+            background-image: url(./imgs/img-sprite-pc-20210406.png);
+            background-position: 0px 0px;
+            transform: translate(0, -50%);
+            background-size: 1538px 1284px;
+        }
+
+        span.guri {
+            position: absolute;
+            left: 48%;
+            bottom: 23%;
+            z-index: 10;
+
+            img {
+                width: 420px;
+            }
+        }
+    }
+
+    &#sec5 {
+        height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        h3 {
+            width: 443px;
+            height: 106px;
+            background-position: 0px -244px;
+            background-image: url(./imgs/txt-sprite-pc-20210406.png);
+            background-size: 838px 458px;
+        }
+
+        div {
+            text-align: center;
+
+            .jump {
+                margin: 130px;
+                margin-left: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .img-div {
+                width: 210px;
+                height: 210px;
+                background-size: 1538px 1284px;
+                background-image: url(./imgs/img-sprite-pc-20210406.png);
+
+                &.div1 {
+                    background-position: -1328px 0px;
+                }
+
+                &.div2 {
+                    background-position: -1328px -212px;
+                }
+            }
+
+            span {
+                display: block;
+                background-color: rgba(0, 0, 0, 0.116);
+                width: 170px;
+                height: 60px;
+                border-radius: 30px;
+                border: 2px solid #ffffff;
+                margin: 30px 10px;
+
+                a.sns1 {
+                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                    display: block;
+                    overflow: hidden;
+                    margin: 15px 0 0 20px;
+                    background-size: 838px 458px;
+                    text-indent: -9999px;
+                    background-position: -652px -150px;
+                    width: 124px;
+                    height: 26px;
+                }
+
+                a.sns2 {
+                    background-image: url(./imgs/txt-sprite-pc-20210406.png);
+                    display: block;
+                    overflow: hidden;
+                    background-size: 838px 458px;
+                    width: 124px;
+                    height: 26px;
+                    background-position: -652px -178px;
+                    margin: 15px 0 0 20px;
+                }
+
+                .text-a {
+                    font-style: 20px;
+                    margin: 15px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    img {
+        position: absolute;
+        width: 350px;
+        left: 40%;
+        top: 20%;
+        z-index: 10;
+    }
+
+    span {
+        text-align: center;
+        background-color: white;
+        width: 310px;
+        height: 310px;
+        border-radius: 500px;
+        display: block;
+        position: absolute;
+        left: 22%;
+        top: 17%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 14px;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid #ffffff;
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: rotate(100deg);
+        }
+
+        b {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        &.mini-text-icon {
+            left: 60%;
+            top: 35%;
+            z-index: 10;
+
+            &::after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                border-bottom: 50px solid #ffffff;
+                position: absolute;
+                left: -20px;
+                top: 33%;
+                transform: rotate(-80deg);
+                z-index: -1;
+            }
+        }
+
+    }
+
+    div {
+        h1 {
+            background-image: url(./imgs/txt-sprite-pc-20210406.png);
+            width: 74px;
+            height: 19px;
+            background-position: -652px -206px;
+            background-size: 838px 458px;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        position: absolute;
+        background-color: rgb(240, 240, 240);
+        width: 100%;
+        height: 50vh;
+        bottom: 0;
+
+        ul li {
+            margin: 10px;
+            color: #5e5e5e;
+        }
+
+        .f-text {
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-weight: bold;
+            width: 41%;
+            margin-bottom: 30px;
+            color: #363636;
+        }
+    }
+}
