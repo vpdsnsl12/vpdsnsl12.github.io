@@ -20,3 +20,18 @@ img {
 .flex {
     display: flex;
 }
+body{
+    background-image: url(./imgs/{D21A2873-7E62-46D1-94BB-46748E4F4EB1}.png.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.list{
+    background-color: white;
+    position: absolute;
+    left: 35%;
+    top: 12%;
+    width: 800px;
+}
+li{
+    margin: 10px;
+}

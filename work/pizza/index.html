@@ -199,49 +199,77 @@
     </footer>
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper1", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        freeMode: true,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-      $(".tab li a").click(function () {
-        $(".tab li a").removeClass("on");
-        $(this).addClass("on");
-
-        let href = $(this).attr("href");
-        // alert("잘했어요")
-        let secTop = $(href).offset().top;
-        $("html").stop().animate({ scrollTop: secTop });
-      });
-      window.addEventListener("scroll", function () {
-        // 특정 위치에서 동작 수행
-        let triggerPosition = 500; // 예: 스크롤이 500px 지점에 도달하면 동작
-        if (window.scrollY > triggerPosition) {
-          console.log("스크롤 위치 10px 도달!");
-          // 여기에 원하는 동작을 추가할 수 있습니다.
-          document.querySelector("header").classList.add("on");
-          document.querySelector(".text-wrap").classList.add("on");
-        } else if (window.scrollY < triggerPosition) {
-          // 여기에 원하는 동작을 추가할 수 있습니다.
-          document.querySelector("header").classList.remove("on");
-          document.querySelector(".text-wrap").classList.remove("on");
-        }
-      });
-      // $(window).scroll(function () {
-      //   let scrollTop = $(this).scrollTop();
-      //   $("h5").text(scrollTop);
-      // });
-    </script>
+    <script src="./jquery.mousewheel.min.js"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper1", {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          freeMode: true,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+    
+        $(".tab li a").click(function () {
+          $(".tab li a").removeClass("on");
+          $(this).addClass("on");
+    
+          let href = $(this).attr("href");
+          // alert("잘했어요")
+          let secTop = $(href).offset().top;
+          $("html").stop().animate({ scrollTop: secTop });
+        });
+        window.addEventListener("scroll", function () {
+          // 특정 위치에서 동작 수행
+          let triggerPosition = 500;  // 예: 스크롤이 500px 지점에 도달하면 동작
+          let triggerPositionTop = 0;
+    
+          if (window.scrollY > triggerPosition) {
+            console.log("스크롤 위치 500px 도달!");
+            // 여기에 원하는 동작을 추가할 수 있습니다.
+            document.querySelector("header").classList.add("on");
+            document.querySelector(".text-wrap").classList.add("on");
+            document.querySelector(".diagonal-text").classList.add("on");
+    
+          } else if (window.scrollY < triggerPosition) {
+            // 여기에 원하는 동작을 추가할 수 있습니다.
+            document.querySelector("header").classList.remove("on");
+            document.querySelector(".text-wrap").classList.remove("on");
+            document.querySelector(".diagonal-text").classList.add("on");
+          }
+        });
+        // $(window).scroll(function () {
+        //   let scrollTop = $(this).scrollTop();
+        //   $("h5").text(scrollTop);
+        // });
+        $('section').mousewheel(function (e, delta) {
+          if (delta > 0) {
+            let prev = $(this).prev().offset().top
+            $('html').stop().animate({ 'scrollTop': prev })
+          }
+          else if (delta < 0) {
+            let next = $(this).next().offset().top
+            $('html').stop().animate({ 'scrollTop': next })
+          }
+        })
+        $(window).scroll(function () {
+          let scrTop = $(this).scrollTop()
+          $('h5').text(scrTop)
+    
+          $('section').each(function (i) {
+            let secTop = $(this).offset().top
+            if (scrTop >= secTop) {
+              $('.tab li a').removeClass('on')
+              $('.tab li').eq(i).find('a').addClass('on')
+            }
+          })
+        })
+      </script>
   </body>
 </html>
