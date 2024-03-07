@@ -40,11 +40,7 @@ header .header-inner h1 a {
   background-image: url(./imgs/txt-sprite-pc-20210406.png);
   display: inline-block;
   overflow: hidden;
-  font-size: 0;
-  line-height: 0;
   background-size: 838px 458px;
-  text-indent: -9999px;
-  vertical-align: middle;
   width: 110px;
   height: 28px;
   background-position: -641px -288px;
@@ -76,6 +72,9 @@ header .header-inner h1 a {
   width: 23px;
   height: 23px;
   margin-left: -5px;
+}
+.tab ul li:nth-child(3) a.on, .tab ul li:nth-child(5) a.on {
+  border: 4px solid #ffffff;
 }
 
 section {

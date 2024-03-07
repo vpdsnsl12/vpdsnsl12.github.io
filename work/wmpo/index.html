@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>위메프오</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./wmpo.css">
 </head>
@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="header-inner flex">
-            <h1><a href="#;"></a></h1>
+            <h1><a id="logo" href="#;"></a></h1>
             <div class="button"><a href="#;"><img src="./imgs/floatingbn-wmpoplus-expansion_v3.png" alt=""></a>
                 <a href="#;"><img src="./imgs/floatingbn-partner-expansion_v3.png" alt=""></a>
             </div>
@@ -139,6 +139,7 @@
         <span class="guri"><img src="./imgs/돈-너구리.png" alt=""></span>
     </section>
     <section id="sec5">
+        <h1><a href="#;"></a></h1>
         <h3></h3>
         <div class="flex">
             <div class="jump">
@@ -243,6 +244,21 @@
                 }
             })
         })
+        document.addEventListener("DOMContentLoaded", function () {
+            var logo = document.getElementById("logo");
+
+            window.addEventListener("scroll", function () {
+                var sec3Position = document.getElementById("sec3").offsetTop;
+                var sec5Position = document.getElementById("sec5").offsetTop;
+                var scrollPosition = window.scrollY;
+
+                if (scrollPosition == sec3Position || scrollPosition == sec5Position) {
+                    logo.style.filter = "brightness(0) invert(1)";
+                } else {
+                    logo.style.filter = "none";
+                }
+            });
+        });
     </script>
 </body>
 
