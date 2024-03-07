@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./saewooggang.css">
+</head>
+
+<body>
+    <div class="mo-menu">
+        <ul class="flex">
+            <li><a href="#">손이가요 새우깡</a><span>새우깡 이야기</span></li>
+            <li><a href="#">어른손 아이손</a><span>새우깡 만들기</span></li>
+            <li><a href="#">언제든지 새우깡</a><span>새우깡 변천사</span></li>
+            <li><a href="#">누구든지 즐겨요</a><span>새우깡 이벤트</span></li>
+        </ul>
+    </div>
+    <div class="wrap">
+
+        <header>
+            <div class="bg-img flex">
+                <h1><a href="#"><img src="./imgs/logo (2).png" alt=""></a></h1>
+                <nav>
+                    <ul class="flex">
+                        <li><a href="#">손이가요 새우깡</a><span>새우깡 이야기</span></li>
+                        <li><a href="#">어른손 아이손</a><span>새우깡 만들기</span></li>
+                        <li><a href="#">언제든지 새우깡</a><span>새우깡 변천사</span></li>
+                        <li><a href="#">누구든지 즐겨요</a><span>새우깡 이벤트</span></li>
+                    </ul>
+                </nav>
+                <div class="menu-icon">
+                    <a href="#"><img src="./imgs/btnGnb.png" alt=""></a>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+<script src="./jquery-3.7.1.min.js"></script>
+<script>
+    $('.menu-icon').click(function (e) {
+        e.preventDefault();
+        var $wrap = $('.wrap');
+        $wrap.toggleClass('menu-opened');
+
+        if ($wrap.hasClass('menu-opened')) {
+            $wrap.animate({ 'right': '150px' }, 300);
+        } else {
+            $wrap.animate({ 'right': '0' }, 300);
+        }
+    });
+</script>
+
+</html>
