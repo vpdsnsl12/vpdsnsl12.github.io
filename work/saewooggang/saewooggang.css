@@ -199,3 +199,12 @@ section#sec2 img {
   margin-top: 30px;
   width: 211px;
 }
+section#sec2 div {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 25px;
+}
+section#sec2 div .movis {
+  margin-top: 0;
+  width: 25px;
+}

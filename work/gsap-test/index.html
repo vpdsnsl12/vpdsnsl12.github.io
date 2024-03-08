@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: rgb(191, 255, 216);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+
+        h2 {
+            font-size: 65px;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 50px 0;
+            font-size: 25px;
+        }
+
+        .btu a {
+            display: block;
+            text-align: center;
+            background-color: rgb(221, 129, 233);
+            width: 180px;
+            padding: 15px;
+            border-radius: 50px;
+            color: white;
+            border: 1px solid #92528d;
+        }
+
+        .stage {
+            margin-left: 80px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        img:nth-child(1) {
+            /* border: 1px solid #000; */
+            top: -10%;
+            right: 15%;
+        }
+
+        img:nth-child(2) {
+            /* border: 1px solid #ff6565; */
+            top: 40%;
+            right: -3%;
+        }
+
+        img:nth-child(3) {
+            /* border: 1px solid #33ffbb; */
+            bottom: -50%;
+            right: -8%;
+
+        }
+
+        img:nth-child(4) {
+            /* border: 1px solid #0059ff; */
+            top: -70%;
+            left: -20%;
+        }
+        img:nth-child(5) {
+            /* border: 1px solid #d9ff00; */
+            top: -45%;
+            right:-20%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <h1>PLANET</h1>
+        <h2>EXPLORATION</h2>
+        <p>
+            Let's explore the planets in <br>
+            space together
+        </p>
+        <div class="btu"><a href="#">READ MORE</a></div>
+    </div>
+    <div class="planet">
+        <img src="./imgs/12.png" alt="">
+        <img src="./imgs/13.png" alt="">
+        <img src="./imgs/14.png" alt="">
+        <img src="./imgs/15.png" alt="">
+        <img src="./imgs/17.png" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script>
+        const ani = gsap.timeline({ repeat: -1 })
+        ani.from('.stage', { autoAlpha: 0 })
+            .from('.stage h1', { x: -300, dyration: .3 })
+            .from('.stage h2', { x: 300, dyration: .3 })
+            .from('.stage p', { x: 300, dyration: .3 })
+            .from('.stage .btu', { y: 50 })
+            .from('.planet img', { scale: 0, stagger: 0.1 });
+    </script>
+</body>
+</html>

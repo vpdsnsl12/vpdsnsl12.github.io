@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Jalnan";
+            src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+            overflow: hidden;
+        }
+
+        * {
+            font-family: "Jalnan";
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+            overflow: hidden;
+            background-color: rgb(73, 112, 143);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin: 10px;
+        }
+
+        h2 {
+            font-size: 65px;
+        }
+
+        p {
+            margin: 50px 0;
+            font-size: 25px;
+        }
+
+        .btu a {
+            display: block;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            width: 180px;
+            padding: 15px;
+            border-radius: 50px;
+            color: rgb(16, 60, 126);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .stage {
+            margin-left: 80px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            width: 600px;
+            position: absolute;
+        }
+
+        img:nth-child(1) {
+            /* border: 1px solid #000; */
+            bottom: -10%;
+            right: 0%;
+        }
+
+        img:nth-child(2) {
+            /* border: 1px solid #ff6565; */
+            top: 0%;
+            left: 5%;
+        }
+
+        img:nth-child(3) {
+            /* border: 1px solid #33ffbb; */
+            bottom: -15%;
+            left: -7%;
+            width: 800px;
+            transform: rotate(40deg);
+
+        }
+
+        img:nth-child(4) {
+            /* border: 1px solid #0059ff; */
+            top: 35%;
+            right: 15%;
+            transform: rotate(25deg);
+        }
+
+        img:nth-child(5) {
+            /* border: 1px solid #d9ff00; */
+            top: 35%;
+            left: 20%;
+            transform: rotate(-25deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <h1>JUHEE's</h1>
+        <h2>Java Script</h2>
+        <p>
+            주희의 자바스크립트 테스트에 오신것을 환영합니다
+        </p>
+        <div class="btu"><a href="#">READ MORE</a></div>
+    </div>
+    <div class="planet">
+        <img class="img1" src="./imgs/오리.png" alt="">
+        <img class="img2" src="./imgs/새.png" alt="">
+        <img class="img3" src="./imgs/사람.png" alt="">
+        <img class="img4" src="./imgs/꽃.png" alt="">
+        <img class="img5" src="./imgs/옷.png" alt="">
+        <img class="img5" src="./imgs/촛대.png" alt="">
+        <img class="img5" src="./imgs/사람2.png" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script>
+        const ani = gsap.timeline({ repeat: -1 })
+        ani.from('.stage', { autoAlpha: 0 })
+            .from('.stage h1', { x: -500, y: -100, dyration: .3 })
+            .from('.stage h2', { x: 300, y: -250, dyration: .3 })
+            .from('.stage p', { y: 150,x:-150, dyration: .3 })
+            .from('.stage .btu', { x: 220 , y: 250 })
+        // .from('.planet img', { scale: 0, stagger: 0.5 });
+    </script>
+</body>
+
+</html>
