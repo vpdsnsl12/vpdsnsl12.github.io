@@ -1,36 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        @font-face {
+            font-family: "Jalnan";
+            src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+            overflow: hidden;
+        }
+
+        * {
+            font-family: "Jalnan";
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+            overflow: hidden;
+            background-color: rgb(114, 153, 197);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin: 10px;
+        }
+
+        h2 {
+            font-size: 65px;
+        }
+
+        p {
+            margin: 50px 0;
+            font-size: 25px;
+        }
+
+        .btu a {
+            display: block;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            width: 180px;
+            padding: 15px;
+            border-radius: 50px;
+            color: rgb(16, 60, 126);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .stage {
+            margin-left: 80px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            width: 80px;
+            position: absolute;
+        }
+
+        img:nth-child(1) {
+            bottom: 2%;
+            right: 10%;
+            transform: rotate(15deg);
+        }
+
+        img:nth-child(2) {
+            bottom: 12%;
+            right: 15%;
+            transform: rotate(-15deg);
+        }
+
+        img:nth-child(3) {
+            bottom: 22%;
+            right: 10%;
+            transform: rotate(15deg);
+        }
+
+        img:nth-child(4) {
+            bottom: 32%;
+            right: 15%;
+            transform: rotate(-15deg);
+        }
+
+        img:nth-child(5) {
+            bottom: 42%;
+            right: 10%;
+            transform: rotate(15deg);
+        }
+
+        img:nth-child(6) {
+            bottom: 52%;
+            right: 15%;
+            transform: rotate(-15deg);
+        }
+
+        img:nth-child(7) {
+            bottom: 62%;
+            right: 10%;
+            transform: rotate(15deg);
+        }
+
+        img:nth-child(8) {
+            bottom: 72%;
+            right: 15%;
+            transform: rotate(-15deg);
+        }
+
+        img:nth-child(9) {
+            bottom: 82%;
+            right: 10%;
+            transform: rotate(15deg);
+        }
+
+        img:nth-child(10) {
+            bottom: 92%;
+            right: 15%;
+            transform: rotate(-15deg);
+        }
+
+        img:nth-child(11) {
+            width: 500px;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        */
+    </style>
 </head>
 
 <body>
-    <div class="list">
-        <ul>
-            <li><a href="./work/dotori/dotori.html" target="_blank">포스터사이트 페이지 작업</a></li>
-            <li><a href="./work/if-kakao/ifkakao2022.html" target="_blank">if kakao 페이지 작업</a></li>
-            <li><a href="./work/interpark/interpark.html" target="_blank">인터파크 페이지 작업</a></li>
-            <li><a href="./work/hollys/hollys.html" target="_blank">할리스 페이지 작업</a></li>
-            <li><a href="./work/naverseries/index.html" target="_blank">네이버소설 페이지 작업</a></li>
-            <li><a href="./work/NEWYORK/index.html" target="_blank">화장품 브랜드 페이지 작업</a></li>
-            <li><a href="./work/pethroom/index.html" target="_blank">애견용품 페이지 작업</a></li>
-            <li><a href="./work/pizza/index.html" target="_blank">피자 브랜드 페이지 작업</a></li>
-            <li><a href="./work/selecto/index.html" target="_blank">카페 페이지 작업 - 셀렉토</a></li>
-            <li><a href="./work/Tong/zenol.html" target="_blank">제놀 약 페이지 작업</a></li>
-            <li><a href="./work/webtoon/index.html" target="_blank">웹툰 페이지 작업</a></li>
-            <li><a href="./work/wodam/index.html" target="_blank">우담 페이지 작업</a></li>
-            <li><a href="./work/yes24/index.html" target="_blank">예스 24 티켓 페이지 작업</a></li>
-            <li><a href="./work/닌텐도/index.html" target="_blank">닌텐도 페이지 작업</a></li>
-            <li><a href="./work/에이스/test.html" target="_blank">에이스침대 페이지 작업</a></li>
-            <li><a href="./work/칠성사이다/index.html" target="_blank">칠성 사이다 페이지 작업</a></li>
-            <li><a href="./work/saewooggang/index.html" target="_blank">새우깡 페이지 작업</a></li>
-            <li><a href="./work/gsap-test/index.html" target="_blank"> gsap을 이용한 기본 페이지 작업</a></li>
-        </ul>
+    <div class="stage">
+        <h1>JUHEE's</h1>
+        <h2>Java Script</h2>
+        <p>
+            주희의 페이지에 오신것을 환영합니다
+        </p>
+        <div class="btu"><a href="./up.html">READ MORE</a></div>
     </div>
+    <div class="duck">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/Group 2.png" alt="">
+        <img src="./imgs/오리.png" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script>
+        const ani = gsap.timeline({ repeat: 0 })
+        ani.from('.stage', { autoAlpha: 0 })
+            .from('.stage h1', { x: -500, y: -100, dyration: .3 })
+            .from('.stage h2', { x: 300, y: -250, dyration: .3 })
+            .from('.stage p', { y: 150, x: -150, dyration: .3 })
+            .from('.stage .btu', { x: 220, y: 250 })
+            .from('.duck img', { scale: 0, stagger: 0.3 });
+    </script>
 </body>
 
 </html>
