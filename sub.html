@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./custom-scroll/jquery.mCustomScrollbar.min.css">
 </head>
 <style>
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+    @font-face {
+        font-family: 'NanumSquareNeo-Variable';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
 
     body {
+        overflow: hidden;
         background-color: rgb(114, 153, 197);
     }
 
@@ -39,20 +40,22 @@
 
     h1 {
         color: rgb(25, 51, 105);
-        font-size: 60px;
+        font-size: 50px;
         font-weight: bold;
         margin: 50px;
         text-shadow: 1px 1px 1px white;
     }
 
-    ul {margin-left: 150px;
-        width: 35%;
+    ul {
+        margin-left: 150px;
+        width: 60%;
+        height: 60%;
     }
 
     li {
         position: relative;
         color: rgb(230, 230, 230);
-        font-size: 28px;
+        font-size: 22px;
         margin: 20px;
         font-weight: lighter;
         display: inline-block;
@@ -61,21 +64,23 @@
         text-shadow: .5px .5px .5px black;
     }
 
-    a {padding: 10px;
+    a {
+        padding: 10px;
         display: block;
         text-decoration: none;
         color: inherit;
     }
-    a:hover{
+
+    a:hover {
         color: rgb(255, 255, 255);
         scale: 1.2;
     }
-    img{
+
+    img {
         position: absolute;
-        bottom: -5%;
-        right: 0%;
+        bottom: -10%;
+        right: -6%;
         width: 600px;
-        filter: opacity(90%);
     }
 </style>
 
@@ -104,6 +109,12 @@
         </ul>
     </div>
     <img src="./imgs/사람.png" alt="">
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./custom-scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>        $("ul").mCustomScrollbar({
+            theme: "rounded-dots",
+            axis: "yx"
+        });</script>
 </body>
 
 </html>
