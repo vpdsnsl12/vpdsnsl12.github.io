@@ -215,35 +215,74 @@ section#sec1 .banner .text .bottom span ul li {
 section#sec2 .text-box-black {
   background-image: url(./imgs/bgBodyTop.png);
 }
-section#sec2 .text-box-black div {
+section#sec2 .text-box-black ul {
+  margin: 30px 0 50px;
+}
+section#sec2 .text-box-black ul li a {
+  text-align: center;
+  line-height: 18px;
+  color: white;
+  padding: 7px;
+  font-size: 13px;
+  width: 132px;
+  height: 34px;
+  display: block;
+}
+section#sec2 .text-box-black ul li a.left {
+  background-image: url(./imgs/bgTapRightcopy.png);
+}
+section#sec2 .text-box-black ul li a.right {
+  background-image: url(./imgs/bgTapRight.jpg);
+}
+section#sec2 .text-box-black ul li a.on {
+  background-position-y: 33px;
+}
+section#sec2 .text-box-black > div {
   display: none;
   text-align: left;
   color: white;
   margin-top: 60px;
   padding: 30px 10px;
 }
-section#sec2 .text-box-black div.on {
+section#sec2 .text-box-black > div.on {
   display: block;
 }
-section#sec2 .text-box-black div h3 {
+section#sec2 .text-box-black > div h3 {
   color: rgb(255, 229, 83);
   font-weight: 500;
 }
-section#sec2 .text-box-black div h3 b {
+section#sec2 .text-box-black > div h3 b {
   font-size: 25px;
 }
-section#sec2 .text-box-black div span {
+section#sec2 .text-box-black > div span {
   margin: 20px 0;
   color: rgb(255, 229, 83);
   font-size: 22px;
   display: block;
 }
-section#sec2 .text-box-black div img {
+section#sec2 .text-box-black > div img {
   display: block;
 }
-section#sec2 .text-box-black div p {
+section#sec2 .text-box-black > div p {
   font-size: 13px;
   line-height: 20px;
+}
+section#sec2 .text-box-black .tab {
+  display: none;
+}
+section#sec2 .text-box-black .tab h4 {
+  font-size: 22px;
+  line-height: 35px;
+}
+section#sec2 .text-box-black .tab.on {
+  display: block;
+}
+section#sec2 .text-box-black .tab .tab-set {
+  display: flex;
+}
+section#sec2 .text-box-black .tab .mini-yell {
+  width: 50%;
+  font-size: 12px;
 }
 section#sec2 .bg-bot {
   background-image: url(./imgs/bgBodytop.png);

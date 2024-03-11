@@ -256,12 +256,45 @@ section {
         .text-box-black {
             background-image: url(./imgs/bgBodyTop.png);
 
-            div {display: none;
+
+            ul {
+                margin: 30px 0 50px;
+
+                li a {text-align: center;
+                    line-height: 18px;
+                    color: white;
+                    padding: 7px;
+                    font-size: 13px;
+                    width: 132px;
+                    height: 34px;
+                    display: block;
+
+                    &.left {
+                        background-image: url(./imgs/bgTapRightcopy.png);
+                    }
+
+                    &.right {
+                        background-image: url(./imgs/bgTapRight.jpg);
+                    }
+
+                    &.on {
+                        background-position-y: 33px;
+
+                    }
+                }
+            }
+
+            >div {
+                display: none;
                 text-align: left;
                 color: white;
                 margin-top: 60px;
                 padding: 30px 10px;
-&.on{display: block;}
+
+                &.on {
+                    display: block;
+                }
+
                 h3 {
                     color: rgb(255, 229, 83);
                     font-weight: 500;
@@ -288,15 +321,40 @@ section {
                 }
             }
 
-            
-        }.bg-bot {
-                background-image: url(./imgs/bgBodytop.png);
-                width: 100%;
-                height: 100px;
-                position: relative;
-                bottom: 20px;
-                transform: rotate(180deg);
+            .tab {
+
+                display: none;
+
+                h4 {
+                    font-size: 22px;
+                    line-height: 35px;
+                }
+
+                &.on {
+                    display: block;
+                }
+
+                .tab-set {
+                    display: flex;
+                }
+
+                .mini-yell {
+                    width: 50%;
+                    font-size: 12px;
+                }
             }
+
+
+        }
+
+        .bg-bot {
+            background-image: url(./imgs/bgBodytop.png);
+            width: 100%;
+            height: 100px;
+            position: relative;
+            bottom: 20px;
+            transform: rotate(180deg);
+        }
 
         img {
             margin-top: 20px;
