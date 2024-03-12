@@ -352,45 +352,46 @@
     </footer>
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="./main.js"></script>
+    <script src="./jquery.mousewheel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="./splitText.js"></script>
     <script>
-var swiper = new Swiper(".mySwiper1", {
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
-    on: {
-        init: function () {
-            let initialSlide = this.slides[this.activeIndex];
-            applyTextAnimation(initialSlide);
-        },
-        slideChange: function () {
-            let activeSlide = this.slides[this.activeIndex];
-            applyTextAnimation(activeSlide);
-        },
-    },
-});
+        var swiper = new Swiper(".mySwiper1", {
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            on: {
+                init: function () {
+                    let initialSlide = this.slides[this.activeIndex];
+                    applyTextAnimation(initialSlide);
+                },
+                slideChange: function () {
+                    let activeSlide = this.slides[this.activeIndex];
+                    applyTextAnimation(activeSlide);
+                },
+            },
+        });
 
-function applyTextAnimation(slide) {
-    gsap.set(slide.querySelectorAll('section.sec1 h2'), { opacity: 1 });
+        function applyTextAnimation(slide) {
+            gsap.set(slide.querySelectorAll('section.sec1 h2'), { opacity: 1 });
 
-    const split = new SplitText(slide.querySelectorAll('section.sec1 h2'), { type: 'chars' });
+            const split = new SplitText(slide.querySelectorAll('section.sec1 h2'), { type: 'chars' });
 
-    gsap.from(split.chars, {
-        x: 20,
-        y: 0,
-        opacity: 0,
-        duration: 1,
-        stagger: {
-            each: 0.09,
-            from: 'start',
-        },
-    });
-}
+            gsap.from(split.chars, {
+                x: 20,
+                y: 0,
+                opacity: 0,
+                duration: 1,
+                stagger: {
+                    each: 0.09,
+                    from: 'start',
+                },
+            });
+        }
         var swiper = new Swiper(".mySwiper2", {
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -401,6 +402,22 @@ function applyTextAnimation(slide) {
                 disableOnInteraction: false,
             },
         });
+        $('section').mousewheel(function (e, delta) {
+            if (delta > 0) {
+                let prev = $(this).prev().offset().top
+                $('html').stop().animate({ 'scrollTop': prev })
+            }
+            else if (delta < 0) {
+                let next = $(this).next().offset().top
+                $('html').stop().animate({ 'scrollTop': next })
+            }
+        })
+        $(window).scroll(function () {
+            let scrTop = $(this).scrollTop()
+            $('section').each(function (i) {
+                let secTop = $(this).offset().top
+            })
+        })
     </script>
 </body>
 
