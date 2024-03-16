@@ -1,0 +1,523 @@
+@import url(./reset.css);
+* {
+  box-sizing: border-box;
+}
+/* ---Header------------------------------------------------------- */
+header {
+  background: url(img/bgHeader.png) repeat-x;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  /* left:0;top:0 */
+}
+h1 {
+  width: 235px;
+  padding-left: 15px;
+ 
+  flex-shrink:0 ;
+}
+/* 모바일에도 공동속성 */
+header .inner {
+
+  position: relative;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ /*--Reamote------------------------------------------------------- */
+#remote {
+  position: fixed;
+  left: 50%;
+  margin-left: -535px;
+  top: 50%;
+  z-index: 999;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 207px;
+  background: url("img/remote_bg.png") no-repeat;
+}
+
+#remote ul li a {
+  text-indent: -999px;
+  display: block;
+  height: 40px;
+  font-size: 15px;
+  background: url("img/remote_btnOff.png") no-repeat center;
+}
+
+#remote ul li a:hover,
+#remote ul li a.on {
+  background: url("img/remote_btnOn.png") no-repeat center;
+}
+
+#remote ul li.main a {
+  height: 43px;
+  background: url("img/remote_mainOff.png") no-repeat center;
+}
+
+#remote ul li.main a:hover,
+#remote ul li.main a.on {
+  height: 43px;
+  background: url("img/remote_mainOn.png") no-repeat center;
+}
+
+section {
+  position: relative;
+  text-align: center;
+  left:50%;
+ transform: translateX(-50%);
+ 
+  /* 모두 가운데 정렬 Margin auto로 하면 fixed shrip 하고 위치 안 맞는다*/
+}
+section .inner {
+  /* bg영역 :after사용 */
+  position: relative;
+}
+.wrap {
+  position: relative;
+  z-index: 200;
+  /* 우선순위를 이용해서 올린다. */
+  background: #fffdf6 url("img/bgContent.gif") repeat-y center top;
+ 
+}
+
+ 
+footer {
+  background: url(img/bgBodyTop.png) repeat-x;
+}
+
+ 
+.secDesc {
+  height: 0;
+  overflow: hidden;
+}
+
+
+
+/* 각 SECTION 마다 지정------------------------------------------- */
+section:nth-of-type(n + 2) .inner:after {
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1046px;
+  z-index: -1;  /*디테일 페이지가 위로 올라온다,버튼클릭 안됨  */
+
+}
+
+#sect2 .inner::after {
+  height: 766px;
+  background-image: url("img/objGroup01.png");
+}
+
+#sect3 .inner::after {
+  height: 700px;
+  background-image: url("img/objGroup02.png");
+}
+
+#sect4 .inner::after {
+  bottom: 10px;
+  height: 770px;
+  background-image: url("img/objGroup03.png");
+}
+
+#sect5 .inner::after {
+  bottom: 110px;
+  height: 544px;
+  background-image: url("img/objGroup04.png");
+}
+
+#sect5 {
+  background: url(img/bgStep04.png) no-repeat center bottom;
+}
+/*모바일 네비 영역--------------------------------------------------*/
+.nav_mobile {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: right 0.4s;
+  width: 150px;
+  background: url("img/bgGnb_m.gif") repeat-y;
+  z-index: 100;
+}
+
+.nav_mobile ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.nav_mobile ul li {
+  padding: 0 5px;
+  color: #fff;
+  background: url("img/border_m.gif") repeat-x 0 bottom;
+}
+
+.nav_mobile ul li a {
+  display: block;
+  border-radius: 3px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav_mobile ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ---------------------------------------------------------- */
+@media only screen and (max-width: 820px) {
+  header {
+    padding: 0 10px;
+  }
+
+  /*모바일에만 왼쪽오른쪽패팅 위아래 이미flex정렬됨*/
+  .nav_pc,
+  .gnb_pc {
+    display: none;
+  
+  }
+
+  a.mbtn {
+    display: block;
+  }
+
+  .pc_title {
+    display: none;
+  }
+
+  .mainVisual {
+    display: none;
+  }
+
+  .banner .mobile_title {
+    margin-top: -120px;
+  }
+  section h2 img {
+    width: 211.5px;
+  }
+
+  section:nth-of-type(n + 2) {
+    margin-bottom: 50px;
+  }
+  .fixedshrimp {
+    display: none;
+  }
+}
+
+ 
+@media only screen and (min-width: 821px) {
+  /* ---메인 애니------------------------------------------------------- */
+@keyframes shrimp1 {
+  0% {
+    left: 0;
+  }
+
+  33% {
+    top: 300px;
+    left: 150px;
+  }
+
+  60% {
+    top: 200px;
+    left: 300px;
+  }
+
+  100% {
+    top: 300px;
+    left: 460px;
+  }
+}  
+
+  @keyframes shrimp2 {
+  0% {
+    left: 300px;
+  }
+
+  33% {
+    top: 265px;
+    left: 200px;
+  }
+
+  60% {
+    top: 100px;
+    left: 350px;
+  }
+
+  100% {
+    top: 300px;
+    left: 460px;
+  }
+}  
+
+  @keyframes shrimp3 {
+  0% {
+    left: 500px;
+  }
+
+  33% {
+    top: 200px;
+    left: 400px;
+  }
+
+  60% {
+    top: 100px;
+    left: 350px;
+  }
+
+  100% {
+    top: 300px;
+    left:460px;
+  }
+}  
+
+ @keyframes shrimp4 {
+  0% {
+    left: 700px;
+  }
+
+  33% {
+    top: 299px;
+    left: 400px;
+  }
+
+  60% {
+    top: 166px;
+    left: 450px;
+  }
+
+  100% {
+    top: 300px;
+    left:460px;
+  }
+}  
+
+@keyframes snack {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Header 영역--------------------------------------------------------------- */
+  .bar_mobile {
+    display: none;
+  }
+
+  header .inner {
+    max-width: 1064px;
+   margin: auto;
+  }
+
+  header li a {
+    color: #fff;
+  }
+
+  header .inner {
+    padding: 0 20px;
+  }
+
+  .nav_mobile {
+    display: none;
+  }
+
+  .nav_pc {
+    width: 580px;
+    flex-shrink: 0;
+  }
+ 
+
+  .nav_pc ul li a span.on {
+    display: none;
+    color: #f58220;
+  }
+
+  .nav_pc ul li:hover span.on {
+    display: block;
+    text-decoration: underline;
+  }
+
+  .nav_pc ul li:hover span.off {
+    display: none;
+  }
+
+  .nav_pc ul {
+    display: flex;
+    width: 570px;
+    justify-content: space-between;
+  }  
+  .gnb_pc li {
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+.gnb_pc {flex-shrink: 0;}
+  
+  .mobile_title {
+    display: none;
+  }
+/* section 기본값 설정---------------------------------------------------------- */
+
+  section {
+    width: 1064px;
+
+  }
+  section .inner {
+    height: 700px;
+  }
+  #sect1 {
+    background: #fffdf6;
+    padding-top:120px;
+  }
+/* 첫번째 Section ---------------------------------------------------------- */
+  #sect1 .mainVisual {
+    position: relative;
+    height: 564px;
+ 
+  }
+
+  .mainVisual > * {
+    position: absolute;
+  }
+
+  .mainVisual .mid {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .bgMusic {
+    top: 70px;
+  }
+
+  .shrimp {
+    top: 0;
+  }
+
+  .shrimp1 {
+    left: 100px;
+    animation: shrimp1 2s linear forwards;
+  }
+
+  .shrimp2 {
+    left: 300px;
+    animation: shrimp2 2s 0.4s linear forwards;
+  }
+
+  .shrimp3 {
+    left: 500px;
+    animation: shrimp3 2s 0.8s linear forwards;
+  }
+
+  .shrimp4 {
+    left: 700px;
+    animation: shrimp4 2s 1.2s linear forwards;
+  }
+
+  .pdtBasic {
+
+    top: 40px;
+    opacity: 0;
+    animation: snack 1s 3.5s linear forwards;
+  }
+.bgsnackAni{  top: 470px;bottom:0}
+  .pdtHot,
+  .pdtRice {
+    top: 150px;
+    opacity: 0;
+    animation: snack 1s 4s linear forwards;
+  }
+  .pdtHot {
+    margin-left: -188px;
+  }
+
+  .pdtRice {
+    margin-left: 140px;
+  }
+ 
+
+  #sect1 .banner img,
+  #sect1 .promote {
+    position: absolute;
+  }
+  .banner .pc_title {
+    left: 0;
+    top: 33%;
+  }  
+  #sect1 .promote {
+    right: 0;
+    top: 15%;
+  }  
+/* Section 마다 왼쪽,오른쪽 타이틀 ,배너 영역-------------------- */
+
+  section:nth-of-type(n + 2) .secTit,
+  section .secMenu {
+    position: absolute;
+    top: 10%;
+  
+  }
+
+  section .secMenu {
+    right: -1000px;
+    transition: 0.5s;
+  }
+  section .secMenu.on {
+    right: 0;
+  }
+
+  section:nth-of-type(n + 2) .secTit {
+    width: 283px;
+    text-align: right;
+    left: -1000px;
+    transition: 0.5s;
+  }
+  section:nth-of-type(n + 2) .secTit.on {
+    left: 70px;
+  }
+  .secDesc {
+    position: relative;
+    top: -275px;
+    background: url(img/bgBodyTop.png) repeat-x center;
+  }
+  section .inner.moveBg:after {
+    animation: moveBg 5s linear alternate infinite;
+  }
+
+  @keyframes moveBg {
+    0% {
+      bottom: 0px;
+    }
+    100% {
+      bottom: 80px;
+    }
+  }
+ /* ---고정 새우------------------------------------------------------- */
+  .fixedshrimp {
+    position: fixed;
+    opacity:0;
+    transition: 2s;
+    left: 50%;
+    transform: translateX(-57%);
+    z-index: 999;
+    top: 261px;
+  }
+ 
+  .fixedshrimp.on {
+    opacity: 1;
+  }
+  .fixedshrimp.left {
+    left: 0%;
+  }  
+}
+ 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .stage {
+            color: white;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <h1>저는 깜직하고 귀여운, 수진이에용 ㅎㅎㅎ.</h1>
+    </div>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="./splitText.js"></script>
+    <script>
+
+        const split = new SplitText('h1', { type: 'chars' })
+        const tl = gsap.timeline()
+
+        tl.from(split.chars, {
+            y: gsap.utils.wrap([-100, 100, -50, 50]),
+            opacity: 0,
+            stagger: {
+                each: .02,
+                from: 'random'//edges, end, center
+            }
+        })
+        .to(split.chars,{
+            x:50,
+            // y:gsapp.utils.wrap([-10,10]),
+            // color:'red',
+            color:gsap.utils.wrap(['yellowgreen','skyblue']),
+            stagger: {
+                each: .02,
+                from: 'random'//edges, end, center
+            }
+        })
+        
+    </script>
+</body>
+
+</html>

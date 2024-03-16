@@ -124,8 +124,9 @@
         </div>
         <p class="mini-text">ⓒ 2023 GC Biopharma corporate.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./jquery.mousewheel.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper1", {
             effect: "cube",
@@ -157,11 +158,28 @@
             $('html').stop().animate({ 'scrollTop': secTop })
         })
 
-        // $(window).scroll(function () {
-        //     let scrollTop=$(this).scrollTop()
-        //     $('h5').text(scrollTop)
-        // })
+        $('section').mousewheel(function (e, delta) {
+            if (delta > 0) {
+                let prev = $(this).prev().offset().top
+                $('html').stop().animate({ 'scrollTop': prev })
+            }
+            else if (delta < 0) {
+                let next = $(this).next().offset().top
+                $('html').stop().animate({ 'scrollTop': next })
+            }
+        })
+        $(window).scroll(function () {
+            let scrTop = $(this).scrollTop()
+            $('h5').text(scrTop)
 
+            $('section').each(function (i) {
+                let secTop = $(this).offset().top
+                if (scrTop >= secTop) {
+                    $('.tab li a').removeClass('on')
+                    $('.tab li').eq(i).find('a').addClass('on')
+                }
+            })
+        })
     </script>
 </body>
 
