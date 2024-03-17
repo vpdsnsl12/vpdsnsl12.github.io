@@ -110,7 +110,7 @@ $(".secMenu ul li a").on({
     //클릭한 href 상세페이이보기
     $(panelOn).fadeIn();
 
-    var descActiveHeight = $(panelOn).outerHeight();
+    var descActiveHeight = $(panelOn).outerHeight() * 1.2;
     $(panelOn).closest(".secDesc").animate({
       height: descActiveHeight,
     });
@@ -124,7 +124,7 @@ $(".btnClose").click(function (e) {
   e.preventDefault();
 
   $(this).fadeOut();
-  $(".secDesc li").fadeOut();
+  $(".secDesc >li").fadeOut();
   $(".secDesc").animate({
     height: 0,
   });
