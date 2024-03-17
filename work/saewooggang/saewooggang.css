@@ -467,7 +467,7 @@ section#sec2 .bg-4 {
     top: 0;
   }
   .wrap.menu-opened {
-    right: 150px;
+    display: none;
   }
   .wrap header {
     position: fixed;
@@ -643,6 +643,13 @@ section#sec2 .bg-4 {
   section#sec2 .text-box-black {
     background-image: url(./imgs/bgBodyTop.png);
   }
+  section#sec2 .text-box-black > div {
+    width: 1200px;
+    margin: auto;
+  }
+  section#sec2 .text-box-black > div .dis-flex {
+    display: flex;
+  }
   section#sec2 .text-box-black ul {
     margin: 30px 0 50px;
   }
@@ -676,11 +683,11 @@ section#sec2 .bg-4 {
   section#sec2 .text-box-black > div::after {
     content: "";
     background-image: url(./imgs/bgBodytop.png);
-    width: 100%;
+    width: 185%;
     height: 100px;
     position: absolute;
     bottom: -20px;
-    left: 0;
+    left: -800px;
     z-index: -1;
     transform: rotate(180deg);
   }
@@ -823,4 +830,4 @@ section#sec2 .bg-4 {
   position: absolute;
   z-index: -1;
   top: 10%;
-}
+}/*# sourceMappingURL=saewooggang.css.map */
