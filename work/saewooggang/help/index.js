@@ -20,8 +20,8 @@ var activeHeight = 0;
 $(window).scroll(function () {
   scrTop = $(window).scrollTop();
 
-  $(".secTit").addClass("on");
-  $(".secMenu").addClass("on");
+  $(".secTit").removeClass("on");
+  $(".secMenu").removeClass("on");
 
   $("section").each(function (i) {
     var sectTop = $(this).offset().top;

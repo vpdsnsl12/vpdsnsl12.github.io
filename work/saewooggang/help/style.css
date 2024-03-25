@@ -203,7 +203,8 @@ section:nth-of-type(n + 2) .inner:after {
   color: gold;
 }
 .secDesc-inner .img-tab {
-  width: 100%;
+  width: 60%;
+  margin-left: 200px;
 }
 .secDesc-inner ul li a.left {
   background-image: url(./imgs/bgTapRightcopy.png);
