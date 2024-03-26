@@ -1,157 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>grid</title>
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-        .wrap {
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-rows: repeat(3, 1fr);
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-        .wrap>div {
-            border: 1px solid #000000;
-            overflow: hidden;
-        }
-
-        .item1 {
-            grid-column: 1/3;
-            grid-row: 1/4;
-        }
-
-        .item1 img {
-            height: 100%;
-            width: 130%;
-            margin-left: -15%;
-        }
-
-        .item2 {
-            grid-column: 3/5;
-        }
-
-        .item2 img {
-            height: 100%;
-            width: 130%;
-            margin-left: -15%;
-        }
-
-        .item3 {
-            grid-column: 5/6;
-            grid-row: 1/3;
-        }
-
-        .item3 img {
-            height: 100%;
-            width: 170%;
-            margin-left: -50%;
-        }
-
-        .item4 {
-            grid-column: 3/4;
-            grid-row: 2/4;
-        }
-
-        .item4 img {
-            height: 100%;
-            width: 170%;
-            margin-left: -35%;
-        }
-
-        .item5 img {
-            height: 105%;
-            width: 100%;
-        }
-
-        .item6 img {
-            width: 100%;
-            height: 110%;
-            margin-top: -5%;
-        }
-
-        .item7 img {
-            width: 100%;
-            height: 125%;
-            margin-top: -8%;
-        }
-
-        h1 {
-            position: absolute;
-        }
-
-        h1 img {
-            width: 200px;
-        }
-
-        .position img {
-            position: absolute;
-        }
-
-        .blue img {
-            left: 25%;
-            bottom: 18%;
-            width: 250px;
-            transform: rotate(-25deg);
-            transform-origin: top center;
-            animation: wobble-hor-top 1.5s ease-in-out;
-        }
-
-        @keyframes wobble-hor-top {
-
-            0%{
-                transform: rotate(-25deg);
-            }
-
-            15% {
-                transform:rotate(-70deg);
-                
-            }
-
-            30% {
-                transform:rotate(-25deg);
-            }
-
-            45% {
-                transform: rotate(-80deg);
-            }
-
-            60% {
-                transform:rotate(-25deg);
-            }
-
-            75% {
-                transform: rotate(-70deg);
-            }
-            100% {
-                transform: rotate(-25deg);
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <h1><img src="./imgs/logo.png" alt=""></h1>
-    <div class="wrap wrap1">
-        <div class="item1"><img src="./imgs/핑크곰.jpg" alt=""></div>
-        <div class="item2"><img src="./imgs/할인배너.jpg" alt=""></div>
-        <div class="item3"><img src="./imgs/타올.jpg" alt=""></div>
-        <div class="item4"><img src="./imgs/핑크가운.jpg" alt=""></div>
-        <div class="item5"><img src="./imgs/보라가방.jpg" alt=""></div>
-        <div class="item6"><img src="./imgs/핑크장화.jpg" alt=""></div>
-        <div class="item7"><img src="./imgs/핑크슬리퍼.jpg" alt=""></div>
+  <body>
+    <h1><img src="./imgs/logo.png" alt="" /></h1>
+    <div class="set">
+      <div class="wrap wrap1">
+        <div class="item1"><img src="./imgs/핑크곰.jpg" alt="" /></div>
+        <div class="item2"><img src="./imgs/할인배너.jpg" alt="" /></div>
+        <div class="item3"><img src="./imgs/타올.jpg" alt="" /></div>
+        <div class="item4"><img src="./imgs/핑크가운.jpg" alt="" /></div>
+        <div class="item5"><img src="./imgs/보라가방.jpg" alt="" /></div>
+        <div class="item6"><img src="./imgs/핑크장화.jpg" alt="" /></div>
+        <div class="item7"><img src="./imgs/핑크슬리퍼.jpg" alt="" /></div>
+      </div>
+      <div class="position">
+        <div class="blue"><img src="./imgs/분홍가방.png" alt="" /></div>
+      </div>
     </div>
-    <div class="position">
-        <div class="blue"><img src="./imgs/분홍가방.png" alt=""></div>
+    <div class="wrap wrap2">
+      <div class="item11"><img src="./imgs/배경8.jpg" alt="" /></div>
+      <div class="item22"><img src="./imgs/파란니트.jpg" alt="" /></div>
+      <div class="item33"><img src="./imgs/칫솔걸이.webp" alt="" /></div>
+      <div class="item44"><img src="./imgs/쿠션.jpg" alt="" /></div>
+      <div class="item55"><img src="./imgs/파랑가방.jpg" alt="" /></div>
+      <div class="item66"><img src="./imgs/젖소로브.jpg" alt="" /></div>
+      <div class="item77"><img src="./imgs/파란장화.jpg" alt="" /></div>
+      <div class="item88"></div>
+      <div class="item99"></div>
+      <div class="item00"><img src="./imgs/파란양말.jpg" alt="" /></div>
+      <div class="item01"><img src="./imgs/하늘색슬리퍼.jpg" alt="" /></div>
     </div>
-</body>
-
+  </body>
 </html>
