@@ -89,14 +89,57 @@
         }
 
         h1 img {
-            width: 100px;
-            stroke: white;
+            width: 200px;
+        }
+
+        .position img {
+            position: absolute;
+        }
+
+        .blue img {
+            left: 25%;
+            bottom: 18%;
+            width: 250px;
+            transform: rotate(-25deg);
+            transform-origin: top center;
+            animation: wobble-hor-top 1.5s ease-in-out;
+        }
+
+        @keyframes wobble-hor-top {
+
+            0%{
+                transform: rotate(-25deg);
+            }
+
+            15% {
+                transform:rotate(-70deg);
+                
+            }
+
+            30% {
+                transform:rotate(-25deg);
+            }
+
+            45% {
+                transform: rotate(-80deg);
+            }
+
+            60% {
+                transform:rotate(-25deg);
+            }
+
+            75% {
+                transform: rotate(-70deg);
+            }
+            100% {
+                transform: rotate(-25deg);
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1><img src="./imgs/logo (1).png" alt=""></h1>
+    <h1><img src="./imgs/logo.png" alt=""></h1>
     <div class="wrap wrap1">
         <div class="item1"><img src="./imgs/핑크곰.jpg" alt=""></div>
         <div class="item2"><img src="./imgs/할인배너.jpg" alt=""></div>
@@ -106,14 +149,8 @@
         <div class="item6"><img src="./imgs/핑크장화.jpg" alt=""></div>
         <div class="item7"><img src="./imgs/핑크슬리퍼.jpg" alt=""></div>
     </div>
-    <div class="wrap wrap2">
-        <div class="item1-1"><img src="./imgs/핑크곰.jpg" alt=""></div>
-        <div class="item2-2"><img src="./imgs/할인배너.jpg" alt=""></div>
-        <div class="item3-3"><img src="./imgs/타올.jpg" alt=""></div>
-        <div class="item4-4"><img src="./imgs/핑크가운.jpg" alt=""></div>
-        <div class="item5-5"><img src="./imgs/보라가방.jpg" alt=""></div>
-        <div class="item6-6"><img src="./imgs/핑크장화.jpg" alt=""></div>
-        <div class="item7-7"><img src="./imgs/핑크슬리퍼.jpg" alt=""></div>
+    <div class="position">
+        <div class="blue"><img src="./imgs/분홍가방.png" alt=""></div>
     </div>
 </body>
 
