@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140.362" height="44.99" viewBox="0 0 1140.362 44.99">
+  <g id="게이지_01" data-name="게이지 01" transform="translate(-409.002 -2082)">
+    <path id="사각형_760_복사" data-name="사각형 760 복사" d="M1680.364,2126.99h-280.5V2082h280.5l17,22.18Z" transform="translate(-148)" fill="#003b69"/>
+    <path id="사각형_760_복사_5" data-name="사각형 760 복사 5" d="M1419.864,2126.99H1080.713V2082h339.151l17,22.5Z" transform="translate(-116)" fill="#0067b5"/>
+    <path id="사각형_760_복사_6" data-name="사각형 760 복사 6" d="M1080.713,2126.99h-255V2082h255l17,22.745Z" transform="translate(-85)" fill="#0084e8"/>
+    <path id="사각형_760_복사_7" data-name="사각형 760 복사 7" d="M826.562,2126.99H570.712V2082H826.562l17,22.369Z" transform="translate(-63)" fill="#47b0ec"/>
+    <path id="사각형_760_복사_8" data-name="사각형 760 복사 8" d="M570.634,2126.99H445l20-22.337L445,2082H570.634L587,2104.228Z" transform="translate(-36)" fill="#69beef"/>
+    <text id="Little_Nokjiwon" data-name="Little Nokjiwon" transform="translate(1413 2109.999)" fill="#fff" font-size="16" font-family="Outfit-Bold, Outfit" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">Little Nokjiwon</tspan></text>
+    <text id="Glide" transform="translate(1242.692 2109.999)" fill="#fff" font-size="16" font-family="Outfit-Bold, Outfit" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">Glide</tspan></text>
+    <text id="Jump" transform="translate(952.826 2109.999)" fill="#fff" font-size="16" font-family="Outfit-Bold, Outfit" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">Jump</tspan></text>
+    <text id="Dash" transform="translate(712.714 2109.999)" fill="#fff" font-size="16" font-family="Outfit-Bold, Outfit" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">Dash</tspan></text>
+    <text id="Leader" transform="translate(479.528 2109.999)" fill="#fff" font-size="16" font-family="Outfit-Bold, Outfit" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">Leader</tspan></text>
+  </g>
+</svg>
