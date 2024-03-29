@@ -1,0 +1,516 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Pretendard-Regular;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+.flex {
+    display: flex;
+}
+
+video {
+    width: 100%;
+}
+
+b {
+    color: rgb(14, 187, 240);
+}
+
+/* img-size */
+h1 img {
+    width: 100px;
+}
+
+.link img {
+    width: 10vw;
+}
+
+.main-text img {
+    width: 80%;
+}
+
+.all-people {
+    width: 100%;
+}
+
+.togeter li img {
+    width: 90%;
+}
+
+.big-img img {
+    width: 90%;
+}
+
+.img-list li:hover img {
+    opacity: 100%;
+    transition: .35s;
+
+}
+
+.img-list li img {
+    opacity: 60%;
+    width: 90%;
+}
+
+.list-one-people {
+    border-radius: 50%;
+}
+
+
+.banner {
+    width: 100%;
+}
+
+/* font-size */
+.link-text {
+    font-size: 1vw;
+}
+
+.link-name {
+    font-size: 3vw;
+}
+
+.link-name {
+    font-size: 3vw;
+}
+
+.section3 .wrap h2 {
+    font-size: 4vw;
+}
+
+.section4 h2 {
+    line-height: 5vw;
+    font-size: 3vw;
+}
+
+.text-wrap p {
+    font-size: 3vw;
+}
+
+.section3 h2 {
+    font-size: 4vw;
+}
+
+
+.link-text {
+    font-size: 3vw
+}
+
+/* logo */
+.intro h1 {
+    position: fixed;
+    padding: 20px;
+}
+
+/* section */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* header */
+.section1 {
+    padding: 0 0 50px;
+    position: relative;
+    height: 47vw;
+    overflow: hidden;
+}
+
+.link-button {
+    width: 70%;
+    position: absolute;
+    align-items: center;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* section1 */
+.main-text {
+    text-align: center;
+    padding: 30px;
+}
+
+/* section2 */
+/* section3 */
+.section3 h2 {
+    text-align: center;
+    line-height: 200%;
+    padding-bottom: 40px;
+}
+
+.togeter {
+    padding-bottom: 40px;
+}
+
+.togeter p {
+    padding: 20px 0 40px;
+}
+
+.news-list li a {
+    display: block;
+    padding: 10px;
+}
+
+.news-list li {
+    margin-bottom: 10px;
+}
+
+.button a {
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+}
+
+.news-list li:hover>a {
+    background-color: gold;
+    transition: .35s;
+}
+
+/* section4 */
+.section4 {
+    background-color: white;
+    color: black;
+}
+
+.section4 h2 {
+    padding: 30px 20px 40px 0;
+    text-align: right;
+}
+
+.text-wrap {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.big-img {
+    width: 50%;
+}
+
+.text-wrap p {
+    width: 67%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* section5 */
+.section5 {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.section5 h2 {
+    padding: 20px;
+}
+
+.people-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.set p {
+    margin: 20px 0 40px;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+/*section6*/
+.section6 {
+    position: relative;
+    padding: 0 0 50px;
+}
+
+.banner-up {
+    position: absolute;
+    top: 20px;
+    left: 4%;
+    text-align: left;
+    font-size: 2vw;
+}
+
+.people-list li {
+    padding-bottom: 70px;
+}
+.section6 {
+    background-image: url(./unicef-img/파란색아가.jpg);
+    height: 30vw;;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* footer */
+footer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer h1 img {
+    width: 200px;
+}
+
+footer ul {
+    font-size: 10px;
+    line-height: 20px;
+}
+
+
+@media screen and (max-width: 576px) {
+    .news-list li a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .people-list li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name {
+        width: 40vw;
+        padding: 20px;
+    }
+
+    .set p {
+        width: 83%;
+        margin: auto;
+        text-align: left;
+        font-weight: lighter;
+        font-size: 2.5vw;
+        line-height: 5vw;
+    }
+
+    .list-one-people {
+        width: 400px;
+        height: 400px;
+    }
+
+    .img-list {
+        flex-wrap: wrap;
+    }
+
+    .img-list li {
+        width: 50%;
+    }
+
+    .content-name {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    .wrap {
+        width: 90%;
+        margin: auto;
+    }
+
+    .togeter {
+        display: flex;
+    }
+
+    .button {
+        width: 50%;
+    }
+
+    .button a {
+        width: 95%;
+    }
+
+    .news-list {
+        display: flex;
+    }
+
+    .news-list li {
+        margin-right: 10px;
+    }
+
+    .name {
+        width: 25vw;
+        padding: 20px;
+    }
+
+    .people-list li {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section5 .people-list li:nth-child(odd) figure {
+        order: 2;
+    }
+
+    .set figure {
+        width: 50%;
+    }
+
+    .set p {
+        width: 80%;
+        font-size: 1.5vw;
+        line-height: 2vw;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: right;
+        padding-right: 30px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+
+    .name {
+        height: 15vw;
+        padding: 20px;
+    }
+
+    .list-one-people {
+        width: 300px;
+        height: 300px;
+    }
+
+    .img-list {
+        flex-wrap: wrap;
+    }
+
+    .img-list li {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .section3 {
+        padding: 50px;
+    }
+
+    .content-name {
+        font-size: 1.5vw;
+    }
+
+    .togeter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .name {
+        width: 20vw;
+        padding: 20px;
+    }
+
+    .set p {
+        font-size: 1vw;
+        line-height: 2vw;
+    }
+
+    .name {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+    }
+
+    .list-one-people {
+        border-radius: 2%;
+        width: 250px;
+        height: 300px;
+    }
+
+    .set figure img {
+        border-radius: 0;
+    }
+
+    .set p {
+        width: 90%;
+        font-size: 1vw;
+        line-height: 2vw;
+    }
+
+    .people-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .people-list li {
+        padding-bottom: 0;
+        margin: 5px;
+        width: 48%;
+    }
+
+    .big-img img {
+        width: 70%;
+    }
+
+    .img-list li {
+        width: 25%;
+    }
+
+    .section3,
+    .section4 {
+        padding: 300px;
+    }
+
+    .content-name {
+        font-size: 1vw;
+    }
+
+    .wrap h2 {
+        font-size: 1vw;
+    }
+
+    .section3 .wrap h2 {
+        font-size: 4vw;
+    }
+
+    .section4 h2 {
+        line-height: 3vw;
+        font-size: 2vw;
+    }
+
+    .text-wrap p {
+        font-size: 1vw;
+    }
+
+    .section3 h2 {
+        font-size: 3vw;
+    }
+
+}
