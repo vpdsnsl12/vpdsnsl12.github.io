@@ -3,21 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catch_table</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Catch_table-main</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d35b097dab.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>
-      <a href="#"><img src="./img/logo (2).png" alt="" /></a>
-    </h1>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+    <header class="flex">
+      <h1>
+        <a href="#"><img src="./img/logo (2).png" alt="" /></a>
+      </h1>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #bbbbbb"></i
+        ><input class="search" type="text" placeholder="지역,음식,매장명검색" />
       </div>
-    </div>
+      <div class="login">
+        <a href="#"
+          ><i class="fa-solid fa-user fa-xl" style="color: #d1d1d1"></i
+        ></a>
+      </div>
+    </header>
+    <section>
+      <div class="dot">
+        <a href="#"
+          ><i class="fa-solid fa-location-dot fa-xl" style="color: #a1a1a1"></i>
+          <span>서울</span
+          ><i class="fa-solid fa-chevron-down" style="color: #a1a1a1"></i
+        ></a>
+        <div class="dot-box">
+          <ul>
+            <li><a href="#">잠실 / 송파 / 강동</a></li>
+            <li><a href="#">강남</a></li>
+            <li><a href="#">홍대 / 합정 / 마포</a></li>
+            <li><a href="#">서초</a></li>
+            <li><a href="#">건대 / 성수 / 왕십리</a></li>
+            <li><a href="#">용산 / 이태원 / 한남</a></li>
+            <li><a href="#">영등포 / 여의도 / 강서</a></li>
+            <li><a href="#">종로 / 중구</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="slide-content">
+        <div class="slide-wrap flex">
+          <div class="slide">
+            <a href="#"
+              ><img src="./img/KakaoTalk_20240330_195420340_16.jpg" alt=""
+            /></a>
+          </div>
+          <div class="slide">
+            <a href="#"
+              ><img src="./img/쿠히치.jpg" alt=""
+            /></a>
+          </div>
+          <div class="slide">
+            <a href="#"
+              ><img src="./img/미안.jpg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="icons">
+        <ul class="flex">
+          <li>
+            <a href="#"
+              ><img src="./img/🦆 icon _watch_.png" alt="" />
+              <p>대기</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/🦆 icon _heart target_.png" alt="" />
+              <p>주변맛집</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/🦆 icon _shopping bag_.png" alt="" />
+              <p>포장</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/🦆 icon _thumb up_.png" alt="" />
+              <p></p>
+              TOP 10</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      setInterval(function () {
+        $(".slide-wrap").animate({ "margin-left": "-100%" }, function () {
+          $(".slide").first().appendTo(".slide-wrap");
+          $(".slide-wrap").css({ "margin-left": "0%" });
+        });
+      }, 3000);
+
+      $(document).ready(function () {
+        $(".dot").click(function () {
+          $(".dot-box").toggle();
+        });
+      });
+    </script>
   </body>
 </html>

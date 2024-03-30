@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>partner-login-page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d35b097dab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="partner-login-page">
+      <section>
+        <div class="color-box"></div>
+        <h1><img src="./img/logo (2).png" alt="" /></h1>
+        <h2>
+          새로운 인연을 만드는 <br />
+          디닝닷닷 캐치테이블
+        </h2>
+      </section>
+      <section class="form">
+        <h3>파트너 가입</h3>
+        <form id="signupForm" action="signup.php" method="post">
+          <div>
+            <label for="fullname">이름</label>
+            <input type="text" id="fullname" name="fullname" required />
+          </div>
+          <div>
+            <label for="nickname">닉네임</label>
+            <a href="#">중복확인</a>
+            <input type="text" id="nickname" name="nickname" required>
+        </div>
+          <div>
+            <label for="email">이메일</label>
+            <a href="#">인증메일보내기</a>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="password">비밀번호</label>
+            <span class="sub-text"
+              >영문, 숫자, 특수문자 중 2개를 포함해 8~20자로 설정해주세요.</span
+            >
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div>
+            <label for="address">주소</label>
+            <input type="text" id="address" name="address">
+        </div>
+          <button type="submit">가입하기</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
