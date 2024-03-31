@@ -11,8 +11,8 @@
   box-sizing: border-box;
 }
 html {
-  max-width: 480px;
-  height: 100vh;
+  max-width: 1130px;
+  height: 730px;
   margin: auto;
   border: 1px solid #b3b3b3;
   font-family: "Pretendard-Regular";
@@ -28,8 +28,8 @@ li {
 .flex {
   display: flex;
 }
+/* ----------------------메인---------------------------- */
 /* header */
-
 header {
   width: 100%;
   height: 60px;
@@ -135,13 +135,13 @@ h1 img {
   margin-bottom: 5px;
 }
 
-/* login */
+/* -------------------login ------------------*/
 .login-wrap {
   display: flex;
   justify-content: center;
 }
 .login-page {
-  margin-top: 180px;
+  margin-top: 100px;
   width: 400px;
   height: 600px;
 }
@@ -157,20 +157,20 @@ h1 img {
   text-align: center;
 }
 .sns-login {
-  margin-top: 80px;
+  margin-top: 30px;
   position: relative;
 }
 .sns-login::after {
   content: "";
   width: 400px;
   height: 1px;
-  background-color: rgb(159, 159, 159);
+  background-color: rgb(219, 219, 219);
   position: absolute;
   left: 0;
   bottom: -40px;
 }
 .sns-login div {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .sns-login div a {
   width: 400px;
@@ -189,70 +189,75 @@ h1 img {
 }
 .kakao a {
   background-color: #fddc3f;
+  color: rgb(0, 0, 0);
 }
-.google a {
-  background-color: #f8f8f8;
+.naver a {
+  color: white;
+  background-color: #00c73c;
 }
-.mini-sns {
-  margin-top: 70px;
-  width: 400px;
-  justify-content: center;
+.mail-login a {
+  color: rgb(105, 105, 105);
+  background-color: #e7e7e7;
 }
-.mini-sns li {
-  margin: 0 10px;
-}
-.mini-sns li img {
-  border-radius: 5px;
-}
-.mini-sns li:nth-child(1) a img {
-  width: 50px;
-}
-.mini-sns li:nth-child(2) a img {
-  width: 40px;
-  margin-top: 5px;
-}
-.mini-sns li:nth-child(3) a img {
-  width: 40px;
-  margin-top: 5px;
-}
-.login-page p{
+
+.login-page p {
   margin: 10px;
   color: #595959;
 }
 .login-page p.login-text b {
   padding: 0 7px;
 }
+.login-footer {
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+/* ------------------------------------------ */
 .partner-login a {
+  display: inline-block;
+  color: #979797;
+  margin: 0;
+}
+.partner-login:nth-child(1) a::after {
+  content: "|";
+  margin-left: 20px;
+}
+.partner-login2 a {
   border: 1px solid #939393;
   display: inline-block;
   padding: 5px 40px;
   border-radius: 30px;
   color: #595959;
+  width: 250px;
+}
+.partner-login2 a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 /* partner-login-page */
-.partner-login-page {
-  padding: 20px 50px;
-}
 .partner-login-page h1 img {
   filter: brightness(100);
 }
-.color-box {
-  width: 100%;
-  height: 200px;
-  background-color: #f74242;
+.box {
+  padding: 25px 0 0 10px;
   position: absolute;
-  left: 0;
-  top: 0;
+  width: 100%;
+  height: 700px;
   z-index: -1;
 }
 .partner-login-page h2 {
   line-height: 40px;
-  font-size: 30px;
+  font-size: 25px;
   padding: 10px;
   color: white;
+  font-weight: 300;
 }
 .form {
-  margin-top: 60px;
+  width: calc(100% - 270px);
+  height: 700px;
+  margin-left: 300px;
+  text-align: left;
+  padding-top: 35px;
 }
 .form h3 {
   font-size: 22px;
@@ -284,12 +289,14 @@ input[type="password"],
 input[type="email"],
 input[type="address"],
 input[type="businessNumber"] {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+section input[type="text"] {
+  margin: 3px 0;
+}
 button[type="submit"] {
   margin-top: 20px;
   background-color: #afafaf;
@@ -298,7 +305,7 @@ button[type="submit"] {
   padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
   font-size: 15px;
 }
 
@@ -306,7 +313,7 @@ button[type="submit"]:hover {
   background-color: #4d4d4d;
 }
 /* img-list */
-.img-box{
+.img-box {
   width: 110px;
   height: 100px;
   border: 1px solid #e0e0e0;
@@ -315,12 +322,303 @@ button[type="submit"]:hover {
   margin: 20px 22px -10px 0;
   position: relative;
 }
-.img-box::after{
-  content: '+ 등록';
+.img-box::after {
+  content: "+ 등록";
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: #bababa;
+}
+/* ------------------partner-login -------------------*/
+.color-box {
+  width: 260px;
+  height: 730px;
+  background-color: #f74242;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.login-wrap2 {
+  width: calc(100% - 270px);
+  margin-left: 270px;
+  margin-top: 30px;
+  text-align: left;
+}
+.login-wrap2 input[type="email"],
+.login-wrap2 input[type="password"],
+.login-wrap2 button {
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-page2 h1,
+.login-page2 p {
+  margin: 0;
+  padding: 10px 0;
+}
+.login-page2 div {
+  margin-top: 10px;
+}
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.checkbox label {
+  order: 2;
+  margin-top: 3.5px;
+  margin-left: 3px;
+}
+/* ---------------store-page--------- */
+.color-box2 {
+  background-color: rgb(235, 235, 235);
+  padding: 10px 15px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  height: 728px;
+  box-shadow: 0px 1px 3px;
+}
+.store-page figure {
+  width: 230px;
+}
+.store-page figure img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.store-page ul li {
+  margin: 10px 0;
+}
+.store-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+.store-map {
+  color: rgb(117, 117, 117);
+}
+.store-map p {
+  display: none;
+}
+.store-map p img {
+  margin-top: 10px;
+  width: 230px;
+  height: 200px;
+  border-radius: 10px;
+}
+.level {
+  margin: 15px 0;
+  border-top: 1px solid #b6b6b6;
+  border-bottom: 1px solid #b6b6b6;
+  border-right: 30px;
+}
+.level li {
+  display: flex;
+  align-items: center;
+  color: rgb(87, 87, 87);
+}
+.level li span {
+  display: inline-block;
+  width: 65px;
+}
+.level li img {
+  margin-right: 5px;
+}
+/* detail */
+.detail {
+  padding: 20px 50px;
+}
+.part {
+  margin-bottom: 15px;
+}
+.detail h2 {
+  padding-bottom: 10px;
+}
+.detail > a {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+.detail ul li {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.detail ul li span {
+  cursor: pointer;
+  color: rgb(44, 58, 255);
+  margin-left: 7px;
+}
+.detail ul li:nth-child(1) i {
+  margin-right: 10px;
+  font-size: 25px;
+}
+.detail ul li:nth-child(2) i,
+.detail ul li:nth-child(3) i,
+.detail ul li:nth-child(4) i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+/* -------------tab-------------- */
+.tab-menu{
+  margin: -5px 0 5px 5px;
+}
+.tab-menu li a {
+  display: inline-block;
+  margin-right: 15px;
+}
+.tab-menu li a.on {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.tab {
+  margin-top: -50px;
+  display: none;
+}
+.tab.on {
+  display: block;
+}
+.tab ul {
+  flex: 1;
+  margin-top: -20px;
+}
+.tab ul li {
+  flex-direction: column;
+  border: 1px solid #c7c7c7;
+  width: 250px;
+  height: 330px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.tab ul li img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.nickname {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.part p a {
+  display: block;
+  width: 100px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: rgb(153, 153, 153);
+  color: white;
+  margin-top: -10px;
+  position: absolute;
+  right: 50px;
+}
+.part p a:hover{
+  background-color: rgb(44, 100, 255);
+}
+/* -----review--------- */
+.review-box {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.426);
+}
+.review-page {
+  width: 700px;
+  height: 550px;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+}
+.review-check div {
+  margin: 20px 50px 20px 0;
+}
+.review-check div >p{
+  margin-bottom: 8px;
+}
+.review-check div label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.review-check div span {
+  margin: 0 25px 0 5px;
+}
 
+.close {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+.add-list {
+  margin: 10px 0;
+  padding: 10px 0 15px;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.add-img li a {
+  display: inline-block;
+  border: 1px solid #d7d7d7;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 10px 20px 0 0;
+  background-color: #f0f0f0;
+  position: relative;
+}
+.add-img li a::after {
+  content: "+추가";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-review{
+  margin-top: 5px;
+}
+.text-review textarea {
+  width: 600px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+button.review-submit{
+  width: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+button.review-submit:hover{
+  background-color: rgb(44, 100, 255);
+}
+button.link{
+  margin-top: 20px;
+  width: 150px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: rgb(44, 100, 255);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+button.link:hover{
+  background-color: rgb(0, 0, 0);
 }

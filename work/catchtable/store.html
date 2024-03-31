@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="partner-login-page">
-      <section>
+      <section class="box">
         <div class="color-box"></div>
         <h1><img src="./img/logo (2).png" alt="" /></h1>
         <h2>
@@ -24,20 +24,17 @@
         <h3>매장 등록</h3>
         <form id="signupForm" action="signup.php" method="post">
           <div>
-            <label for="fullname">이름</label>
-            <span class="sub-text"
-              >사업자등록증에 대표로 등록된 성명을 입력해주세요.</span
-            >
-            <input type="text" id="fullname" name="fullname" required />
-          </div>
-          <div>
             <label for="storeName">매장명</label>
             <input type="text" id="storeName" name="storeName" required />
           </div>
           <div>
             <label for="address">매장 주소</label>
-            <input type="text" id="address" name="address">
-        </div>
+            <input type="text" id="address" name="address" /><input
+              type="text"
+              id="address"
+              name="address"
+            /><input type="text" id="address" name="address" />
+          </div>
           <div>
             <label for="businessNumber">사업자 등록번호</label>
             <input
@@ -52,11 +49,20 @@
           <div>
             <label for="image">이미지등록</label>
             <ul class="img-list flex">
-              <li><a href="#"><div class="img-box"></div></a></li>
-              <li><a href="#"><div class="img-box"></div></a></li>
-              <li><a href="#"><div class="img-box"></div></a></li>
+              <li>
+                <a href="#"><div class="img-box"></div></a>
+              </li>
+              <li>
+                <a href="#"><div class="img-box"></div></a>
+              </li>
+              <li>
+                <a href="#"><div class="img-box"></div></a>
+              </li>
+              <li>
+                <a href="#"><div class="img-box"></div></a>
+              </li>
             </ul>
-        </div>
+          </div>
           <button type="submit">등록하기</button>
         </form>
       </section>
