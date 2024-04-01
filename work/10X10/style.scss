@@ -1,0 +1,333 @@
+html {
+    overflow-x: hidden;
+
+    * {
+        font-family: "Pretendard-Regular";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .flex {
+        display: flex;
+    }
+}
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    .header-top {
+        height: 40px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-color: rgb(233, 233, 233);
+        padding: 0 80px;
+    }
+
+    .header-bottom {
+        margin: 0 80px;
+        height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        nav {
+            .menu {
+                align-items: center;
+                font-size: 16px;
+
+                li {
+                    margin-left: 10px;
+
+                    b {
+                        color: tomato;
+                        font-weight: 500;
+                    }
+
+                    input[type="text"] {
+                        font-size: 12px;
+                        width: 270px;
+                        outline: none;
+                        padding: 7px 10px;
+                        border-radius: 30px;
+                        border: 1px solid #ff0000;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+    .cartegori {
+        height: 45px;
+        margin: 0 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: sb;
+
+        ul {
+            font-size: 13px;
+            font-weight: bold;
+            margin: 0 10px;
+            border-right: 1px solid #d3d3d3;
+
+            li {
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+section {
+    &#sec1 {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: 80px;
+            width: 80px;
+            height: 80px;
+            z-index: 10;
+            background-image: url(./img/icon-emblem.png);
+            background-position: center;
+            background-size: contain;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 600px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            position: relative;
+
+            &:nth-child(1) {
+                background-image: url(./img/mainRolling_92528_20240329173558.jpg);
+            }
+
+            &:nth-child(2) {
+                background-image: url(./img/mainRolling_92552_20240329172633.jpg);
+            }
+
+            &:nth-child(3) {
+                background-image: url(./img/mainRolling_92277_20240308165558.jpg);
+                color: white;
+            }
+
+            &:nth-child(4) {
+                background-image: url(./img/mainRolling_92500_20240327164320.jpg);
+            }
+
+            &:nth-child(5) {
+                background-image: url(./img/mainRolling_92534_20240329172753.jpg);
+            }
+
+            &:nth-child(6) {
+                background-image: url(./img/mainRolling_92543_20240329171349.jpg);
+            }
+
+            &:nth-child(7) {
+                background-image: url(./img/mainRolling_92545_20240401092529.jpg);
+            }
+
+            &:nth-child(8) {
+                background-image: url(./img/mainRolling_92550_20240329172618.jpg);
+            }
+
+            .text {
+                position: absolute;
+                left: 20%;
+                top: 38%;
+
+                p {
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 55px;
+                    margin-bottom: 10px;
+                }
+            }
+
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: gainsboro;
+
+        }
+    }
+
+    &#sec2 {
+        .article1 {
+            height: 400px;
+            padding: 60px;
+            background-image: url(./img/bg_pattern_slash.png);
+            justify-content: center;
+
+            div {
+                p {
+                    font-size: 40px;
+
+                }
+
+                span {
+                    color: red;
+                    font-size: 28px;
+                    line-height: 50px;
+                }
+            }
+
+            ul {
+                margin-left: 100px;
+
+                li {
+                    margin: 0 20px;
+
+                    img {
+                        width: 220px;
+                        height: 220px;
+                    }
+
+                    div {
+                        margin: 15px;
+                        text-align: center;
+
+                        p {
+                            font-size: 16px;
+
+                        }
+
+                        span {
+                            color: black;
+                            font-weight: bold;
+                            font-size: 15px;
+                            line-height: 30px;
+
+                            b {
+                                color: red;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        .article2 {
+            padding: 60px;
+
+            ul {
+                gap: 30px;
+                justify-content: center;
+
+                li {
+                    h3 {
+                        line-height: 40px;
+                        font-size: 18px;
+
+                        b {
+                            color: rgb(22, 87, 228);
+                        }
+                    }
+
+                    img {
+                        width: 360px;
+                    }
+                }
+            }
+        }
+
+        .article3 {
+            justify-content: center;
+            padding-top: 80px;
+
+            .left {
+                width: 250px;
+
+                h3 {
+                    font-size: 30px;
+
+                    b {
+                        font-weight: 300;
+                    }
+                }
+
+                p {
+                    margin-top: 70px;
+                    font-size: 15px;
+                }
+
+                .tab-list {
+                    margin-top: 70px;
+
+                    li {
+                        a {
+                            font-size: 13px;
+                            margin: 5px 0;
+                            display: inline-block;
+                            border-radius: 30px;
+                            padding: 5px 10px;
+                            background-color: rgb(231, 231, 231);
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: 900px;
+
+                ul {
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+
+                    li {
+                        margin-bottom: 30px;
+
+                        .img {
+                            width: 260px;
+                            height: 260px;
+                            border: 1px solid #000;
+                        }
+
+                        p {
+                            line-height: 50px;
+                        }
+
+                        span {
+                            font-size: 13px;
+
+                            b {
+                                color: #ff0000;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
