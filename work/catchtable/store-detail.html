@@ -147,7 +147,7 @@
   <div class="review-box">
     <div class="review-page">
       <a href="#" class="close"><i class="fa-regular fa-circle-xmark fa-2xl"></i></a>
-      <h2>리뷰 등록</h2>
+      <h2>리뷰등록</h2>
       <div class="flex review-check">
         <div>
           <p><b>평점</b></p>
@@ -180,6 +180,13 @@
       <button class="review-submit" type="submit">리뷰등록</button>
     </div>
   </div>
+  <div class="reservation-box">
+    <div class="reservation-page">
+      <a href="#" class="close"><i class="fa-regular fa-circle-xmark fa-2xl"></i></a>
+      <h2>리뷰 등록</h2>
+      <button class="reservation-submit" type="submit">예약완료</button>
+    </div>
+  </div>
   <script src="./jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -197,13 +204,13 @@
       $(".tab").removeClass("on");
       $(href).addClass("on");
     });
-    $(".click-review").click(function (e) {
+    $(".link").click(function (e) {
       e.preventDefault();
-      $(".review-box").show();
+      $(".reservation-box").show();
     });
     $(".close").click(function (e) {
       e.preventDefault();
-      $(".review-box").hide();
+      $(".reservation-box").hide();
     });
     $(".review-submit").click(function (e) {
       e.preventDefault();
