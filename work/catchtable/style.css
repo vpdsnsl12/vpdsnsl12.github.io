@@ -372,7 +372,7 @@ button[type="submit"]:hover {
 }
 /* ---------------store-page--------- */
 .color-box2 {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(239, 239, 239);
   padding: 10px 15px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -461,7 +461,7 @@ button[type="submit"]:hover {
   font-size: 20px;
 }
 /* -------------tab-------------- */
-.tab-menu{
+.tab-menu {
   margin: -5px 0 5px 5px;
 }
 .tab-menu li a {
@@ -515,7 +515,7 @@ button[type="submit"]:hover {
   position: absolute;
   right: 50px;
 }
-.part p a:hover{
+.part p a:hover {
   background-color: rgb(44, 100, 255);
 }
 /* -----review--------- */
@@ -530,7 +530,7 @@ button[type="submit"]:hover {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.426);
 }
-.reservation-box{
+.reservation-box {
   /* display: none; */
   width: 100%;
   height: 100%;
@@ -541,7 +541,7 @@ button[type="submit"]:hover {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.426);
 }
-.review-page ,.reservation-page{
+.review-page {
   width: 700px;
   height: 550px;
   position: absolute;
@@ -556,7 +556,7 @@ button[type="submit"]:hover {
 .review-check div {
   margin: 20px 50px 20px 0;
 }
-.review-check div >p{
+.review-check div > p {
   margin-bottom: 8px;
 }
 .review-check div label {
@@ -596,7 +596,7 @@ button[type="submit"]:hover {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.text-review{
+.text-review {
   margin-top: 5px;
 }
 .text-review textarea {
@@ -607,16 +607,16 @@ button[type="submit"]:hover {
   border-radius: 10px;
   margin-top: 5px;
 }
-button.review-submit{
+button.review-submit {
   width: 100px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
-button.review-submit:hover{
+button.review-submit:hover {
   background-color: rgb(44, 100, 255);
 }
-button.link{
+button.link {
   margin-top: 20px;
   width: 150px;
   position: relative;
@@ -630,6 +630,161 @@ button.link{
   border-radius: 30px;
   cursor: pointer;
 }
-button.link:hover{
+button.link:hover {
   background-color: rgb(0, 0, 0);
+}
+.reservation-box {
+  display: none;
+}
+.reservation-box form {
+  width: 90%;
+}
+.reservation-box input[type="text"],
+.reservation-box input[type="tel"],
+.reservation-box input[type="date"],
+.reservation-box input[type="time"],
+.reservation-box input[type="number"],
+.reservation-box textarea,
+.reservation-box button {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.reservation-page {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 30px;
+}
+.reservation-page form {
+  padding: 10px;
+  margin: auto;
+}
+.reservation-page label {
+  display: block;
+  margin: 5px 0;
+  font-size: 18px;
+}
+.number-input-container {
+  display: inline-block;
+  position: relative;
+}
+.number-input-container input[type="number"] {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.number-input-container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  border: none;
+  background-color: #03c75a;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+.number-input-container button:hover {
+  background-color: #028d47;
+}
+
+/* list */
+.list-header {
+  height: 80px;
+  padding: 30px;
+  position: relative;
+}
+.list-header .search-box {
+  width: 600px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.list-header .search-box i {
+  margin-top: -12px;
+  margin-left: 10px;
+}
+.list-header .search-box input[type="text"] {
+  width: 520px;
+  font-size: 18px;
+}
+.mini-menu {
+  margin-top: 10px;
+}
+.store-list {
+  padding: 50px;
+  overflow: hidden;
+}
+
+.store-list ul {
+  height: 570px;
+  overflow-y: auto;
+  flex-wrap: wrap;
+}
+.store-list ul::-webkit-scrollbar {
+  display: none;
+}
+.store-list ul li {
+  margin-bottom: 60px;
+  width: 400px;
+  margin-left: 80px;
+}
+.store-list ul li a {
+  display: flex;
+  align-items: start;
+}
+.store-list ul li a div {
+  margin-left: 20px;
+  line-height: 30px;
+}
+.store-list ul li a img {
+  width: 130px;
+  height: 110px;
+  border-radius: 10px;
+}
+.store-list ul li a span {
+  color: #595959;
+}
+.menu-bar-list {
+  display: none;
+  position: absolute;
+  width: 130px;
+  height: 150px;
+  right: 20px;
+  top: 55px;
+  background-color: #fff;
+  box-shadow: 1px 2px 3px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.menu-bar-list ul li {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+.menu-bar-list ul li:nth-child(1) {
+  padding-bottom: 10px;
+}
+.menu-bar-list ul li:nth-child(2) {
+  border-bottom: 1px solid #bbbbbb;
+}
+.menu-bar-list ul li a {
+  font-size: 19px;
+}
+.menu-bar-list ul li a:hover {
+  color: black;
 }
