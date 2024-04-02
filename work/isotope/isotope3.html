@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Isotope</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            /* force scrollbar */
+            html {
+                overflow-y: scroll;
+            }
+
+            body {
+                font-family: sans-serif;
+            }
+
+            /* ---- isotope ---- */
+
+            .grid {
+                background: #DDD;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            /* clear fix */
+            .grid:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .grid-item {
+                width: 180px
+            }
+
+            .grid-item {
+                float: left;
+            }
+
+            .grid-item img {
+                display: block;
+                max-width: 100%;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            ul.menu {
+                display: flex;
+            }
+
+            ul.menu li {
+                margin: 10px;
+            }
+
+            ul.menu li a {
+                display: block;
+                padding: 10px;
+            }
+
+            ul.menu li a.on {
+                background: #000;
+                color: #fff;
+            }
+
+            ul.menu li a {
+                display: inline-block;
+                padding: 10px
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul class="menu">
+            <li><a href="#" class="on" data-filter="*">All</a></li>
+            <li><a href="#" data-filter=".web"> Template</a></li>
+            <li><a href="#" data-filter=".logo">Logos</a></li>
+            <li><a href="#" data-filter=".draw">Drawings</a></li>
+            <li><a href="#" data-filter=".ui">UI Elements</a></li>
+        </ul>
+        <div class="grid">
+            <div class="grid-item web"><img src="./imgs/dribbble-1.png" alt=""></div>
+            <div class="grid-item ui"><img src="./imgs/dribbble-2.png" alt=""></div>
+            <div class="grid-item logo"><img src="./imgs/dribbble-3.png" alt=""></div>
+            <div class="grid-item draw"><img src="./imgs/dribbble-4.png" alt=""></div>
+            <div class="grid-item logo"><img src="./imgs/dribbble-5.png" alt=""></div>
+            <div class="grid-item web"><img src="./imgs/dribbble-6.png" alt=""></div>
+            <div class="grid-item web"><img src="./imgs/dribbble-7.png" alt=""></div>
+            <div class="grid-item logo"><img src="./imgs/dribbble-8.png" alt=""></div>
+            <div class="grid-item draw"><img src="./imgs/dribbble-9.png" alt=""></div>
+            <div class="grid-item logo"><img src="./imgs/dribbble-10.png" alt=""></div>
+            <div class="grid-item ui"><img src="./imgs/dribbble-11.png" alt=""></div>
+            <div class="grid-item draw"><img src="./imgs/dribbble-12.png" alt=""></div>
+            <div class="grid-item ui"><img src="./imgs/dribbble-13.png" alt=""></div>
+            <div class="grid-item web"><img src="./imgs/dribbble-14.png" alt=""></div>
+            <div class="grid-item draw"><img src="./imgs/dribbble-15.png" alt=""></div>
+            <div class="grid-item logo"><img src="./imgs/dribbble-16.png" alt=""></div>
+            <div class="grid-item ui"><img src="./imgs/dribbble-17.png" alt=""></div>
+            <div class="grid-item web"><img src="./imgs/dribbble-18.png" alt=""></div>
+            <div class="grid-item logo"><img src="./imgs/dribbble-19.png" alt=""></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+        <script>
+
+            var $grid = $('.grid').imagesLoaded(function () {
+                $grid.isotope({
+                    itemSelector: '.grid-item',
+
+                    masonry: {
+                        columnWidth: 180,
+                        fitWidth: true,
+                    }
+
+                });
+            });
+            $('.menu li a').on('click', function (e) {
+                e.preventDefault()
+                $('.menu li a').removeClass('on')
+                $(this).addClass('on')
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+            });
+        </script>
+
+    </body>
+
+    </html>
+</body>
+
+</html>

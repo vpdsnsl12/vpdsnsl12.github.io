@@ -205,6 +205,7 @@ section#sec2 .article2 ul li img {
 section#sec2 .article3 {
   justify-content: center;
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 section#sec2 .article3 .left {
   width: 250px;
@@ -230,27 +231,88 @@ section#sec2 .article3 .left .tab-list li a {
   padding: 5px 10px;
   background-color: rgb(231, 231, 231);
 }
+section#sec2 .article3 .left .tab-list li a.on {
+  background-color: black;
+  color: white;
+}
 section#sec2 .article3 .right {
   width: 900px;
 }
-section#sec2 .article3 .right ul {
+section#sec2 .article3 .right div.grid {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-section#sec2 .article3 .right ul li {
+section#sec2 .article3 .right div.grid div {
   margin-bottom: 30px;
 }
-section#sec2 .article3 .right ul li .img {
+section#sec2 .article3 .right div.grid div img {
   width: 260px;
   height: 260px;
-  border: 1px solid #000;
 }
-section#sec2 .article3 .right ul li p {
+section#sec2 .article3 .right div.grid div p {
   line-height: 50px;
 }
-section#sec2 .article3 .right ul li span {
+section#sec2 .article3 .right div.grid div span {
   font-size: 13px;
 }
-section#sec2 .article3 .right ul li span b {
+section#sec2 .article3 .right div.grid div span b {
   color: #ff0000;
+}
+
+footer .footer-menu {
+  border-bottom: 1px solid #c7c7c7;
+  border-top: 1px solid #c7c7c7;
+  font-size: 15px;
+}
+footer .footer-menu ul {
+  padding: 10px 0;
+  margin: 0 300px;
+  width: 830px;
+  justify-content: space-between;
+}
+footer .footer-bottom {
+  width: 1300px;
+  margin: auto;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+footer .footer-bottom .f-text {
+  width: 600px;
+  margin: 0 20px;
+  color: #333333;
+  line-height: 22px;
+}
+footer .footer-bottom .f-text ul {
+  margin: 10px 0;
+}
+footer .footer-bottom .f-text ul li {
+  font-size: 14px;
+}
+footer .footer-bottom .f-text div {
+  font-size: 14px;
+}
+footer .footer-bottom .f-text div p {
+  margin: 5px 0;
+  font-size: 13px;
+}
+footer .footer-bottom .f-right {
+  padding: 0 30px;
+}
+footer .footer-bottom .f-right ul li {
+  margin-right: 10px;
+}
+footer .footer-bottom .f-right ul li img {
+  width: 40px;
+}
+footer .footer-bottom .f-right div {
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+footer .footer-bottom .f-right div p {
+  padding: 10px;
+}
+footer .footer-bottom .f-right div .cscenter b {
+  color: #a5a5a5;
+  margin-right: 5px;
 }

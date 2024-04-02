@@ -239,6 +239,7 @@ section {
         .article2 {
             padding: 60px;
 
+
             ul {
                 gap: 30px;
                 justify-content: center;
@@ -263,6 +264,7 @@ section {
         .article3 {
             justify-content: center;
             padding-top: 80px;
+            padding-bottom: 80px;
 
             .left {
                 width: 250px;
@@ -291,26 +293,32 @@ section {
                             border-radius: 30px;
                             padding: 5px 10px;
                             background-color: rgb(231, 231, 231);
+
+                            &.on {
+                                background-color: black;
+                                color: white;
+                            }
                         }
+
                     }
                 }
+
             }
 
             .right {
                 width: 900px;
 
-                ul {
+                div.grid {
                     flex-wrap: wrap;
                     justify-content: space-between;
 
 
-                    li {
+                    div {
                         margin-bottom: 30px;
 
-                        .img {
+                        img {
                             width: 260px;
                             height: 260px;
-                            border: 1px solid #000;
                         }
 
                         p {
@@ -326,6 +334,73 @@ section {
                         }
 
                     }
+                }
+            }
+        }
+    }
+
+}
+
+footer {
+    .footer-menu {
+        border-bottom: 1px solid #c7c7c7;
+        border-top: 1px solid #c7c7c7;
+        font-size: 15px;
+
+        ul {
+            padding: 10px 0;
+            margin: 0 300px;
+            width: 830px;
+            justify-content: space-between;
+        }
+    }
+
+    .footer-bottom {
+        width: 1300px;
+        margin: auto;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        .f-text {
+            width: 600px;
+            margin: 0 20px;
+            color: #333333;
+            line-height: 22px;
+
+            ul {
+                margin: 10px 0;
+
+                li {
+                    font-size: 14px;
+                }
+            }
+
+            div {
+                font-size: 14px;
+
+                p {
+                    margin: 5px 0;
+                    font-size: 13px;
+                }
+            }
+        }
+        .f-right{ padding: 0 30px;
+            ul{
+                li{margin-right: 10px;
+                    img{
+                        width: 40px;
+                    }
+                }
+            }
+            div{background-color: #f1f1f1;
+                padding: 5px 10px;
+                font-size: 13px;
+                p{
+                    padding:10px;
+                }
+                .cscenter{
+                    b{color: #a5a5a5;
+                    margin-right: 5px;}
                 }
             }
         }
