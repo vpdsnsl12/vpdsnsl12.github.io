@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>store list</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d35b097dab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="flex list-header">
+      <h1>
+        <a href="#"><img src="./img/logo (2).png" alt="" /></a>
+      </h1>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #bbbbbb"></i
+        ><input class="search" type="text" placeholder="음식, 매장명검색" />
+      </div>
+      <div class="menu-bar">
+        <a href="#"><i class="fa-solid fa-bars fa-2xl"></i></a>
+      </div>
+    </header>
+    <div class="menu-bar-list">
+      <ul>
+        <li><b>양재준</b>님</li>
+        <li><a href="#">마이페이지</a></li>
+        <li><a href="#">예약현황</a></li>
+      </ul>
+    </div>
+    <section class="store-list">
+      <ul class="flex">
+        <li>
+          <a href="#"
+            ><img src="./img/가게-구구당.jpg" alt="" />
+            <div>
+              <h3>구구당</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.3 (330)
+              </p>
+              <span>퓨전요리 / 강남구 역삼동</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/카메참치.jpg" alt="" />
+            <div>
+              <h3>카메참치</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.5 (135)
+              </p>
+              <span>생선 회 / 강남구 봉은사로</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/전복삼계탕.jpg" alt="" />
+            <div>
+              <h3>진전복 삼계탕 본점</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.3 (540)
+              </p>
+              <span>백숙, 삼계탕 / 강남구 선릉로</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/중화객잔로.jpg" alt="" />
+            <div>
+              <h3>중화객잔수 압구정점</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.7 (330)
+              </p>
+              <span>중식당 / 강남구 논현로</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/브런치.jpg" alt="" />
+            <div>
+              <h3>플르서라구뜨</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.3 (220)
+              </p>
+              <span>브런치 / 강남구 압구정로</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/램브라튼.jpg" alt="" />
+            <div>
+              <h3>램브라튼</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.5 (310)
+              </p>
+              <span>육류, 고기요리 / 강남구 압구정로</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/양꼬치.jpg" alt="" />
+            <div>
+              <h3>이가네 양꼬치 선릉역직영점</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.3 (630)
+              </p>
+              <span>양꼬치 / 강남구 역삼동</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/가게-구구당.jpg" alt="" />
+            <div>
+              <h3>구구당</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.3 (330)
+              </p>
+              <span>퓨전요리 / 강남구 역삼동</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/카메참치.jpg" alt="" />
+            <div>
+              <h3>카메참치</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.5 (135)
+              </p>
+              <span>생선 회 / 강남구 봉은사로</span>
+            </div></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/브런치.jpg" alt="" />
+            <div>
+              <h3>플르서라구뜨</h3>
+              <p>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>4.3 (220)
+              </p>
+              <span>브런치 / 강남구 압구정로</span>
+            </div></a
+          >
+        </li>
+      </ul>
+    </section>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+      $('.menu-bar').click(function(){
+        $('.menu-bar-list').toggle()
+      })
+    </script>
+  </body>
+</html>
