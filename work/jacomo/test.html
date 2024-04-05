@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{margin: 0;padding: 0;}
-        li{list-style: none;}
-        a{text-decoration: none;color: inheritF;}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li {
+            list-style: none;
+        }
+
         .scene {
             width: 400px;
             margin: auto;
@@ -41,7 +52,7 @@
 
         button.on {
             background: royalblue;
-            color: white;
+            color: #fff;
         }
     </style>
 </head>
@@ -49,7 +60,7 @@
 <body>
     <div class="scene">
         <figure>
-            <video src=""></video>
+            <video src="./img/영상1.mp4" width="400" loop></video>
         </figure>
         <ul class="control flex">
             <li><button class="unmute">Sound On</button></li>
@@ -58,7 +69,7 @@
             <li><button class="pause">PAUSE</button></li>
             <li><button class="on stop">STOP</button></li>
             <li><button class="rate1">1배속</button></li>
-            <li><button class="rete2">2배속</button></li>
+            <li><button class="rate2">2배속</button></li>
             <li><button class="rew">&lt&lt</button></li>
             <li><button class="fwd">&gt&gt</button></li>
             <li><button class="size100">100%</button></li>
@@ -66,32 +77,41 @@
             <li><button class="size50">50%</button></li>
         </ul>
     </div>
-    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        const video = $('.video').get(0)
+        const video = $('video').get(0)
 
         $('.play').click(function () {
-            buttonActive($(this))//클릭한 버튼 값을 넣어 함수 호출
+            buttonActive($(this))//클릭한 [버튼 값]을 넣어 함수 호출
             video.play()
         })
-
         $('.stop').click(function () {
             buttonActive($(this))
             video.pause()
             video.currentTime = 0
         })
+        $('.pause').click(function () {
+            buttonActive($(this))
+            video.pause()
 
+        })
         $('.rate1').click(function () {
             buttonActive($(this))
             video.playbackRate = 1
         })
+
         $('.rate2').click(function () {
             buttonActive($(this))
             video.playbackRate = 2
         })
+
         $('.rew').click(function () {
             buttonActive($(this))
             video.currentTime -= 2
+        })
+        $('.fwd').click(function () {
+            buttonActive($(this))
+            video.currentTime += 2
         })
         $('.size100').click(function () {
             buttonActive($(this))
@@ -99,24 +119,22 @@
         })
         $('.size200').click(function () {
             buttonActive($(this))
-            buttonActive($(this))
             video.width = 800
         })
         $('.size50').click(function () {
             buttonActive($(this))
             video.width = 200
         })
+
         $('.mute').click(function () {
-            buttonActive($(this))
             video.muted = true
         })
         $('.unmute').click(function () {
-            buttonActive($(this))
             video.muted = false
         })
-        // 버튼 10개 모두 비활성화 활성화를 반복해야 하기때문에
-        function buttomActive(target) {//호출할때 넣은 this값을 변수에 저장
-            $('.buttom').removeClass('on')
+        //버튼 10개모두 비활성화 활성화를 반복해야 하기때문에
+        function buttonActive(target) {//[호출할때 넣은 this값을 변수에저장]
+            $('button').removeClass('on')
             $(target).addClass('on')
         }
     </script>
