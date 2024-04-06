@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reserve-check</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d35b097dab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="reserve-check">
+    <h1><img src="./img/logo (2).png" alt="" /></h1>
+    <p></p>
+    <div id="verificationForm">
+      <h2>예약확인을 위해 휴대폰 번호를 입력해주세요</h2>
+      <input type="text" id="phoneNumber" />
+      <div id="keypad">
+        <button onclick="addToPhoneNumber('1')">1</button>
+        <button onclick="addToPhoneNumber('2')">2</button>
+        <button onclick="addToPhoneNumber('3')">3</button>
+        <button onclick="addToPhoneNumber('4')">4</button>
+        <button onclick="addToPhoneNumber('5')">5</button
+        ><button onclick="deleteLastDigit()">
+          <i class="fa-solid fa-arrow-left"></i></button
+        ><br />
+        <button onclick="addToPhoneNumber('6')">6</button>
+        <button onclick="addToPhoneNumber('7')">7</button>
+        <button onclick="addToPhoneNumber('8')">8</button>
+        <button onclick="addToPhoneNumber('9')">9</button>
+        <button onclick="addToPhoneNumber('0')">0</button
+        ><button onclick="verifyPhoneNumber()">
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </div>
+    </div>
+    <ul class="check-text">
+      <li>확인 되었습니다.</li>
+      <li>다시 입력해주세요</li>
+    </ul>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+      function addToPhoneNumber(digit) {
+        var phoneNumberInput = document.getElementById("phoneNumber");
+        phoneNumberInput.value += digit;
+      }
+
+      function deleteLastDigit() {
+        var phoneNumberInput = document.getElementById("phoneNumber");
+        var currentPhoneNumber = phoneNumberInput.value;
+        phoneNumberInput.value = currentPhoneNumber.slice(0, -1);
+      }
+    </script>
+  </body>
+</html>

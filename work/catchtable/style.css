@@ -17,6 +17,7 @@ html {
   border: 1px solid #b3b3b3;
   font-family: "Pretendard-Regular";
   position: relative;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -50,7 +51,7 @@ h1 img {
   margin-right: 10px;
 }
 .search-box {
-  width: 250px;
+  width: 500px;
   background-color: rgb(232, 232, 232);
   border-radius: 30px;
   height: 30px;
@@ -68,7 +69,7 @@ h1 img {
 /* slide */
 .slide-content {
   width: 100%;
-  height: 300px;
+  height: 330px;
   position: relative;
   overflow: hidden;
 }
@@ -82,7 +83,6 @@ h1 img {
 }
 .slide img {
   width: 100%;
-  height: 280px;
   border-radius: 10px;
 }
 /* dot */
@@ -616,7 +616,8 @@ button.review-submit {
 button.review-submit:hover {
   background-color: rgb(44, 100, 255);
 }
-button.link {
+button.link,
+button.link2 {
   margin-top: 20px;
   width: 150px;
   position: relative;
@@ -630,7 +631,8 @@ button.link {
   border-radius: 30px;
   cursor: pointer;
 }
-button.link:hover {
+button.link:hover,
+button.link2:hover {
   background-color: rgb(0, 0, 0);
 }
 .reservation-box {
@@ -742,6 +744,7 @@ button.link:hover {
   margin-bottom: 60px;
   width: 400px;
   margin-left: 80px;
+  padding: 5px;
 }
 .store-list ul li a {
   display: flex;
@@ -787,4 +790,301 @@ button.link:hover {
 }
 .menu-bar-list ul li a:hover {
   color: black;
+}
+.list-click {
+  border: 1px dashed #929292;
+  position: relative;
+}
+.list-click::after {
+  content: "click";
+  text-align: right;
+  display: block;
+  color: #929292;
+}
+/* mypage */
+.mypage header {
+  padding: 20px;
+}
+.mypage header p {
+  font-size: 25px;
+}
+.mypage header p i {
+  padding-left: 10px;
+}
+.mypage section {
+  padding: 30px;
+}
+.mypage ul {
+  padding: 20px 0;
+  position: relative;
+}
+.mypage ul.bdbottom::after {
+  content: "";
+  width: 180px;
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid #e3e3e3;
+}
+.mypage ul li {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.mypage ul li {
+  font-size: 25px;
+}
+.mypage ul li i {
+  margin-right: 15px;
+  font-size: 25px;
+}
+section.mypage-memo {
+  border-left: 1px solid #e7e7e7;
+  padding: 0;
+  position: absolute;
+  width: 900px;
+  height: 670px;
+  background-color: #f4f4f4;
+  right: 0;
+  top: 60px;
+}
+
+/* 내 리뷰 */
+.mypage-memo-box {
+  display: none;
+}
+.mypage-memo-box.on {
+  display: block;
+}
+.mypage-memo-box > p {
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 15px;
+  color: #4d4d4d;
+}
+.my-review span {
+  position: absolute;
+  top: 40%;
+  right: 42%;
+  color: #4d4d4d;
+}
+ul.reserve-list {
+  padding: 10px 0 0 0;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+.my-reserve ul > li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #e3e3e3;
+  font-size: 18px;
+}
+.my-reserve > li:nth-child(4) {
+  border-right: none;
+}
+.my-reserve ul li ul li {
+  margin-bottom: 5px;
+  color: #8b8b8b;
+  font-size: 16px;
+}
+.my-reserve li a img {
+  width: 150px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.my-reserve li a p {
+  font-size: 18px;
+  color: #4d4d4d;
+  padding-top: 5px;
+  font-weight: bold;
+}
+.img-filter img {
+  filter: grayscale(70%);
+}
+.reserve-list li ul button {
+  margin-left: -70px;
+  margin-top: 5px;
+}
+.review-box .add-list {
+  margin-bottom: 5px;
+  border-bottom: none;
+}
+.review-box .text-review {
+  margin-top: -40px;
+}
+.dis-no {
+  display: none;
+}
+button.reserve-ok,
+button.cancel,
+button.reserve-no {
+  width: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+button.reserve-ok,
+button.cancel {
+  background-color: rgb(44, 100, 255);
+}
+button.reserve-no {
+  background-color: rgb(215, 55, 55);
+}
+button.reserve-ok,
+button.reserve-no,
+button.cancel {
+  margin-top: 20px;
+  width: 150px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+button.reserve-ok:hover,
+button.reserve-no:hover,
+button.cancel:hover {
+  background-color: rgb(0, 0, 0);
+}
+.de-co {
+  flex-direction: column;
+  margin-left: 150px;
+}
+.my-review div img {
+  width: 150px;
+  height: 130px;
+  border-radius: 10px;
+}
+.my-review > div {
+  padding: 10px;
+  background-color: white;
+}
+.my-review .star {
+  text-align: center;
+}
+.my-review > div ul li {
+  padding-left: 10px;
+  font-size: 18px;
+}
+.my-review > div ul li i {
+  font-size: 18px;
+}
+.my-review > div ul li.text {
+  font-size: 16px;
+  color: #595959;
+}
+.test-review {
+  display: none;
+}
+.po-as {
+  position: absolute;
+  z-index: 10;
+  top: 185px;
+  right: 30px;
+}
+.partner-page-memo .test-review {
+  display: block;
+}
+.cancel-list {
+  margin-top: 20px;
+  border-top: 1px solid #e3e3e3;
+}
+.test-review-cancel {
+  display: none;
+}
+.dis-bl {
+  display: none;
+}
+.my-store img {
+  width: 240px;
+  height: 200px;
+  border-radius: 30px;
+  padding: 20px 15px 15px;
+}
+.my-store ul li {
+  width: 240px;
+  height: 250px;
+  border: 1px solid #e5e5e5;
+  margin: 20px 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+}
+.my-store ul li a p {
+  color: #000;
+  font-size: 18px;
+  padding-top: 10px;
+}
+.my-store ul li.add-store-list a {
+  display: block;
+  width: 240px;
+  height: 250px;
+  position: relative;
+}
+.my-store ul li.add-store-list a::after {
+  content: '+매장추가';
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+}
+/* 예약 체크 */
+.reserve-check{padding-top:100px;}
+.reserve-check h1{
+  width: 500px;
+  margin: auto;
+}
+.reserve-check h1 img{
+  width: 100%;
+  margin: 10px 0;
+}
+.reserve-check div{
+  width: 500px;
+  margin: 20px 0;
+}
+
+.reserve-check h2{
+  text-align: center;
+  color: #595959;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+#verificationForm {
+  width: 500px;
+  margin: 0 auto;
+  padding-left: 15px;
+}
+.reserve-check input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+.reserve-check button {
+  padding: 15px 25px;
+  background-color: #ffffff;
+  color: #ff004c;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  font-size: 30px;
+}
+.reserve-check button:hover{
+  background-color: #ff004c;
+  color: white;
+}
+.check-text{
+  display: none;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  color: #494949;
 }

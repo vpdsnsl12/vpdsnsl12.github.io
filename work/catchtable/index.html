@@ -20,7 +20,7 @@
         ><input class="search" type="text" placeholder="지역,음식,매장명검색" />
       </div>
       <div class="login">
-        <a href="#"
+        <a href="./login-page.html"
           ><i class="fa-solid fa-user fa-xl" style="color: #d1d1d1"></i
         ></a>
       </div>
@@ -29,7 +29,7 @@
       <div class="dot">
         <a href="#"
           ><i class="fa-solid fa-location-dot fa-xl" style="color: #a1a1a1"></i>
-          <span>서울</span
+          <span class="seoul">서울</span
           ><i class="fa-solid fa-chevron-down" style="color: #a1a1a1"></i
         ></a>
         <div class="dot-box">
@@ -44,22 +44,21 @@
             <li><a href="#">종로 / 중구</a></li>
           </ul>
         </div>
-      </div>
       <div class="slide-content">
         <div class="slide-wrap flex">
           <div class="slide">
             <a href="#"
-              ><img src="./img/KakaoTalk_20240330_195420340_16.jpg" alt=""
+              ><img src="./img/Frame 20.png" alt=""
             /></a>
           </div>
           <div class="slide">
             <a href="#"
-              ><img src="./img/쿠히치.jpg" alt=""
+              ><img src="./img/Frame 21.png" alt=""
             /></a>
           </div>
           <div class="slide">
             <a href="#"
-              ><img src="./img/미안.jpg" alt=""
+              ><img src="./img/Frame 22.png" alt=""
             /></a>
           </div>
         </div>
@@ -67,25 +66,25 @@
       <div class="icons">
         <ul class="flex">
           <li>
-            <a href="#"
+            <a href="./list.html"
               ><img src="./img/🦆 icon _watch_.png" alt="" />
               <p>대기</p></a
             >
           </li>
           <li>
-            <a href="#"
+            <a href="./list.html"
               ><img src="./img/🦆 icon _heart target_.png" alt="" />
               <p>주변맛집</p></a
             >
           </li>
           <li>
-            <a href="#"
+            <a href="./list.html"
               ><img src="./img/🦆 icon _shopping bag_.png" alt="" />
               <p>포장</p></a
             >
           </li>
           <li>
-            <a href="#"
+            <a href="./list.html"
               ><img src="./img/🦆 icon _thumb up_.png" alt="" />
               <p></p>
               TOP 10</a
@@ -106,7 +105,7 @@
       }, 3000);
 
       $(document).ready(function () {
-        $(".dot").click(function () {
+        $(".seoul").click(function () {
           $(".dot-box").toggle();
         });
       });

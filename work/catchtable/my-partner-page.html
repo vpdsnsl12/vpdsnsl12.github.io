@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-partner-page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d35b097dab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="mypage partner-page-list">
+    <header class="flex">
+      <p>
+        <b>관리자 님</b
+        ><i class="fa-solid fa-angle-right" style="color: grey"></i>
+      </p>
+      <p><i class="fa-solid fa-house"></i></p>
+    </header>
+    <section>
+      <ul class="bdbottom my-page-list">
+        <li>
+          <a href="#my-review"><i class="fa-regular fa-comment"></i>매장리뷰</a>
+        </li>
+        <li>
+          <a href="#my-reserve"
+            ><i class="fa-regular fa-calendar"></i>예약현황</a
+          >
+        </li>
+        <li>
+          <a href="#my-store"><i class="fa-solid fa-store"></i>매장관리</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#"><i class="fa-solid fa-circle-exclamation"></i>공지사항</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-phone"></i>매장관리문의</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-list"></i>약관 및 정책</a>
+        </li>
+      </ul>
+    </section>
+    <section class="mypage-memo partner-page-memo">
+      <div class="my-review mypage-memo-box" id="my-review">
+        <p>매장 리뷰 관리</p>
+        <div class="test-review">
+          <div class="flex">
+            <div>
+              <img src="./img/숙이네.jpg" alt="" />
+              <p class="star">
+                <i class="fa-solid fa-star star" style="color: #ffc800"></i
+                ><i class="fa-solid fa-star star"></i
+                ><i class="fa-solid fa-star star"></i
+                ><i class="fa-solid fa-star star"></i
+                ><i class="fa-solid fa-star star"></i>
+              </p>
+            </div>
+            <ul>
+              <li><p>숙이네 조개전골 서울대입구점</p></li>
+              <li class="text">2024.04.01(월)</li>
+              <li class="text">
+                <p>존나 맛없다. 여기는 다시 안갈듯.</p>
+              </li>
+            </ul>
+            <div class="po-as">
+              <ul class="flex">
+                <li>
+                  <a href="#"><i class="fa-solid fa-trash"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="cancel-list">삭제된 내역</p>
+        <div class="test-review-cancel">
+          <div class="flex">
+            <div>
+              <img src="./img/숙이네.jpg" alt="" />
+              <p class="star">
+                <i class="fa-solid fa-star star" style="color: #ffc800"></i
+                ><i class="fa-solid fa-star star"></i
+                ><i class="fa-solid fa-star star"></i
+                ><i class="fa-solid fa-star star"></i
+                ><i class="fa-solid fa-star star"></i>
+              </p>
+            </div>
+            <ul>
+              <li><p>숙이네 조개전골 서울대입구점</p></li>
+              <li class="text">2024.04.01(월)</li>
+              <li class="text">
+                <p>존나 맛없다. 여기는 다시 안갈듯.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="my-reserve mypage-memo-box" id="my-reserve">
+        <p>예약 현황 관리</p>
+        <select name="" id="">
+          <option value="">전체보기</option>
+          <option value="">오늘</option>
+          <option value="">최근 7일</option>
+          <option value="">최근 15일</option>
+          <option value="">최근 30일</option>
+        </select>
+        <ul class="flex reserve-list">
+          <li>
+            <u>예약취소</u>
+            <ul class="dis-no">
+              <li>
+                <a href="./store-detail.html"
+                  ><img src="./img/숙이네.jpg" alt="" />
+                  <p>숙이네 조개전골</p></a
+                >
+              </li>
+              <li>2024.04.07(월)</li>
+              <li>오후 5시 30분 2명</li>
+            </ul>
+            <ul class="no1">
+              <li>없음</li>
+            </ul>
+          </li>
+          <li>
+            <u>예약신청중</u>
+            <ul class="dis-no2 test-reserve2">
+              <li>
+                <a href="./store-detail.html"
+                  ><img src="./img/숙이네.jpg" alt="" />
+                  <p>숙이네 조개전골</p></a
+                >
+              </li>
+              <li>2024.04.07(월)</li>
+              <li>오후 5시 30분 2명</li>
+              <div class="flex de-co">
+                <button type="button" class="reserve-ok">예약승락</button>
+                <button type="button" class="reserve-no">예약거절</button>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <u>예약확정</u>
+            <ul class="dis-bl">
+              <li>
+                <a href="./store-detail.html"
+                  ><img src="./img/숙이네.jpg" alt="" />
+                  <p>숙이네 조개전골</p></a
+                >
+              </li>
+              <li>2024.04.07(월)</li>
+              <li>오후 5시 30분 2명</li>
+            </ul>
+            <ul class="no2">
+              <li>없음</li>
+            </ul>
+          </li>
+          <li>
+            <u>방문완료</u>
+            <ul>
+              <li class="img-filter">
+                <a href="./store-detail.html"
+                  ><img src="./img/숙이네.jpg" alt="" />
+                  <p>숙이네 조개전골</p></a
+                >
+              </li>
+              <li>2024.04.01(월)</li>
+              <li>오후 3시 30분 2명</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="my-store mypage-memo-box on" id="my-store">
+        <p>매장 관리</p>
+        <ul class="flex">
+          <li>
+            <a href="#"
+              ><img src="./img/숙이네.jpg" alt="" />
+              <p>숙이네 조개전골 서울대입구점</p></a
+            >
+          </li>
+          <li class="add-store-list"><a href="./store.html"></a></li>
+          <li class="add-store-list"><a href="./store.html"></a></li>
+        </ul>
+      </div>
+    </section>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+      $(".my-page-list li a").click(function () {
+        $("my-page-list li a").removeClass("on");
+        $(this).addClass("on");
+        let href = $(this).attr("href");
+        $(".mypage-memo-box").removeClass("on");
+        $(href).addClass("on");
+      });
+      $(".po-as").click(function () {
+        $(".test-review").hide();
+        $(".test-review-cancel").show();
+      });
+      $(".reserve-ok").click(function () {
+        $(".test-reserve2").hide();
+        $(".no1").hide();
+        $(".dis-bl").show();
+      });
+      $(".reserve-no").click(function () {
+        $(".test-reserve2").hide();
+        $(".no2").hide();
+        $(".dis-no").show();
+      });
+    </script>
+  </body>
+</html>
