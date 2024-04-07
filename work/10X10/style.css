@@ -61,20 +61,22 @@ header .header-bottom nav .menu li input[type=text] {
 }
 header .cartegori {
   height: 45px;
-  margin: 0 60px;
-  width: 100%;
+  padding: 0 60px;
+  margin: auto;
+  width: 1300px;
   display: flex;
   align-items: center;
-  justify-content: sb;
 }
 header .cartegori ul {
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 15px;
   margin: 0 10px;
   border-right: 1px solid #d3d3d3;
 }
+header .cartegori ul:nth-child(4) {
+  border: none;
+}
 header .cartegori ul li {
-  padding-right: 15px;
+  padding-right: 20px;
 }
 
 section#sec1 {
@@ -258,6 +260,33 @@ section#sec2 .article3 .right div.grid div span {
 section#sec2 .article3 .right div.grid div span b {
   color: #ff0000;
 }
+section .rook-book {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 150px;
+}
+section .rook-book ul {
+  position: absolute;
+}
+section .rook-book span {
+  position: absolute;
+  z-index: 999;
+  width: 60px;
+  top: 45%;
+}
+section .rook-book span.next {
+  right: 30px;
+}
+section .rook-book span.prev {
+  transform: rotate(180deg);
+  left: 30px;
+  top: 40%;
+}
+section .rook-book span img {
+  width: 100%;
+  height: 100%;
+}
 
 footer .footer-menu {
   border-bottom: 1px solid #c7c7c7;
@@ -315,4 +344,4 @@ footer .footer-bottom .f-right div p {
 footer .footer-bottom .f-right div .cscenter b {
   color: #a5a5a5;
   margin-right: 5px;
-}
+}/*# sourceMappingURL=style.css.map */
