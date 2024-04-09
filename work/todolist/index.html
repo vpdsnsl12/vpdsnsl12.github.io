@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일목록</title>
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        input,
+        #add-text[type='text'] {
+            padding: 5px 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>나의 할일</h1>
+        <input type="text" id="add-text">
+        <button id="add-button">추가</button>
+        <div class="container">
+            <p><b>할일목록</b></p>
+            <ul id="memo-list">
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="../ace/jquery-3.7.1.min.js"></script>
+    <script>
+        $('#add-button').click(function () {
+            const text = $('#add-text').val()
+            if (text) {
+                addTodo(text)
+                $('#add-text').val('').focus()
+            }
+        })
+        function addTodo(text) {
+            const $li = $('<li>').addClass('flex')
+            const $p = $('<p>').text(text)
+
+            const $div = $('<div>').addClass('flex')
+            const $deleteBtn = $('<button>').text('삭제').addClass('delete-btn')
+            const $editBtn = $('<button>').text('수정').addClass('edit-btn')
+            $div.append($editBtn, $deleteBtn)
+            $li.append($p, $div)
+            $('#memo-list').append($li)
+
+            $deleteBtn.click(function () {
+                $li.remove()
+            })
+
+            $editBtn.click(function () {
+                //변경할 값을 입력할 수 있는 인풋을 하나 만들겠다.
+                const $editInput = $('<input>').attr('type', 'text').addClass('eidt-input').val($p.text())
+                //값을 저장할 수 있도록 하는 버튼을 하나 생성하겠다.
+                const $saveBtn = $('<button>').text('저장').addClass('save-btn')
+                //$p, $deleteBtn, $editBtn사라져
+                $p.hide()
+                $deleteBtn.hide()
+                $editBtn.hide()
+                //$div여기에 새로운 값과 저장버튼 추가
+                $div.append($editInput, $saveBtn)
+
+                $saveBtn.click(function () {
+                const newText = $editInput.val()
+                if (newText) {
+                    $p.text(newText).show()
+                    $deleteBtn.show()
+                    $editBtn.show()
+                    $editInput.remove()
+                    $saveBtn.remove()
+                }
+            })
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .modal {
+            background: skyblue;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+            display: none;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal" id="popup">
+        <h2 id="title">알림창</h2>
+        <button id="popup-close">닫기</button>
+    </div>
+
+    <button id="notic-show">공지글보기</button>
+    <button id="news-show">뉴스보기</button>
+
+    <script src="../ace/jquery-3.7.1.min.js"></script>
+    <script>
+        function modal(title) {
+            document.getElementById('title').innerHTML = title
+            document.getElementById('popup').style.display = 'block'
+        }
+        document.querySelector('#notic-show').addEventListener('click', function () {
+            modal('공지글보기')
+        })
+        document.querySelector('#news-show').addEventListener('click', function () {
+            modal('뉴스보기')
+        })
+        document.querySelector('#popup-close').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>
