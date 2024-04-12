@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vanila</title>
+</head>
+<style>
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .container {
+        width: 300px;
+        margin: 50px auto;
+    }
+
+    button {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    input,
+    #add-text[type='text'] {
+        padding: 5px 0;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>나의 할일</h1>
+        <input type="text" id="add-text">
+        <button id="add-button">추가</button>
+        <div class="container">
+            <p><b>할일목록</b></p>
+            <ul id="memo-list">
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../ace/jquery-3.7.1.min.js"></script>
+<script>
+    const addButton = document.getElementById('add-button')
+    const addText = document.getElementById('add-text')
+    const memoList = document.getElementById('memo-list')
+    addText.focus()
+    //메모저장
+    function saveMemo(text) {
+        const memos = JSON.parse(localStorage.getItem('memos') || '[]')
+        memos.push(text)
+        localStorage.setItem('memos', JSON.stringify(memos))
+    }
+    //메모삭제
+    function removeMemo(text) {
+        const memos = JSON.parse(localStorage.getItem('memos') || '[]')
+        localStorage.setItem('memos', JSON.stringify(memos.filter(memo => memo !== text)))
+
+    }
+    //메모수정
+    function updateMemo(oldText, newText) {
+
+    }
+    //로컬스트리지에 있는 데이타를 읽어오기
+    function loadMemos() {
+        const memos = JSON.parse(localStorage.getItem('memos') || '[]')
+        memos.forEach(function (text) {
+            addMemoDom(text)
+        })
+    }
+
+    addButton.addEventListener('click', function () {
+        const text = addText.value.trim()
+        if (text) {
+            addMemoDom(text)
+            saveMemo(text)
+            addText.value = ''
+        }
+    })
+    function addMemoDom(text) {
+        const li = document.createElement('li')
+        li.classList.add('flex')
+        const p = document.createElement('p')
+
+        const div = document.createElement('div')
+        const deleteBtn = document.createElement('button')
+        const editBtn = document.createElement('button')
+
+        p.textContent = text
+        deleteBtn.textContent = '삭제'
+        editBtn.textContent = '수정'
+
+        li.appendChild(p)
+        div.appendChild(editBtn)
+        div.appendChild(deleteBtn)
+        li.appendChild(div)
+        memoList.appendChild(li)
+
+        deleteBtn.addEventListener('click', function () {
+            removeMemo(p.textContent)
+            li.parentNode.removeChild(li)
+        })
+
+        editBtn.addEventListener('click', function () {
+            const editInput = document.createElement('input')
+            editInput.type = 'text'
+            editInput.value = p.textContent
+            const saveBtn = document.createElement('button')
+            saveBtn.textContent = '저장'
+
+            li.replaceChild(editInput, p)
+            div.replaceChild(saveBtn, editBtn)
+
+            saveBtn.addEventListener('click', function () {
+                updateMemo(p.textContent, editInput.value)
+                editInput.replaceWith(p)
+                p.textContent=editInput.value
+                saveBtn.replaceWith(editBtn)
+            })
+        })
+
+    }
+
+    loadMemos();
+</script>
+
+</html>

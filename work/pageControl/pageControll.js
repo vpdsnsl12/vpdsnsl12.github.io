@@ -31,25 +31,44 @@ links.forEach(link => {
     ScrollTrigger.create({
         trigger: elem,
         // 스크롤할때 특징 section이 화면 중앙에 위치하면
-        start:"top center",
-        end:"bottom center",
+        start: "top center",
+        end: "bottom center",
         // 해당 Nav의 링크를 활성화한다
-        onToggle:self=>setActive(link)
+        onToggle: self => setActive(link)
     })
-    let linkST=ScrollTrigger.create({
-        trigger:elem,
+    let linkST = ScrollTrigger.create({
+        trigger: elem,
         // 사용자가 링크를 클릭하면 해당 section상단으로 스크롤을 이동해라
-        start:"top top",
+        start: "top top",
     })
-    link.addEventListener('click',e=>{
+    link.addEventListener('click', e => {
         e.preventDefault()
         // 동시에 여러 스크롤 애니메이션이 발생하면 애니메이션 간의 충동을 방지하는 속성
-        gsap.to(window,{duration:1,scrollTo:linkST.start,overwrite:"auto"})
+        gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" })
     })
 })
 
-function setActive(link){
-    links.forEach(el=>el.classList.remove('on'))
+//Nav 아래로 내려가면 nav 숨기기---------
+const showNav = gsap.from("nav", {
+    yPercent: -200,
+    paused: true,
+    duration: 0.2
+}).progress(1)
+ScrollTrigger.create({
+    start: "top top",
+    end: 9999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showNav.play() : showNav.reverse()
+    }
+})
+
+
+
+
+
+//버튼 활성화 비활성화
+function setActive(link) {
+    links.forEach(el => el.classList.remove('on'))
     link.classList.add('on')
 }
 
@@ -58,12 +77,12 @@ function setActive(link){
 const lenis = new Lenis()
 
 lenis.on('scroll', (e) => {
-  console.log(e)
+    console.log(e)
 })
 
 function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
+    lenis.raf(time)
+    requestAnimationFrame(raf)
 }
 
 requestAnimationFrame(raf)
