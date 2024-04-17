@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-step</title>
+    <style>
+        .avatar {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .avatar .img {
+            width: 150px;
+            height: 270px;
+            border: 1px solid #000;
+            background-image: url(./imgs/KakaoTalk_20240417_094739471.png);
+            animation:avatarAni 1.5s steps(15) infinite;
+        }
+
+        @keyframes avatarAni {
+            100% {
+                background-position-x: -2250px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="avatar">
+        <div class="img"></div>
+    </div>
+</body>
+
+</html>
