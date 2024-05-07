@@ -1,0 +1,409 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard-Regular';
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* -------------- */
+
+header {
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'JalnanGothic';
+    font-size: 4vw;
+    margin-top: 4vw;
+    color: green;
+    letter-spacing: .3vw;
+}
+
+header>img {
+    width: 50vw;
+    margin-top: -5vw;
+}
+
+header ul li img {
+    position: absolute;
+    width: 5vw;
+    top: 8vw;
+}
+
+header ul li:nth-child(1) img {
+    right: 42vw;
+}
+
+header ul li:nth-child(2) img {
+    right: 37vw;
+    top: 14vw;
+}
+
+header ul li:nth-child(3) img {
+    right: 34vw;
+    top: 20vw;
+}
+
+header ul li:nth-child(4) img {
+    right: 35vw;
+    top: 27vw;
+    width: 6vw;
+}
+
+header p {
+    color: rgb(159, 159, 159);
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+header p b {
+    color: rgb(87, 87, 87);
+}
+
+/* ------------------ */
+section {
+    margin: 10vw 20vw 10vw;
+    position: relative;
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+    font-family: 'JalnanGothic';
+    font-weight: 300;
+}
+
+section h2 b {
+    background-color: rgb(123, 191, 123);
+    border-radius: 99px;
+    padding: 1vw;
+    margin-right: 1vw;
+    color: white;
+}
+
+#sect1 ul,
+#sect3 ul {
+    margin-top: 3vw;
+}
+
+#sect1 ul li,
+#sect3 ul li {
+    background-color: rgb(232, 232, 232);
+    border-radius: 2vw;
+    width: 50vw;
+    padding: 1vw 2vw;
+    margin-bottom: 1vw;
+    font-size: 1.2vw;
+}
+
+/* ---------------------- */
+#sect2 h3 {
+    position: relative;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+}
+
+#sect2 h3 b {
+    border-radius: 1.2vw;
+    padding: .4vw;
+    color: white;
+    background-color: rgb(77, 160, 77);
+}
+
+#sect2>ul {
+    margin-top: -10vw;
+}
+
+#sect2>ul>li {
+    position: absolute;
+    font-size: 2vw;
+    background-color: white;
+}
+
+#sect2>ul>li ul {
+    color: gray;
+    position: absolute;
+    width: 8vw;
+    font-size: 1.5vw;
+    line-height: 3vw;
+}
+
+#sect2>ul>li:nth-child(1) {
+    left: 18vw;
+    top: 18vw;
+    border: 1px solid #000;
+    padding: .5vw;
+    border-radius: 1vw;
+
+}
+
+#sect2>ul>li:nth-child(1)::after {
+    content: '';
+    width: 7vw;
+    height: .1vw;
+    background-color: black;
+    position: absolute;
+    transform: rotate(35deg);
+    top: 5vw;
+    left: 3.7vw;
+    z-index: -1;
+}
+
+#sect2>ul>li:nth-child(1) ul {
+    right: 6vw;
+    top: -4vw;
+    text-align: right;
+}
+
+#sect2>ul>li:nth-child(2) {
+    left: 36vw;
+    top: 18vw;
+    border: 1px solid #000;
+    padding: .5vw;
+    border-radius: 1vw;
+}
+
+#sect2>ul>li:nth-child(2) ul {
+    right: -10vw;
+    top: -4vw;
+}
+
+#sect2>ul>li:nth-child(2)::after {
+    content: '';
+    width: 7vw;
+    height: .1vw;
+    background-color: black;
+    position: absolute;
+    transform: rotate(-35deg);
+    top: 4.7vw;
+    left: -5vw;
+    z-index: -1;
+}
+
+#sect2>ul>li:nth-child(3) {
+    left: 16vw;
+    top: 30vw;
+    border: 1px solid #000;
+    padding: .5vw;
+    border-radius: 1vw;
+}
+
+#sect2>ul>li:nth-child(3) ul {
+    right: 7vw;
+    top: 5vw;
+    text-align: right;
+}
+
+#sect2>ul>li:nth-child(3)::after {
+    content: '';
+    width: 7vw;
+    height: .1vw;
+    background-color: black;
+    position: absolute;
+    transform: rotate(-35deg);
+    top: -.5vw;
+    left: 4.1vw;
+    z-index: -1;
+}
+
+#sect2>ul>li:nth-child(4) {
+    left: 36vw;
+    top: 30vw;
+    border: 1px solid #000;
+    padding: .5vw;
+    border-radius: 1vw;
+}
+
+#sect2>ul>li:nth-child(4) ul {
+    right: -10vw;
+    top: 5vw;
+}
+
+#sect2>ul>li:nth-child(4)::after {
+    content: '';
+    width: 7vw;
+    height: .1vw;
+    background-color: black;
+    position: absolute;
+    transform: rotate(35deg);
+    top: -1vw;
+    left: -5vw;
+    z-index: -1;
+}
+
+/* --------------- */
+#sect3 ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sect3 ul li {
+    width: 20vw;
+    margin: 1vw 2vw 1.2vw 0;
+}
+
+/* -------------- */
+#sect4 ul {
+    margin-top: 4vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#sect4 ul li {
+    width: 13vw;
+    font-size: 1vw;
+}
+
+#sect4 ul li p {
+    background-color: rgb(50, 117, 50);
+    color: white;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+#sect4 ul li span {
+    display: block;
+    margin-top: 2vw;
+    line-height: 1.8vw;
+    text-align: center;
+    padding-bottom: 1.2vw;
+    font-weight: 100;
+    color: #5a5a5a;
+    border-bottom: .3vw solid rgb(50, 117, 50);
+}
+
+#sect4 ul li span b {
+    color: black;
+}
+
+/* ----------------- */
+#sect5 ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vw;
+    height: 18vw;
+}
+
+#sect5 ul li {
+    position: relative;
+    color: white;
+    font-size: 1.6vw;
+    padding-top: 5.2vw;
+    padding-left: 2.2vw;
+    font-weight: bold;
+}
+
+#sect5 ul li::after {
+    content: '';
+    position: absolute;
+    background-image: url(./img/brand-bg.png);
+    width: 12vw;
+    height: 12vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#sect5 p {
+    font-size: 1.4vw;
+    text-align: center;
+    line-height: 3vw;
+    font-weight: lighter;
+    color: #4e4e4e;
+}
+
+#sect5 p b {
+    color: #000;
+}
+
+/* ---------------------- */
+#sect6 .brand {
+    display: flex;
+    background-color: rgb(67, 124, 67);
+    color: white;
+    border-radius: 3vw;
+    height: 17vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    font-size: 1.3vw;
+    line-height: 2vw;
+    width: 60vw;
+}
+
+#sect6 .brand img {
+    width: 10vw;
+    margin-right: 1vw;
+}
+
+#sect6 .brand ul li {
+    width: 40vw;
+    margin-top: 1.2vw;
+    color: #dadada;
+}
+
+#sect6 .brand ul li b {
+    color: white;
+}
+/* ------------------ */
+#sect7 h3{
+    color: rgb(5, 87, 5);
+    font-size: 2.1vw;
+    margin-top: 3vw;
+    font-family: 'JalnanGothic';
+}
+#sect7 div{
+    background-color: gainsboro;
+    padding: 2vw;
+    margin: 1vw 0 2vw;
+    border-radius: 1vw;
+text-align: center;
+box-shadow: 1px 1px 3px;
+}
+#sect7 div p{
+font-weight: bold;
+font-size: 2.3vw;
+line-height: 4vw;
+color: rgb(51, 51, 51);
+}
+#sect7 div span{
+    color: grey;
+}
