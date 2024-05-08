@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'JalnanGothic';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
     font-weight: normal;
@@ -15,7 +22,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Pretendard-Regular';
+    font-family: 'GmarketSansMedium';
 }
 
 li {
@@ -375,35 +382,271 @@ section h2 b {
 }
 
 #sect6 .brand ul li {
+    font-family: 'Pretendard-Regular';
     width: 40vw;
     margin-top: 1.2vw;
     color: #dadada;
 }
 
 #sect6 .brand ul li b {
+    font-family: 'Pretendard-Regular';
     color: white;
+    font-size: 1.5vw;
 }
+
 /* ------------------ */
-#sect7 h3{
+#sect7 h3 {
     color: rgb(5, 87, 5);
-    font-size: 2.1vw;
+    font-size: 2.2vw;
     margin-top: 3vw;
     font-family: 'JalnanGothic';
 }
-#sect7 div{
-    background-color: gainsboro;
+
+#sect7 div.box {
+    background-color: rgb(231, 231, 231);
     padding: 2vw;
     margin: 1vw 0 2vw;
     border-radius: 1vw;
-text-align: center;
-box-shadow: 1px 1px 3px;
+    text-align: center;
+    box-shadow: 1px 1px 3px;
 }
-#sect7 div p{
-font-weight: bold;
-font-size: 2.3vw;
-line-height: 4vw;
-color: rgb(51, 51, 51);
+
+#sect7 div p {
+    font-size: 1.5vw;
+    line-height: 4vw;
+    color: rgb(51, 51, 51);
 }
-#sect7 div span{
+
+#sect7 div span {
     color: grey;
+    font-size: 1vw;
+    display: block;
+    margin-top: -1vw;
+}
+
+#sect7 div.wrap {
+    display: flex;
+}
+
+#sect7 div.wrap div {
+    text-align: left;
+    margin: 1vw;
+    width: 23.5vw;
+}
+
+#sect7 div.wrap div img {
+    width: 10vw;
+}
+
+#sect7 div.wrap div p {
+    font-size: 1.8vw;
+}
+
+#sect7 div.wrap div span {
+    font-size: .9vw;
+    margin-top: .5vw;
+    color: #8b8b8b;
+}
+
+#sect7 div.wrap div .text {
+    font-size: 1vw;
+}
+
+#sect7 div.wrap div ul {
+    font-size: 1vw;
+    color: #7b7b7b;
+}
+
+#sect7 div.wrap div ul li {
+    margin-top: 1vw;
+}
+
+/* ------------------- */
+.flex {
+    display: flex;
+}
+
+#sect8 ul {
+    margin-top: 1vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sect8 ul li {
+    padding: .5vw;
+    width: 10vw;
+    margin-top: 1vw;
+    font-size: 1vw;
+    color: white;
+    line-height: 1.8vw;
+    text-align: center;
+    border-radius: .8vw;
+}
+
+#sect8 .joruney-1 li {
+    background-color: #6fb67e;
+}
+
+#sect8 .joruney-2 li {
+    height: 13vw;
+    font-size: .9vw;
+    background-color: rgb(46, 120, 46);
+    padding-top: 2vw;
+}
+
+#sect8 .joruney-3 {
+    margin-top: 4vw;
+}
+
+#sect8 .joruney-3 li {
+    width: 57vw;
+    height: 2px;
+    background-color: green;
+    padding: 0;
+    margin-top: 2vw;
+    position: relative;
+}
+
+#sect8 .joruney-3 li:nth-child(3) {
+    background-color: red;
+}
+
+#sect8 .joruney-3 li:nth-child(1)::after {
+    content: '';
+    background-image: url(./img/smail-kaeru.png);
+    width: 4.2vw;
+    height: 4.2vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -2.2vw;
+    left: 27.3vw;
+}
+
+#sect8 .joruney-3 li:nth-child(1)::before {
+    content: '';
+    background-image: url(./img/text1.png);
+    width: 8vw;
+    height: 8vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -1vw;
+    left: 6vw;
+}
+
+#sect8 .joruney-3 li:nth-child(2)::after {
+    content: '';
+    background-image: url(./img/smail-kaeru.png);
+    width: 4.2vw;
+    height: 4.2vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -2vw;
+    left: 15vw;
+}
+
+#sect8 .joruney-3 li:nth-child(2)::before {
+    content: '';
+    background-image: url(./img/text2.png);
+    width: 8vw;
+    height: 8vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: 2vw;
+    left: 13vw;
+}
+
+#sect8 .joruney-3 li:nth-child(3)::after {
+    content: '';
+    background-image: url(./img/smail-kaeru2.png);
+    width: 4.2vw;
+    height: 4.2vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -2vw;
+    left: 38.7vw;
+}
+
+#sect8 .joruney-3 li:nth-child(3)::before {
+    content: '';
+    background-image: url(./img/text3.png);
+    width: 8vw;
+    height: 8vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -2.8vw;
+    left: 25.5vw;
+}
+
+#sect8 .joruney-3 li:nth-child(4)::after {
+    content: '';
+    background-image: url(./img/smail-kaeru.png);
+    width: 4.2vw;
+    height: 4.2vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -6.4vw;
+    left: 51vw;
+}
+
+#sect8 .joruney-3 li:nth-child(4)::before {
+    content: '';
+    background-image: url(./img/text4.png);
+    width: 8vw;
+    height: 8vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -10vw;
+    left: 42.5vw;
+}
+
+#sect8 .joruney-3 li:nth-child(5)::after {
+    content: '';
+    background-image: url(./img/smail-kaeru2.png);
+    width: 4.2vw;
+    height: 4.2vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -2vw;
+    left: 3vw;
+}
+
+#sect8 .joruney-3 li:nth-child(5)::before {
+    content: '';
+    background-image: url(./img/text5.png);
+    width: 8vw;
+    height: 8vw;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -4.8vw;
+    left: 45vw;
 }
