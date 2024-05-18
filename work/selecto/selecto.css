@@ -18,7 +18,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.flex{display: flex;}
+.flex {
+  display: flex;
+}
 /* -------------------header----------------- */
 header {
   display: flex;
@@ -155,7 +157,7 @@ header {
   font-size: 80px;
   color: orangered;
   text-align: center;
-  margin: 120px;
+  margin: 200px 0 50px;
 }
 
 .ore_img {
@@ -171,10 +173,11 @@ header {
   overflow: hidden;
 }
 
-.text_ani>div {
+.text_ani > div {
   gap: 20px;
   width: 34%;
   display: flex;
+  font-size: 20px;
 }
 
 .text_ani {
@@ -434,7 +437,7 @@ footer h6 {
   }
 
   .big_news {
-    font-size: 80px;
+    font-size: 8vw;
     color: orangered;
   }
 }

@@ -1,0 +1,162 @@
+body,
+html {
+    width: 100%;
+}
+
+.bg {
+    background-color: rgb(28, 31, 33);
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 30px;
+}
+
+.logo {
+    width: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb li {
+    margin-right: 60px;
+}
+
+.main_top_video {
+    width: 100%;
+}
+
+.first {
+    margin: 80px 0;
+}
+
+.main_text h1 {
+    margin: 30px 0;
+}
+
+.main_text p {
+    font-size: 20px;
+    margin: 40px;
+}
+
+.main_main,
+.link {
+    text-align: center;
+}
+
+.main_img ul {
+    margin: auto;
+}
+
+.link {
+    margin: 80px 0 220px;
+}
+
+.link a {
+    padding: 20px 30px;
+    border-radius: 40px;
+    border: 2px solid #ffffff;
+}
+
+#button_a a {
+    background-color: rgb(48, 186, 240);
+    border-style: none;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.main_img {
+    margin-top: 60px;
+    margin-bottom: 250px;
+}
+
+.main_img ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_img ul li {
+    max-width: 20%;
+    min-width: 250px;
+}
+
+.section img {
+    width: 90%;
+}
+
+.icon img {
+    width: 300px;
+}
+.main_bottom{width: 100%;}
+.icon_list {
+    display: flex;
+    width: 60%;
+    min-width: 400px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.icon_list li {
+    width: 25%;
+    min-width: 200px;
+    /* display: flex; */
+}
+
+.icon_list li a img{
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+
+}
+
+#button_b a {
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.add {
+    width: 100%;
+}
+
+.add_top {
+    background-color: rgb(25, 210, 255);
+    text-align: center;
+}
+
+.add_top img,
+.add_bottom img {
+    vertical-align: top;
+    width: 60%;
+}
+
+.add_bottom {
+    background-color: rgb(255, 242, 62);
+    text-align: center;
+}
+
+footer .saigo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.saigo a {
+    padding: 100px 20px 20px;
+}

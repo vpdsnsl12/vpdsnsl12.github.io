@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kakaotalk</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumDaSiSiJagHae.css" rel="stylesheet" />
+    <style>
+        .backgrond {
+            margin: auto;
+            width: 460px;
+            height: 800px;
+            text-align: center;
+            align-items: center;
+        }
+
+        #content {
+            background-image: url(../img/kakao/삼냥이\ 첫째.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 460px;
+            height: 500px;
+        }
+
+        #context {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 200px;
+            font-family: "NanumDaSiSiJagHae";
+            font-size: 22px;
+        }
+
+        .main {
+            width: 140px;
+            height: 140px;
+            border-radius: 80px;
+        }
+
+        .kakao {
+            width: 60px;
+            height: 60px;
+            border-radius: 80%;
+        }
+
+        .display {
+            background-color: rgb(248, 255, 255);
+            display: flex;
+            justify-content: center;
+            border: 1px solid #e2dada;
+        }
+
+        .display div {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 140px;
+        }
+
+        #name {
+            margin-top: 4px;
+        }
+
+        #img {
+            position: relative;
+            bottom: -110px;
+            align-items: center;
+        }
+
+        p {
+            margin-top: 4px;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backgrond">
+        <div id="content">
+            <p id="context">
+                삼냥이 중에 첫째입니다 :-) <br />
+                제일 순하고 애교가 많아요 구경오세요🐱
+            </p>
+            <div id="img">
+                <img class="main" src="../img/kakao/커플프로필.png" alt="남자친구와 함께 찍은 사진" title="커플사진" />
+                <h2 id="name">박주희</h2>
+            </div>
+        </div>
+        <div class="display">
+            <div>
+                <img class="kakao" src="../img/kakao/나와의 채팅.png" alt="" />
+                <p>나와의 채팅</p>
+            </div>
+            <div>
+                <img class="kakao" src="../img/kakao/프로필관리.png" alt="" />
+                <p>프로필 관리</p>
+            </div>
+            <div>
+                <img class="kakao" src="../img/kakao/카스.png" alt="" />
+                <p>카카오스토리</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

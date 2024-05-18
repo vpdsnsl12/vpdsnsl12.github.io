@@ -1,0 +1,239 @@
+@import url(./reset.css);
+
+* {
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+/* header---------------------------------------------------- */
+header {
+    height: 100px;
+    background-image: url(../img/nexon/bg_header_wrap.gif);
+    border-bottom: 2px solid #000;
+}
+
+.inner-wrap {
+    height: 100%;
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-wrap h1 a img {
+    width: 250px;
+}
+
+/* menu-------------------------------------------------------- */
+nav ul li a {
+    display: block;
+    background-image: url(../img/pethroom/고양이메뉴.jpg);
+    height: 60px;
+    color: transparent;
+    background-repeat: no-repeat;
+    transition: 0.35s;
+}
+
+nav ul li:hover a {
+    background-position-y: -70px;
+}
+
+nav ul li:nth-child(1) a {
+    width: 82px;
+}
+
+nav ul li:nth-child(2) a {
+    width: 105px;
+    background-position-x: -92px;
+}
+
+nav ul li:nth-child(3) a {
+    width: 58px;
+    background-position-x: -205px;
+
+}
+
+nav ul li:nth-child(4) a {
+    width: 80px;
+    background-position-x: -272px;
+
+}
+
+nav ul {
+    gap: 100px;
+    position: relative;
+    top: 19px;
+}
+
+/* main-------------------------------------------------------- */
+.zentaiteki_bg {
+    background-color: rgb(42, 67, 143);
+}
+
+.container {
+    border-bottom: 2px solid #ffcc00;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 42px 0 40px;
+    justify-content: center;
+}
+
+.container main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 712px;
+    gap: 10px;
+}
+
+.container main .bg_img a:hover {
+    background-position-y: -206px;
+}
+
+.container main div a {
+    color: transparent;
+    transition: 0.35s;
+}
+
+.container main div a {
+    border: 4px solid rgb(255, 255, 255);
+}
+
+.bg_img a {
+    display: block;
+    width: 226px;
+    height: 206px;
+}
+
+.tokubetu a {
+    display: block;
+    width: 465px;
+    height: 206px;
+}
+
+#bg_cs:hover {
+    background-position-y: -206px;
+}
+
+#bg_a {
+    background-image: url(../img/pethroom/bg_4.jpg);
+}
+
+#bg_b {
+    background-image: url(../img/pethroom/bg_8.jpg);
+}
+
+#bg_c {
+    background-image: url(../img/pethroom/bg_3.jpg);
+}
+
+#bg_d {
+    background-image: url(../img/pethroom/bg_7.jpg);
+}
+
+#bg_add {
+    background-image: url(../img/pethroom/add1.jpg);
+}
+
+#bg_e {
+    background-image: url(../img/pethroom/bg_2.jpg);
+}
+
+#bg_f {
+    background-image: url(../img/pethroom/bg_6.jpg);
+}
+
+#bg_g {
+    background-image: url(../img/pethroom/bg_1.jpg);
+}
+
+#bg_cs {
+    background-image: url(../img/pethroom/cs전화.jpg);
+}
+
+#bg_h {
+    background-image: url(../img/pethroom/bg_5.jpg);
+}
+
+/* aside------------------------------------------------------- */
+aside {
+    width: 470px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div input {
+    padding: 10px;
+    width: 340px;
+    height: 50px;
+    margin-bottom: 3px;
+}
+
+form {
+    display: flex;
+}
+
+#button {
+    border: none;
+    background-color: rgb(5, 0, 97);
+    padding: 42px 35px;
+    color: white;
+    margin-left: 5px;
+}
+
+label {
+    color: white;
+}
+
+.login,
+.sagasi ul {
+    display: flex;
+    color: white;
+}
+
+.login {
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.sagasi ul li {
+    margin-left: 10px;
+}
+
+figure img {
+    margin-bottom: 10px;
+}
+
+/* footer------------------------------------------------------ */
+footer {
+    margin: auto;
+    width: 1200px;
+    height: 130px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer div {
+    font-size: 22px;
+    color: #ffcc00;
+    font-weight: 900;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    color: white;
+    padding: 5px 30px;
+}
