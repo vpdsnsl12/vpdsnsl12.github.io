@@ -271,7 +271,7 @@ nav {
   padding: 10px;
   align-items: center;
 }
-
+.banner{font-size: 1vw;}
 .but-set-list {
   width: 60%;
   align-items: center;
@@ -297,11 +297,15 @@ nav {
   text-align: center;
   background-color: rgba(39, 145, 115, 0.9);
   color: white;
-  height: 110vh;
+  height: 900px;
   position: relative;
 }
-.brand .sticky p {
-  margin-bottom: 80px;
+.brand h2{
+  font-size: 7vw;
+}
+.brand p{
+  font-size: 1.2vw;
+  margin-bottom: 50px;
 }
 .bg-wh {
   padding: 40px;
@@ -333,7 +337,7 @@ nav {
   z-index: 20;
 }
 .sider li {
-  margin: 45px 10px 0 0;
+  margin: 10px 10px 0 0;
 }
 .sider li a {
   display: block;
@@ -426,4 +430,27 @@ img.water {
   color: rgba(39, 145, 115, 0.9);
   height: 100vh;
   text-align: center;
+}
+footer{background-color: gainsboro;
+  height: 230px;
+  text-align: center;
+  color: gray;
+  padding: 2vw;
+}
+footer img{
+  margin-bottom: 1vw;
+}
+footer ul{
+  width: 55%;
+  justify-content: space-between;
+  margin: auto;
+  margin : .8vw auto;
+
+}
+footer ul:nth-child(3){
+  width: 51%;
+  font-size: .9vw;
+}
+footer p{
+  font-size: .9vw;
 }
