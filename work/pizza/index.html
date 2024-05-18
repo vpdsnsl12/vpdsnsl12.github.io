@@ -244,10 +244,10 @@
             document.querySelector(".diagonal-text").classList.add("on");
           }
         });
-        // $(window).scroll(function () {
-        //   let scrollTop = $(this).scrollTop();
-        //   $("h5").text(scrollTop);
-        // });
+        $(window).scroll(function () {
+          let scrollTop = $(this).scrollTop();
+          $("h5").text(scrollTop);
+        });
         $('section').mousewheel(function (e, delta) {
           if (delta > 0) {
             let prev = $(this).prev().offset().top
