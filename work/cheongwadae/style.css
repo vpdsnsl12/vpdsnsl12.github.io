@@ -108,6 +108,7 @@ header .flex-wrap nav > ul {
 header .flex-wrap nav .main-menu {
   position: relative;
   padding: 0 20px;
+  font-size: 1.2vw;
 }
 header .flex-wrap nav .main-menu:hover > a {
   color: rgb(219, 68, 68);
@@ -389,27 +390,22 @@ section#sec3 .sec3-left ul li:nth-child(2) {
 }
 section#sec3 .swiper {
   width: 420px;
-  height: 430px;
+  height: 250px;
   top: 40%;
   left: 25%;
 }
 section#sec3 .swiper .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 section#sec3 .swiper img {
   display: block;
-  width: 428px;
-  height: 278px;
-  -o-object-fit: cover;
+  width: 100%;
+  height: 100%;
      object-fit: cover;
   position: absolute;
-  top: -10%;
-  left: -10%;
 }
 section#sec4 {
   background-image: url(./imgs/section03.jpg);

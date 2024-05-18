@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    width: 1700px;
+    width: 90%;
     margin: auto;
 }
 
@@ -68,7 +68,7 @@ header {
     margin-top: 30px;
     display: flex;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1vw;
 }
 
 .nav_left ul {
@@ -101,7 +101,7 @@ header {
 }
 
 main {
-    width: 1700px;
+    width: 100%;
     margin: auto;
 }
 
@@ -112,7 +112,8 @@ main {
 }
 
 .main_top ul li img {
-    margin: 40px;
+    margin: 20px;
+    width: 43vw;
     border-radius: 30px;
 }
 
@@ -147,7 +148,7 @@ main {
 }
 
 .tour_list li img {
-    width: 500px;
+    width: 28vw;
     height: 300px;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
@@ -210,9 +211,8 @@ main {
 .main_bottom ul li a {
     border: 1px solid #d3d3d3;
     border-radius: 30px;
-    margin: 10px 30px;
+    margin: 10px 20px;
     align-items: center;
-
     display: flex;
 }
 
@@ -226,7 +226,7 @@ main {
 
 .set {
     margin: 20px 80px 20px 20px;
-    font-size: 20px;
+    font-size: 1.1vw;
 }
 
 .more {
@@ -256,7 +256,7 @@ main {
 }
 
 .add_mini {
-    width: 530px;
+    width: 30vw;
     border: 1px solid #c8c8c8;
     border-radius: 10px;
 }
@@ -272,7 +272,7 @@ text-decoration: line-through;
 }
 
 article {
-    width: 1700px;
+    width: 100%
     margin: auto;
 }
 
@@ -340,7 +340,7 @@ article {
 .article_live_list li a img {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    width: 530px;
+    width: 30vw;
 }
 
 .set_naiyou {

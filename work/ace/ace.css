@@ -65,7 +65,7 @@ h1 {
     position: absolute;
     z-index: -1;
     width: 100%;
-    left: 50%;
+    left: 48%;
     top: 70%;
     transform: translate(-50%, -50%);
 }
@@ -529,7 +529,9 @@ section {
     width: 33.33%;
     font-size: 25px;
     line-height: 40px;
-    padding-left: 200px;
+    padding-left: 150px;
+    font-size: 1.5vw;
+    text-align: center;
 }
 
 .tab-list-2 {
@@ -588,7 +590,7 @@ section {
 
 /* sec6 */
 .section6 {
-    height: 120vh;
+    height: 110vh;
 }
 
 .map-img {
@@ -598,7 +600,7 @@ section {
 
 .sec6-ul {
     position: absolute;
-    top: 60%;
+    top: 75%;
     left: 10%;
 }
 
@@ -632,7 +634,7 @@ section {
     z-index: 20;
     color: white;
     right: 10%;
-    top: 30%;
+    top: 20%;
 }
 
 .box-text {
@@ -662,4 +664,23 @@ input::placeholder {
     font-size: 16px;
 }
 input:focus {outline:none;
+}
+footer{
+    padding: 2vw 10vw;
+}
+footer ul:nth-child(1){
+    width: 60%;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+footer ul:nth-child(1) b{
+    color: #0890c0;
+}
+footer ul:nth-child(2){
+    font-size: 1vw;
+    margin-top: 2vw;
+    color: gray;
+}
+footer ul:nth-child(2) li{
+    margin-top: .3vw;
 }
