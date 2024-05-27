@@ -205,6 +205,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./jquery.mousewheel.min.js"></script>
     <script>
+        // Initialize the Swiper instance
         var swiper = new Swiper(".mySwiper1", {
             pagination: {
                 el: ".swiper-pagination",
@@ -214,45 +215,53 @@
                 disableOnInteraction: false,
             },
         });
+    
+        // jQuery to handle tab click events
         $(".tab li a").click(function () {
             $(".tab li a").removeClass("on");
             $(this).addClass("on");
-
+    
             let href = $(this).attr("href");
             let secTop = $(href).offset().top;
-            $("html").stop().animate({ scrollTop: secTop });
+            $("html, body").stop().animate({ scrollTop: secTop }, 600); // Added animation duration
+            return false; // Prevent default action
         });
-        $('section').mousewheel(function (e, delta) {
+    
+        // jQuery to handle mousewheel scrolling
+        $('section').on('mousewheel', function (e, delta) {
             if (delta > 0) {
-                let prev = $(this).prev().offset().top
-                $('html').stop().animate({ 'scrollTop': prev })
+                let prev = $(this).prev().offset().top;
+                $('html, body').stop().animate({ scrollTop: prev }, 600); // Added animation duration
+            } else if (delta < 0) {
+                let next = $(this).next().offset().top;
+                $('html, body').stop().animate({ scrollTop: next }, 600); // Added animation duration
             }
-            else if (delta < 0) {
-                let next = $(this).next().offset().top
-                $('html').stop().animate({ 'scrollTop': next })
-            }
-        })
+        });
+    
+        // jQuery to handle window scrolling
         $(window).scroll(function () {
-            let scrTop = $(this).scrollTop()
-            $('h5').text(scrTop)
-
+            let scrTop = $(this).scrollTop();
+            $('h5').text(scrTop);
+    
             $('section').each(function (i) {
-                let secTop = $(this).offset().top
+                let secTop = $(this).offset().top;
                 if (scrTop >= secTop) {
-                    $('.tab li a').removeClass('on')
-                    $('.tab li').eq(i).find('a').addClass('on')
+                    $('.tab li a').removeClass('on');
+                    $('.tab li').eq(i).find('a').addClass('on');
                 }
-            })
-        })
+            });
+        });
+    
+        // DOMContentLoaded event to handle logo brightness change on scroll
         document.addEventListener("DOMContentLoaded", function () {
             var logo = document.getElementById("logo");
-
+    
             window.addEventListener("scroll", function () {
                 var sec3Position = document.getElementById("sec3").offsetTop;
                 var sec5Position = document.getElementById("sec5").offsetTop;
                 var scrollPosition = window.scrollY;
-
-                if (scrollPosition == sec3Position || scrollPosition == sec5Position) {
+    
+                if (scrollPosition >= sec3Position && scrollPosition < sec5Position || scrollPosition >= sec5Position) {
                     logo.style.filter = "brightness(0) invert(1)";
                 } else {
                     logo.style.filter = "none";
@@ -260,6 +269,7 @@
             });
         });
     </script>
+    
 </body>
 
 </html>
