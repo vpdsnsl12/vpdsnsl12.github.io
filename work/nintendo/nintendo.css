@@ -283,8 +283,8 @@ top: -15%}
 .hana {
     width: 25vw;
     position: absolute;
-    bottom: -32vw;
-    left: -20vw;
+    bottom: -35vw;
+    left: -25vw;
     animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
 }
 
@@ -296,7 +296,7 @@ top: -15%}
     width: 15vw;
     position: absolute;
     top: 10%;
-    left: -25%;
+    left: -35%;
 }
 .text-1:hover{
     animation: dance .3s ease-out infinite;}
@@ -349,9 +349,9 @@ top: -15%}
 }
 
 .text-2 {
-    width: 12vw;
+    width: 16vw;
     top: 55%;
-    right: -15vw;
+    right: -20vw;
     position: absolute;
 }
 .text-2:hover{transform: scale(1.2);
