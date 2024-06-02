@@ -38,6 +38,17 @@ img {
 .flex {
   display: flex;
 }
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* 나타나는 애니메이션 */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 header {
   height: 40vw;
   flex-direction: column;
@@ -89,14 +100,25 @@ header p b:nth-child(1) {
 header p b:nth-child(2) {
   color: #1d70d2;
 }
-#sect1 {
-  height: 35vw;
+section p {
+  font-size: 1.1vw;
+}
+section h3 {
+  font-size: 2.5vw;
+  margin: 2vw 0;
+}
+section {
+  margin-bottom: 15vw;
 }
 #sect1 ul li {
   margin-top: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.2vw;
+}
+#sect1 ul li:nth-child(1) p {
+  margin-left: 1vw;
 }
 #sect1 ul li img {
   width: 8vw;
@@ -109,12 +131,11 @@ header p b:nth-child(2) {
   width: 10vw;
 }
 #sect2 {
-  height: 45vw;
   text-align: center;
 }
-section h3 {
-  font-size: 2.5vw;
-  margin: 2vw 0;
+
+#sect2 h3 img {
+  width: 14vw;
 }
 #sect2 p {
   line-height: 2vw;
@@ -125,18 +146,226 @@ section h3 {
   color: #1d70d2;
 }
 #sect2 div img {
-  width: 40vw;
+  width: 32vw;
+  margin-top: 2vw;
 }
 #sect3 {
-  height: 45vw;
   text-align: center;
 }
-#sect3 div img {
-  width: 60vw;
+#sect3 h3 img {
+  width: 12vw;
 }
-#sect3 p b:nth-child(1) {
+#sect3 div img {
+  width: 45vw;
+  margin-bottom: 3vw;
+}
+
+#sect3 p > b {
+  color: #ffc700;
+}
+#sect3 p > b:nth-child(1) {
   color: #1d70d2;
 }
-#sect3 p b:nth-child(2) {
+#sect4 {
+  text-align: center;
+}
+#sect4 h3 img {
+  width: 13vw;
+}
+#sect4 > p b {
+  color: #1d70d2;
+}
+#sect4 > div {
+  display: flex;
+  margin: 2vw 0;
+  align-items: center;
+  justify-content: center;
+}
+#sect4 > div div {
+  background-color: #d4e4f6;
+  width: 15vw;
+  font-size: 1.2vw;
+  padding: 1.2vw;
+  border-radius: 2vw;
+}
+#sect4 > div > p {
+  background-color: #1d70d2;
+  width: 35vw;
+  padding: 1.1vw;
+  color: white;
+  border-radius: 2vw;
+  margin-left: 2vw;
+  line-height: 1.7vw;
+}
+#sect4 > div div p {
+  color: #1d70d2;
+  font-weight: bold;
+}
+#sect5 {
+  text-align: center;
+}
+#sect5 h3 {
+  text-align: left;
+  width: 61vw;
+  margin: auto;
+  margin-bottom: 3vw;
+}
+#sect5 h3 img {
+  width: 17vw;
+}
+#sect5 p {
+  text-align: left;
+  width: 61vw;
+  margin: auto;
+}
+#sect5 p > b {
   color: #ffc700;
+}
+#sect5 p > b:nth-child(1) {
+  color: #1d70d2;
+}
+#sect5 div {
+  margin-top: 3vw;
+  position: relative;
+}
+#sect5 div::before {
+  content: "#1266CA";
+  color: #1266ca;
+  font-size: 2vw;
+  font-weight: bold;
+  position: absolute;
+  left: 35vw;
+  top: 4vw;
+}
+#sect5 div::after {
+  content: "#FFC700";
+  color: #ffc700;
+  font-size: 2vw;
+  font-weight: bold;
+  position: absolute;
+  left: 67vw;
+  top: 4vw;
+}
+#sect5 div img {
+  width: 62vw;
+}
+#sect6 h3 {
+  text-align: left;
+  width: 61vw;
+  margin: auto;
+  margin-bottom: 3vw;
+}
+#sect6 h3 img {
+  width: 19vw;
+}
+#sect6 p {
+  text-align: left;
+}
+#sect6 > p {
+  margin-bottom: 3vw;
+}
+#sect6 p b {
+  color: #1d70d2;
+}
+#sect6 > div {
+  justify-content: space-between;
+  width: 62vw;
+  margin: auto;
+}
+#sect6 div > div > div {
+  margin-bottom: 2vw;
+}
+#sect6 div > div > div p b {
+  padding: 1.3vw;
+}
+#sect6 div > div:nth-child(1) {
+  font-family: "JalnanGothic";
+}
+#sect6 div > div > div:nth-child(1) p {
+  font-family: "JalnanGothic";
+  margin-bottom: 0.2vw;
+}
+
+#sect6 div > div > div:nth-child(1) p:nth-child(3) {
+  padding-top: 0.3vw;
+}
+#sect6 div > div > div:nth-child(1) p:nth-child(3),
+#sect6 div > div > div:nth-child(1) p:nth-child(4) {
+  color: rgb(131, 131, 131);
+  margin-bottom: 0.2vw;
+}
+#sect6 div > div > div p:nth-child(1) {
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+#sect6 div > div > div p:nth-child(2) {
+  margin-bottom: 1vw;
+  position: relative;
+}
+#sect6 div > div > div p:nth-child(2)::after {
+  content: "";
+  width: 26vw;
+  height: 0.15vw;
+  background-color: #1266ca;
+  position: absolute;
+  top: 2vw;
+  left: 0;
+}
+#sect6 div > div:nth-child(2) {
+  margin-top: -0.5vw;
+}
+#sect6 div > div > div:nth-child(2) p:nth-child(3),
+#sect6 div > div > div:nth-child(2) p:nth-child(4) {
+  color: rgb(131, 131, 131);
+}
+#sect6 div > div > div:nth-child(2) p:nth-child(4) b {
+  padding: 0.2vw;
+}
+#sect7{
+  background-color:#F6F6F6;
+  padding: 25vw 15vw 0;
+  border-top-left-radius: 50vw;
+  border-top-right-radius: 50vw;
+  margin-bottom: 0;
+  
+}
+#sect7 div{
+  align-items: center;
+  justify-content: space-between;
+}
+#sect7 div p{
+  line-height: 2vw;
+}
+#sect7 div p b{
+  color: #1266ca;
+}
+#sect7 div h4{
+  color: #1266ca;
+  font-size: 1.8vw;
+  font-family: "JalnanGothic";
+  margin-bottom: 1vw;
+}
+#sect7 div img{
+  width: 30vw;
+}
+#sect7 div >div{
+  margin-bottom: 10vw;
+}
+#sect7 div >div:nth-child(1),
+#sect7 div >div:nth-child(3){
+  text-align: right;
+}
+footer{
+padding-top: 5vw;
+  background-color:#F6F6F6;
+  height: 27vw;
+  text-align: center;
+}
+footer h3 img{
+width: 12vw;
+margin-bottom: 3vw;
+}
+footer p{
+  line-height: 2vw;
+  font-size: 1.1vw;
 }
