@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'LOTTERIACHAB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'GmarketSansMedium';
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  vertical-align: top;
+}
+html{
+  border: 1px solid #bbbbbb;
+  width: 390px;
+  height: 844px;
+  margin: auto;
+  overflow: hidden;
+}
+.flex{
+  display: flex;
+}

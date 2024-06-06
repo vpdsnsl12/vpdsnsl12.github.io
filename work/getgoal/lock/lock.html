@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모바일 잠금화면</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      body {
+        margin: 0;
+        height: 844px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lock-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #ead3b1;
+      }
+
+      .lock-container {
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        width: 300px;
+      }
+
+      .lock-container h2 {
+        margin-bottom: 20px;
+        font-family: "GmarketSansMedium";
+        font-size: 30px;
+      }
+
+      .pin-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .pin-inputs input {
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        font-size: 24px;
+        border-radius: 4px;
+        background-image: url("../img/lock-img.png");
+        background-size: cover;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      .keypad {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .keypad button {
+        width: 100%;
+        padding: 20px;
+        background-color: #bc9e71;
+        border: none;
+        border-radius: 55px;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-family: "LOTTERIACHAB";
+      }
+
+      .keypad button:nth-child(10),
+      .keypad button:nth-child(12) {
+        opacity: 0;
+        border: 1px solid #000;
+      }
+      .keypad button:hover {
+        background-color: #0056b3;
+      }
+
+      #message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lock-screen">
+      <div class="lock-container">
+        <h2>비밀번호</h2>
+        <div class="pin-inputs">
+          <input type="password" maxlength="1" disabled />
+          <input type="password" maxlength="1" disabled />
+          <input type="password" maxlength="1" disabled />
+          <input type="password" maxlength="1" disabled />
+        </div>
+        <div class="keypad">
+          <button onclick="enterNumber('1')">1</button>
+          <button onclick="enterNumber('2')">2</button>
+          <button onclick="enterNumber('3')">3</button>
+          <button onclick="enterNumber('4')">4</button>
+          <button onclick="enterNumber('5')">5</button>
+          <button onclick="enterNumber('6')">6</button>
+          <button onclick="enterNumber('7')">7</button>
+          <button onclick="enterNumber('8')">8</button>
+          <button onclick="enterNumber('9')">9</button>
+          <button onclick="clearInput()"></button>
+          <button onclick="enterNumber('0')">0</button>
+          <button onclick="unlock()"></button>
+        </div>
+        <p id="message"></p>
+      </div>
+    </div>
+    <script src="lock.js"></script>
+  </body>
+</html>

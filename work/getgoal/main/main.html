@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인화면</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      body {
+        position: relative;
+        background-image: url(../img/main-bg.jpg);
+        background-repeat: no-repeat;
+      }
+      .main-img {
+        align-items: center;
+        justify-content: center;
+        height: 737px;
+      }
+      ul.main-icon {
+        position: absolute;
+        right: 15px;
+        bottom: 120px;
+      }
+      ul.main-icon li {
+        margin-bottom: 10px;
+      }
+      ul.main-icon li a img {
+        transition: 0.2s;
+      }
+      ul.main-icon li:hover img {
+        transform: scale(1.1);
+      }
+
+      nav {
+        width: 100%;
+        height: 105px;
+        background-color: black;
+      }
+      nav ul {
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+      }
+      nav ul p {
+        display: none;
+      }
+      nav ul li a img {
+        transition: 0.2s;
+      }
+      nav ul li a:hover img {
+        transform: scale(1.1);
+      }
+      div.modal {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 844px;
+        background-color: rgba(0, 0, 0, 0.179);
+      }
+      div.modal.on {
+        display: block;
+      }
+      div.modal-box {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        width: 330px;
+        height: 580px;
+        border-radius: 25px;
+        background-color: #ededed;
+        padding: 15px;
+        text-align: center;
+      }
+      div.modal-box span a {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+        background-color: gray;
+        padding: 1px;
+        color: white;
+        line-height: 25px;
+        position: absolute;
+        right: 15px;
+      }
+      div.modal-box h2 {
+        line-height: 50px;
+      }
+      div.modal-box1 > p {
+        color: rgb(165, 165, 165);
+        margin-bottom: 10px;
+      }
+      div.modal-box1 div {
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        padding: 1px;
+      }
+      div.modal-box1 div h3 {
+        margin-top: 10px;
+      }
+      div.modal-box1 div span,
+      div.modal-box1 div p {
+        font-size: 10px;
+        color: gray;
+      }
+      div.modal-box1 div .btn {
+        margin-top: 15px;
+        display: inline-block;
+      }
+      div.modal-box1 div .btn a {
+        background-color: #6b6b6b;
+        color: white;
+        display: inline-block;
+        padding: 5px 10px 1px;
+        border-radius: 5px;
+      }
+
+      div.modal-box div .btn:hover a {
+        background-color: #3350b9;
+        color: white;
+      }
+      div.modal-box2 span {
+        font-size: 12px;
+        color: gray;
+      }
+      div.modal-box2 div img {
+        margin: 5px 0;
+      }
+      div.modal-box2 p{
+        background-color: #d5d5d5;
+        border-radius: 40px;
+        font-size: 10px;
+        padding: 10px 15px;
+        line-height: 20px;
+        margin-top: 30px;
+      }
+      .attendance {
+        text-align: center;
+        margin-top: 10px;
+        background-color: white;
+        height: 310px;
+        border-radius: 25px;
+        padding-top: 2px;
+      }
+
+      .attendance-dates {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 30px;
+        margin-top: 25px;
+      }
+
+      .date-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #a0a0a0;
+        margin: 8px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+        position: relative;
+      }
+      .date-circle::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .date-circle.attended {
+        background-color: #ff4b4b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-img flex"><img src="../img/sugin-icon.png" alt="" /></div>
+    <div>
+      <ul class="main-icon">
+        <li class="icon1">
+          <a href=""><img src="../img/main-icon-1.png" alt="" /></a>
+        </li>
+        <li class="icon2">
+          <a href=""><img src="../img/main-icon-2.png" alt="" /></a>
+        </li>
+      </ul>
+    </div>
+    <nav>
+      <ul class="flex">
+        <li>
+          <a href=""
+            ><img src="../img/menu1.png" alt="" />
+            <p>도장판</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/menu2.png" alt="" />
+            <p>랭킹</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/menu3.png" alt="" />
+            <p>홈</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/menu4.png" alt="" />
+            <p>커뮤니티</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/menu5.png" alt="" />
+            <p>내정보</p></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="modal modal1">
+      <div class="modal-box modal-box1">
+        <span><a href="" class="close close1"> X </a></span>
+        <h2>주간 도전</h2>
+        <p>남은 도전 시간 : 4일 12시간 39분</p>
+        <div>
+          <h3>부엉이 졸업</h3>
+          <span>완료보상 : 칭호???획득</span>
+          <p>밤 12시(자정)을 넘기기 전 핸드폰을 끄고 잠드세요!</p>
+          <div class="btn"><a href="">수락하기</a></div>
+        </div>
+        <div>
+          <h3>아침 독서</h3>
+          <span>완료보상 : 500포인트</span>
+          <p>매일 아침, 책을 3장 이상 읽고 도장을 찍으세요!</p>
+          <div class="btn"><a href="">수락하기</a></div>
+        </div>
+        <div>
+          <h3>저축왕</h3>
+          <span>완료보상 : 500포인트</span>
+          <p>휴대폰을 사용한 시간만큼 저축하기! (1시간=5000원)</p>
+          <div class="btn"><a href="">수락하기</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal2">
+      <div class="modal-box modal-box2">
+        <span><a href="" class="close close2"> X </a></span>
+        <h2>출석체크</h2>
+        <span>출석체크시 5포인트가 적립됩니다.</span>
+        <div><img src="../img/15days.png" alt="" /></div>
+        <div class="attendance">
+          <div class="attendance-dates">
+            <div class="date-circle date-1" data-date="1" data-attended="false">
+              1
+            </div>
+            <div class="date-circle date-2" data-date="2" data-attended="false">
+              2
+            </div>
+            <div class="date-circle date-3" data-date="3" data-attended="false">
+              3
+            </div>
+            <div class="date-circle date-4" data-date="4" data-attended="false">
+              4
+            </div>
+            <div class="date-circle date-5" data-date="5" data-attended="false">
+              5
+            </div>
+            <div class="date-circle date-6" data-date="6" data-attended="false">
+              6
+            </div>
+            <div class="date-circle date-7" data-date="7" data-attended="false">
+              7
+            </div>
+            <div class="date-circle date-8" data-date="8" data-attended="false">
+              8
+            </div>
+            <div class="date-circle date-9" data-date="9" data-attended="false">
+              9
+            </div>
+            <div
+              class="date-circle date-10"
+              data-date="10"
+              data-attended="false"
+            >
+              10
+            </div>
+            <div
+              class="date-circle date-11"
+              data-date="11"
+              data-attended="false"
+            >
+              11
+            </div>
+            <div
+              class="date-circle date-12"
+              data-date="12"
+              data-attended="false"
+            >
+              12
+            </div>
+            <div
+              class="date-circle date-13"
+              data-date="13"
+              data-attended="false"
+            >
+              13
+            </div>
+            <div
+              class="date-circle date-14"
+              data-date="14"
+              data-attended="false"
+            >
+              14
+            </div>
+            <div
+              class="date-circle date-15"
+              data-date="15"
+              data-attended="false"
+            >
+              15
+            </div>
+          </div>
+        </div>
+        <p>
+          매일 출석체크하고 보너스 포인트 받아 출석왕에 도전하세요! <br />
+          10일 이상 출석시 출석왕 활동배지가 지급됩니다.
+        </p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
