@@ -1,4 +1,4 @@
-const correctPin = "1234"; // 올바른 PIN 코드를 설정합니다.
+const correctPin = "2835";
 let enteredPin = '';
 
 function enterNumber(num) {
@@ -10,6 +10,9 @@ function enterNumber(num) {
         inputs[currentInputIndex].style.background = `url('../img/lock-img-on.png') no-repeat center/contain`;
         inputs[currentInputIndex].style.border = 'none';
         inputs[currentInputIndex].style.textIndent = '-9999px';
+        if (enteredPin.length === 4) {
+            unlock();
+        }
     }
 }
 
@@ -28,6 +31,7 @@ function unlock() {
     if (enteredPin === correctPin) {
         document.getElementById('message').textContent = '잠금 해제되었습니다!';
         document.getElementById('message').style.color = 'green';
+        window.location.href = "../main/main.html";
     } else {
         document.getElementById('message').textContent = '잘못된 PIN 코드입니다.';
         document.getElementById('message').style.color = 'red';

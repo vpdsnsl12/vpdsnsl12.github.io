@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공유 도장판</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      .wrap {
+        position: relative;
+        width: 100%;
+        height: 844px;
+        background-color: #ead3b1;
+        padding: 10%;
+        text-align: center;
+      }
+      .home-btn {
+        position: absolute;
+        right: 35px;
+        top: 63px;
+      }
+      .home-btn a {
+        display: block;
+        padding: 5px;
+        width: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      h2 {
+        font-size: 35px;
+        margin: 10px;
+      }
+      .list {
+        justify-content: space-around;
+      }
+      .list li {
+        width: 140px;
+      }
+      .list li a {
+        display: block;
+        padding: 5px 7px;
+        font-size: 20px;
+        background-color: #000;
+        color: white;
+        border-radius: 30px;
+        font-weight: bold;
+        margin: 10px 0;
+        box-shadow: 3px 3px 3px black;
+      }
+      .list li a.on {
+        background-color: white;
+        color: black;
+      }
+      .icon-list {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .icon-list li {
+        margin-bottom: 15px;
+      }
+      .icon-list li p {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .img {
+        background-color: black;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+      }
+      .add-icon {
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+        font-weight: bold;
+      }
+      .add-icon:hover,
+      .icon-list li:hover,
+      .list li:hover,
+      div.home-btn:hover {
+        transform: scale(1.1);
+        transition: 0.35s;
+      }
+      div.add-modal-box {
+        top: 48%;
+        height: 450px;
+        padding: 5%;
+      }
+      div.add-modal-box h3 {
+        margin: 10px;
+      }
+      div.add-modal-box p {
+        text-align: left;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      div.add-modal-box div {
+        flex-wrap: wrap;
+        text-align: left;
+      }
+      div.add-modal-box div label {
+        margin: 10px;
+        display: inline-block;
+      }
+      .date-circle {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .date-circle.attended {
+        background: #a0e0a0;
+      }
+      .add-btn a {
+        display: block;
+        border: 1px solid #000;
+        width: 80px;
+        text-align: center;
+        padding: 3px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="home-btn"><a href="../main/main.html">Home</a></div>
+      <h2>공유 도장판</h2>
+      <ul class="flex list">
+        <li><a href="../menu1-1/menu1.html">공유 도장판</a></li>
+        <li><a href="" class="on">나의 도장판</a></li>
+      </ul>
+      <ul class="flex icon-list">
+        <li>
+          <a href=""
+            ><img src="../img/빙하.png" alt="" />
+            <p>
+              친환경적인 <br />
+              생활하기
+            </p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/녹차.png" alt="" />
+            <p>
+              커피대신<br />
+              차마시기
+            </p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/수박.png" alt="" />
+            <p>여름을 향해 <br />다이어트</p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/오리.png" alt="" />
+            <p>
+              나만의 <br />
+              취미생활
+            </p></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/주스.png" alt="" />
+            <p>매일매일 <br />일기쓰기</p></a
+          >
+        </li>
+        <li>
+          <a href="">
+            <div class="img"></div>
+            <p>새벽 1시<br />소등하기</p>
+          </a>
+        </li>
+        <li>
+          <a href=""
+            ><img src="../img/잠수.png" alt="" />
+            <p>
+              휴대폰 <br />
+              잠수타기
+            </p></a
+          >
+        </li>
+      </ul>
+      <div class="add-icon">
+        <a href="">
+          <img src="../img/typcn_plus.png" alt="" />
+          <p>도전추가</p>
+        </a>
+      </div>
+      <div class="modal add-modal">
+        <div class="modal-box add-modal-box">
+          <span><a href="" class="close add-modal-close"> X </a></span>
+          <h3>도전추가하기</h3>
+          <p>카테고리 선택</p>
+          <div>
+            <label for="category-saving"
+              ><input type="checkbox" id="category-saving" />저축</label
+            >
+            <label for="category-study"
+              ><input type="checkbox" id="category-study" />공부</label
+            >
+            <label for="category-task"
+              ><input type="checkbox" id="category-task" />과제</label
+            >
+            <label for="category-routine"
+              ><input type="checkbox" id="category-routine" />루틴</label
+            >
+            <label for="category-daily"
+              ><input type="checkbox" id="category-daily" />일상</label
+            >
+            <label for="category-hobby"
+              ><input type="checkbox" id="category-hobby" />취미</label
+            >
+            <label for="category-other"
+              ><input type="checkbox" id="category-other" />기타</label
+            >
+          </div>
+          <p>도전명 : ___________________</p>
+          <p>기간선택</p>
+          <div>
+            <label for="period-1day"
+              ><input type="checkbox" id="period-1day" />하루</label
+            >
+            <label for="period-3days"
+              ><input type="checkbox" id="period-3days" />3일</label
+            >
+            <label for="period-7days"
+              ><input type="checkbox" id="period-7days" />7일</label
+            >
+            <label for="period-15days"
+              ><input type="checkbox" id="period-15days" />15일</label
+            >
+            <label for="period-30days"
+              ><input type="checkbox" id="period-30days" />30일</label
+            >
+            <label for="period-60days"
+              ><input type="checkbox" id="period-60days" />60일</label
+            >
+            <label for="period-other"
+              ><input type="checkbox" id="period-other" />기타</label
+            >
+          </div>
+          <p>알람설정 <input type="checkbox" id="alarm-setting" /></p>
+          <div class="add-btn"><a href="">등록하기</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="./menu1-2.js"></script>
+  </body>
+</html>
