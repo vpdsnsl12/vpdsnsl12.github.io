@@ -10,3 +10,7 @@ document.querySelector(".add-modal-close").addEventListener("click", function (e
   event.preventDefault();
   document.querySelector(".add-modal").classList.remove("on");
 });
+document.querySelector(".add-btn").addEventListener("click", function (event) {
+  event.preventDefault();
+  document.querySelector(".add-modal").classList.remove("on");
+});

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커뮤니티</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      .wrap {
+        position: relative;
+        width: 100%;
+        height: 844px;
+        background-color: #ead3b1;
+        padding: 10%;
+        text-align: center;
+      }
+      .home-btn {
+        position: absolute;
+        right: 35px;
+        top: 63px;
+      }
+      .home-btn a {
+        display: block;
+        padding: 5px;
+        width: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      h2 {
+        font-size: 35px;
+        margin: 10px;
+      }
+      .list {
+        justify-content: space-around;
+      }
+      .list li {
+        width: 140px;
+      }
+      .list li a {
+        display: block;
+        padding: 5px 7px;
+        font-size: 20px;
+        background-color: #000;
+        color: white;
+        border-radius: 30px;
+        font-weight: bold;
+        margin: 10px 0;
+        box-shadow: 3px 3px 3px black;
+      }
+      .list li a.on {
+        background-color: white;
+        color: black;
+      }
+
+      .add-icon {
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+        font-weight: bold;
+      }
+      .post-list-wrap {
+        margin-top: 15px;
+        background-color: white;
+        border-radius: 30px;
+        height: 550px;
+        width: 350px;
+        margin-left: -20px;
+        padding: 15px;
+        overflow: scroll;
+        scrollbar-width: none;
+      }
+      .post-list {
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .post-list img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+      }
+      .post-list div {
+        text-align: left;
+      }
+      .post-list div p {
+        color: gray;
+        line-height: 30px;
+      }
+      .post-list div p b {
+        color: black;
+      }
+      .post-list div span {
+        font-size: 12px;
+      }
+      .post-list div span:nth-child(3) {
+        font-size: 10px;
+        color: rgb(174, 174, 174);
+      }
+      .add-icon:hover,
+      .icon-list li:hover,
+      .list li:hover,
+      div.home-btn:hover {
+        transform: scale(1.1);
+        transition: 0.35s;
+      }
+      div.add-modal-box {
+        top: 48%;
+        height: 450px;
+        padding: 5%;
+      }
+      div.add-modal-box h3 {
+        margin: 10px;
+      }
+      div.add-modal-box p {
+        text-align: left;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      div.add-modal-box div {
+        flex-wrap: wrap;
+        text-align: left;
+      }
+      div.add-modal-box div label {
+        margin: 10px;
+        display: inline-block;
+      }
+      .date-circle {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .date-circle.attended {
+        background: #a0e0a0;
+      }
+      .add-btn a {
+        display: block;
+        border: 1px solid #000;
+        width: 80px;
+        text-align: center;
+        padding: 3px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+      }
+      div.modal {
+        background-color: rgba(0, 0, 0, 0.374);
+      }
+      div.modal span {
+        font-size: 12px;
+        color: gray;
+      } 
+      input[type="text"] {
+        margin-top: 5px;
+        width: 280px;
+        height: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 15px;
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      input[type="text"]:focus {
+        border-color: #66afe9;
+        box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="home-btn"><a href="../main/main.html">Home</a></div>
+      <h2>커뮤니티</h2>
+      <ul class="flex list">
+        <li><a href="./menu3-1.html" class="on">도전공유하기</a></li>
+        <li><a href="../menu3/menu3-2.html">응원 게시판</a></li>
+      </ul>
+
+      <div class="post-list-wrap">
+        <div class="flex post-list">
+          <img src="../img/Ellipse 307.png" alt="" />
+          <div>
+            <p><b>내친구는다람이</b>님의 응원</p>
+            <span
+              >구리분들! 벌써 목요일이에요! <br />
+              조금만 더 화이팅하면 주말이 다가옵니다!</span
+            >
+            <span>2024.06.09 15:34</span>
+          </div>
+        </div>
+        <div class="flex post-list">
+          <img src="../img/Ellipse 307 (1).png" alt="" />
+          <div>
+            <p><b>꼬북이는짹짹</b>님의 응원</p>
+            <span
+              >날이 꿉꿉하네오 <br />
+              다들 우산챙겨가시고 오늘도 화이팅!</span
+            >
+            <span>2024.06.05 10:22</span>
+          </div>
+        </div>
+        <div class="flex post-list">
+          <img src="../img/Ellipse 307 (2).png" alt="" />
+          <div>
+            <p><b>쩐의여왕</b>님의 응원</p>
+            <span
+              >저 드디어 천만원모았어요! <br />
+              티끌모아 태산!! 구리님들도 할수 있어요!!</span
+            >
+            <span>2024.06.03 08:54</span>
+          </div>
+        </div>
+        <div class="flex post-list">
+          <img src="../img/Ellipse 307 (3).png" alt="" />
+          <div>
+            <p><b>만년다이어터</b>님의 응원</p>
+            <span
+              >한달동안 5kg 감량성공!!ㅠㅜ <br />
+              만년다이어터 먼저 탈출합니다! 따라오세요!</span
+            >
+            <span>2024.05.28 12:42</span>
+          </div>
+        </div>
+        <div class="flex post-list">
+          <img src="../img/Ellipse 307 (4).png" alt="" />
+          <div>
+            <p><b>내새꾸가최고</b>님의 응원</p>
+            <span
+              >오랜만에 집에갔는데 제가좋아하는 반찬가득..<br />
+              구리님들도 맛난거 먹고 함께 힘내요!</span
+            >
+            <span>2024.05.26 09:39</span>
+          </div>
+        </div>
+        <div class="flex post-list">
+          <img src="../img/Ellipse 307.png" alt="" />
+          <div>
+            <p><b>취뽀성공</b>님의 응원</p>
+            <span
+              >포폴작업이 드디어 끝났다!!!!!<br />
+              빨리 취뽀해서 인생2막 스타트하고싶어요!</span
+            >
+            <span>2024.05.15 17:14</span>
+          </div>
+        </div>
+        <div class="flex post-list">
+          <img src="../img/Ellipse 307 (1).png" alt="" />
+          <div>
+            <p><b>엄마야</b>님의 응원</p>
+            <span
+              >조금 어색하지만 부모님께 오랜만에<br />
+              사랑한다고 문자했네요! 구리님들도 안부문자 보내보는건 어때요?
+              어색해도 레츠고!</span
+            >
+            <span>2024.05.12 16:25</span>
+          </div>
+        </div>
+      </div>
+      <div class="add-icon">
+        <a href="#">
+          <img src="../img/typcn_plus.png" alt="" />
+          <p>응원등록하기</p>
+        </a>
+      </div>
+      <div class="modal add-modal">
+        <div class="modal-box add-modal-box">
+          <span><a href="#" class="close add-modal-close"> X </a></span>
+          <h3>응원메시지를 남겨주세요</h3>
+          <span>응원메시지를 작성시 20포인트가 적립됩니다.</span>
+          <input type="text"/>
+          <div class="add-btn"><a href="#">등록하기</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".add-icon a").forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".add-modal").classList.add("on");
+        });
+      });
+      document
+        .querySelector(".add-modal-close")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".add-modal").classList.remove("on");
+        });
+        document
+        .querySelector(".add-btn a")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".add-modal").classList.remove("on");
+        });
+      document.addEventListener("DOMContentLoaded", function () {
+        // 저장된 원래의 post-list-wrap HTML 구조를 보관합니다.
+        const postListWrap = document.querySelector(".post-list-wrap");
+        const originalPostListHTML = postListWrap.innerHTML;
+
+        // list-style 클래스 내의 li 요소들을 선택합니다.
+        const listItems = document.querySelectorAll(".list-style li a");
+
+        listItems.forEach(function (item) {
+          item.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // 기존에 on 클래스가 붙은 요소에서 on 클래스를 제거합니다.
+            document
+              .querySelector(".list-style li a.on")
+              .classList.remove("on");
+            // 클릭한 요소에 on 클래스를 추가합니다.
+            this.classList.add("on");
+
+            // 최신순을 클릭한 경우
+            if (this.textContent.trim() === "최신순") {
+              // 순서를 랜덤하게 섞습니다.
+              let postLists = Array.from(postListWrap.children);
+              for (let i = postLists.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                postListWrap.appendChild(postLists[j]);
+              }
+            }
+
+            // 랭킹순을 클릭한 경우
+            if (this.textContent.trim() === "랭킹순") {
+              // 원래의 HTML 구조로 복원합니다.
+              postListWrap.innerHTML = originalPostListHTML;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

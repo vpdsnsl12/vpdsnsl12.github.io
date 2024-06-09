@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커뮤니티</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      .wrap {
+        position: relative;
+        width: 100%;
+        height: 844px;
+        background-color: #ead3b1;
+        padding: 10%;
+        text-align: center;
+      }
+      .home-btn {
+        position: absolute;
+        right: 35px;
+        top: 63px;
+      }
+      .home-btn a {
+        display: block;
+        padding: 5px;
+        width: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      h2 {
+        font-size: 35px;
+        margin: 10px;
+      }
+      .list {
+        justify-content: space-around;
+      }
+      .list li {
+        width: 140px;
+      }
+      .list li a {
+        display: block;
+        padding: 5px 7px;
+        font-size: 20px;
+        background-color: #000;
+        color: white;
+        border-radius: 30px;
+        font-weight: bold;
+        margin: 10px 0;
+        box-shadow: 3px 3px 3px black;
+      }
+      .list li a.on {
+        background-color: white;
+        color: black;
+      }
+      .list-style {
+        margin-top: 5px;
+        margin-left: -10px;
+      }
+      .list-style li {
+        margin-right: 5px;
+      }
+      .list-style li a.on {
+        color: #0037ff;
+      }
+      .post-list-wrap {
+        height: 570px;
+        width: 380px;
+        margin-left: -40px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+      }
+      div.post-list {
+        background-color: white;
+        margin: 20px;
+        height: 110px;
+        font-size: 15px;
+        border-radius: 20px;
+        padding: 10px;
+        width: 350px;
+
+        box-shadow: 2px 2px 2px gray;
+      }
+      div.post-list span {
+        font-size: 11px;
+        color: rgb(146, 146, 146);
+        display: block;
+        margin: 7px;
+      }
+      div.post-list div.add {
+        background-color: rgb(226, 226, 226);
+        width: 160px;
+        padding: 5px 10px;
+        font-size: 13px;
+        border-radius: 20px;
+        margin: auto;
+      }
+      div.post-list div.add.on {
+        background-color: #3350b9;
+        color: white;
+      }
+      div.post-list div.add:hover {
+        background-color: #3350b9;
+        color: white;
+      }
+      .add-icon {
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+        font-weight: bold;
+      }
+      .add-icon:hover,
+      .icon-list li:hover,
+      .list li:hover,
+      div.home-btn:hover {
+        transform: scale(1.1);
+        transition: 0.35s;
+      }
+      div.add-modal-box {
+        top: 48%;
+        height: 450px;
+        padding: 5%;
+      }
+      div.add-modal-box h3 {
+        margin: 10px;
+      }
+      div.add-modal-box p {
+        text-align: left;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      div.add-modal-box div {
+        flex-wrap: wrap;
+        text-align: left;
+      }
+      div.add-modal-box div label {
+        margin: 10px;
+        display: inline-block;
+      }
+      .date-circle {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .date-circle.attended {
+        background: #a0e0a0;
+      }
+      .add-btn a {
+        display: block;
+        border: 1px solid #000;
+        width: 80px;
+        text-align: center;
+        padding: 3px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+      }
+      div.modal {
+        background-color: rgba(0, 0, 0, 0.374);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="home-btn"><a href="../main/main.html">Home</a></div>
+      <h2>커뮤니티</h2>
+      <ul class="flex list">
+        <li><a href="" class="on">도전공유하기</a></li>
+        <li><a href="../menu3/menu3-2.html">응원 게시판</a></li>
+      </ul>
+      <ul class="flex list-style">
+        <li><a href="#">최신순</a></li>
+        <li><a href="#" class="on">랭킹순</a></li>
+      </ul>
+      <div class="post-list-wrap">
+        <div class="post-list">
+          <p>도전명 : 일주일동안 사용한 금액만큼 저금하기</p>
+          <span>현재 도전인원 : 7453명</span>
+          <div class="add on">
+            <a href="#">내 도전과제로 등록하기</a>
+          </div>
+        </div>
+        <div class="post-list">
+          <p>도전명 : 하루동안 비속어 사용하지 않기</p>
+          <span>현재 도전인원 : 5634명</span>
+          <div class="add on">
+            <a href="#">내 도전과제로 등록하기</a>
+          </div>
+        </div>
+        <div class="post-list">
+          <p>도전명 : 일주일에 한번 부모님께 연락하기</p>
+          <span>현재 도전인원 : 4454명</span>
+          <div class="add">
+            <a href="#">내 도전과제로 등록하기</a>
+          </div>
+        </div>
+        <div class="post-list">
+          <p>도전명 : 하루한끼는 집에서 만들어먹기</p>
+          <span>현재 도전인원 : 2534명</span>
+          <div class="add">
+            <a href="#">내 도전과제로 등록하기</a>
+          </div>
+        </div>
+        <div class="post-list">
+          <p>도전명 : 일주일동안 사용한 금액만큼 저금하기</p>
+          <span>현재 도전인원 : 1453명</span>
+          <div class="add">
+            <a href="#">내 도전과제로 등록하기</a>
+          </div>
+        </div>
+        <div class="post-list">
+          <p>도전명 : 하루동안 비속어 사용하지 않기</p>
+          <span>현재 도전인원 : 5634명</span>
+          <div class="add">
+            <a href="#">내 도전과제로 등록하기</a>
+          </div>
+        </div>
+      </div>
+      <div class="add-icon">
+        <a href="#">
+          <img src="../img/typcn_plus.png" alt="" />
+          <p>도전 공유</p>
+        </a>
+      </div>
+      <div class="modal add-modal">
+        <div class="modal-box add-modal-box">
+          <span><a href="#" class="close add-modal-close"> X </a></span>
+          <h3>도전공유하기</h3>
+          <p>카테고리 선택</p>
+          <div>
+            <label for="category-saving"
+              ><input type="checkbox" id="category-saving" />저축</label
+            >
+            <label for="category-study"
+              ><input type="checkbox" id="category-study" />공부</label
+            >
+            <label for="category-task"
+              ><input type="checkbox" id="category-task" />과제</label
+            >
+            <label for="category-routine"
+              ><input type="checkbox" id="category-routine" />루틴</label
+            >
+            <label for="category-daily"
+              ><input type="checkbox" id="category-daily" />일상</label
+            >
+            <label for="category-hobby"
+              ><input type="checkbox" id="category-hobby" />취미</label
+            >
+            <label for="category-other"
+              ><input type="checkbox" id="category-other" />기타</label
+            >
+          </div>
+          <p>도전명 : ___________________</p>
+          <p>기간선택</p>
+          <div>
+            <label for="period-1day"
+              ><input type="checkbox" id="period-1day" />하루</label
+            >
+            <label for="period-3days"
+              ><input type="checkbox" id="period-3days" />3일</label
+            >
+            <label for="period-7days"
+              ><input type="checkbox" id="period-7days" />7일</label
+            >
+            <label for="period-15days"
+              ><input type="checkbox" id="period-15days" />15일</label
+            >
+            <label for="period-30days"
+              ><input type="checkbox" id="period-30days" />30일</label
+            >
+            <label for="period-60days"
+              ><input type="checkbox" id="period-60days" />60일</label
+            >
+            <label for="period-other"
+              ><input type="checkbox" id="period-other" />기타</label
+            >
+          </div>
+          <p>알람설정 <input type="checkbox" id="alarm-setting" /></p>
+          <div class="add-btn"><a href="#">등록하기</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".add-icon a").forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".add-modal").classList.add("on");
+        });
+      });
+
+      document
+        .querySelector(".add-modal-close")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".add-modal").classList.remove("on");
+        });
+      document
+        .querySelector(".add-btn a")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".add-modal").classList.remove("on");
+        });
+      document.addEventListener("DOMContentLoaded", function () {
+        // 저장된 원래의 post-list-wrap HTML 구조를 보관합니다.
+        const postListWrap = document.querySelector(".post-list-wrap");
+        const originalPostListHTML = postListWrap.innerHTML;
+
+        // list-style 클래스 내의 li 요소들을 선택합니다.
+        const listItems = document.querySelectorAll(".list-style li a");
+
+        listItems.forEach(function (item) {
+          item.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // 기존에 on 클래스가 붙은 요소에서 on 클래스를 제거합니다.
+            document
+              .querySelector(".list-style li a.on")
+              .classList.remove("on");
+            // 클릭한 요소에 on 클래스를 추가합니다.
+            this.classList.add("on");
+
+            // 최신순을 클릭한 경우
+            if (this.textContent.trim() === "최신순") {
+              // 순서를 랜덤하게 섞습니다.
+              let postLists = Array.from(postListWrap.children);
+              for (let i = postLists.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                postListWrap.appendChild(postLists[j]);
+              }
+            }
+
+            // 랭킹순을 클릭한 경우
+            if (this.textContent.trim() === "랭킹순") {
+              // 원래의 HTML 구조로 복원합니다.
+              postListWrap.innerHTML = originalPostListHTML;
+              // 복원 후, 모든 div.add 요소에 대해 이벤트 리스너를 다시 추가합니다.
+              addToggleEventToAllAddDivs();
+            }
+          });
+        });
+
+        // 모든 div.add 요소에 대해 이벤트 리스너를 추가하는 함수
+        function addToggleEventToAllAddDivs() {
+          const addDivs = document.querySelectorAll("div.post-list div.add");
+          addDivs.forEach(function (addDiv) {
+            addDiv.addEventListener("click", function () {
+              this.classList.toggle("on");
+            });
+          });
+        }
+
+        // 초기 로드 시, 모든 div.add 요소에 대해 이벤트 리스너를 추가합니다.
+        addToggleEventToAllAddDivs();
+      });
+    </script>
+  </body>
+</html>

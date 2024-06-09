@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>나의 도장판 세트</title>
+    <title>공유 도장판 세트</title>
     <link rel="stylesheet" href="../reset.css" />
     <style>
       .wrap {
@@ -29,15 +29,24 @@
         font-weight: bold;
         font-size: 13px;
       }
-      h2{
+      h2 {
         font-size: 30px;
       }
-div.count{
-  position: absolute;
-  right: 43px;
-  top: 100px;
-  font-size: 15px;
-}
+      p.people {
+        position: absolute;
+        left: 43px;
+        top: 97px;
+        font-size: 15px;
+      }
+      p.people:hover {
+        color: rgb(255, 255, 255);
+      }
+      div.count {
+        position: absolute;
+        right: 43px;
+        top: 100px;
+        font-size: 15px;
+      }
       ul.list {
         margin-left: -15px;
         width: 340px;
@@ -51,7 +60,7 @@ div.count{
         align-items: center;
         justify-content: center;
       }
-      ul.list li{
+      ul.list li {
         width: 70px;
         height: 60px;
       }
@@ -76,12 +85,33 @@ div.count{
       .stamp img {
         width: 40px;
       }
+      div.modal-box {
+        top: 187px;
+        height: 110px;
+        text-align: left;
+        padding: 20px;
+      }
+      div.modal-box ul li {
+        text-align: center;
+        width: 60px;
+        background-color: rgb(198, 221, 230);
+        margin-right: 10px;
+        margin-top: 10px;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-weight: bold;
+        line-height: 25px;
+      }
+      div.modal-box span a{
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <div class="back-btn"><a href="../menu1-1/menu1.html">뒤로가기</a></div>
-      <h2>나의 도장판</h2>
+      <div class="back-btn"><a href="../menu1-2/menu1-2.html">뒤로가기</a></div>
+      <h2>공유 도장판</h2>
+      <p class="people"><a href="#">참여인원 : 3명</a></p>
       <div class="count"><span id="count">1</span>/28</div>
       <div>
         <ul class="flex list">
@@ -92,25 +122,25 @@ div.count{
             <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/lock-img.png" alt="" /></a>
+            <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/lock-img.png" alt="" /></a>
+            <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/lock-img.png" alt="" /></a>
+            <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/lock-img.png" alt="" /></a>
+            <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/lock-img.png" alt="" /></a>
+            <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/lock-img.png" alt="" /></a>
+            <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/lock-img.png" alt="" /></a>
+            <a href="#"><img src="../img/lock-img-on.png" alt="" /></a>
           </li>
           <li>
             <a href="#"><img src="../img/lock-img.png" alt="" /></a>
@@ -175,41 +205,63 @@ div.count{
         ><a href="#"><img src="../img/ph_stamp.png" alt="" /></a
       ></span>
     </div>
+    <div class="modal">
+      <div class="modal-box">
+        <span><a href="" class="close close2"> X </a></span>
+        <h3>참여인원</h3>
+        <ul class="flex">
+          <li>주희</li>
+          <li>수진</li>
+          <li>하영</li>
+        </ul>
+      </div>
+    </div>
     <script>
-     function updateCount() {
-  var count = document.querySelectorAll('ul.list li a img[src="../img/lock-img-on.png"]').length;
-  document.getElementById('count').textContent = count;
-}
+      function updateCount() {
+        var count = document.querySelectorAll(
+          'ul.list li a img[src="../img/lock-img-on.png"]'
+        ).length;
+        document.getElementById("count").textContent = count;
+      }
 
-// ul.list li a 클릭 이벤트 리스너
-document.querySelectorAll('ul.list li a').forEach(function(element) {
-  element.addEventListener('click', function(event) {
-    event.preventDefault();
-    var img = this.querySelector('img');
-    if (img.src.includes('lock-img.png')) {
-      img.src = "../img/lock-img-on.png";
-    } else {
-      img.src = "../img/lock-img.png";
-    }
-    updateCount();
-  });
-});
+      document.querySelectorAll("ul.list li a").forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          event.preventDefault();
+          var img = this.querySelector("img");
+          if (img.src.includes("lock-img.png")) {
+            img.src = "../img/lock-img-on.png";
+          } else {
+            img.src = "../img/lock-img.png";
+          }
+          updateCount();
+        });
+      });
 
-// span.stamp a 클릭 이벤트 리스너
-document.querySelector('.stamp a').addEventListener('click', function(event) {
+      document
+        .querySelector(".stamp a")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          var imgs = document.querySelectorAll("ul.list li a img");
+          for (var i = 0; i < imgs.length; i++) {
+            if (imgs[i].src.includes("lock-img.png")) {
+              imgs[i].src = "../img/lock-img-on.png";
+              break;
+            }
+          }
+          updateCount();
+        });
+      updateCount();
+
+      document.querySelectorAll(".people a").forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelector(".modal").classList.add("on");
+        });
+      });
+      document.querySelector(".close").addEventListener("click", function (event) {
   event.preventDefault();
-  var imgs = document.querySelectorAll('ul.list li a img');
-  for (var i = 0; i < imgs.length; i++) {
-    if (imgs[i].src.includes('lock-img.png')) {
-      imgs[i].src = "../img/lock-img-on.png";
-      break;
-    }
-  }
-  updateCount();
+  document.querySelector(".modal").classList.remove("on");
 });
-
-// 초기 카운트 업데이트
-updateCount();
     </script>
   </body>
 </html>
