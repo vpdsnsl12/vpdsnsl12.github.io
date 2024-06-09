@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랭킹</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      .wrap {
+        position: relative;
+        width: 100%;
+        height: 844px;
+        background-color: #ead3b1;
+        padding: 10%;
+        text-align: center;
+      }
+      .home-btn {
+        position: absolute;
+        right: 35px;
+        top: 65px;
+      }
+      .home-btn a {
+        display: block;
+        padding: 5px;
+        width: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      .home-btn:hover a{
+        transform: scale(1.1);
+        transition: .2s;
+      }
+      h2 {
+        font-size: 35px;
+        margin: 20px;
+      }
+      .my-page-img {
+        margin: 40px;
+      }
+      .my-page-name p{
+        font-size: 26px;
+        font-weight: bold;
+      }
+      .my-page-name span.text{
+        font-size: 13px;
+      }
+      .my-page-name span.point{
+        color: rgb(152, 152, 152);
+        line-height: 20px;
+        font-size: 15px;
+      }
+      ul{
+        margin-top: 30px;
+      }
+      ul li{
+        margin-bottom: 20px;
+      }
+      ul li a{
+        display: block;
+        background-color: white;
+        width: 240px;
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 30px;
+        color: rgb(54, 54, 54);
+      }
+      ul li a:hover{
+        background-color:  rgb(54, 54, 54);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="home-btn"><a href="../main/main.html">Home</a></div>
+      <h2>마이페이지</h2>
+      <div class="my-page-img">
+        <img src="../img/mypage-icon.png" alt="" />
+      </div>
+      <div class="my-page-name">
+        <span class="text">난이제지쳤어요</span>
+        <p>땡 벌</p>
+        <span class="point">509포인트</span>
+      </div>
+      <ul>
+        <li><a href="#">활동배지</a></li>
+        <li><a href="#">스티커팩</a></li>
+        <li><a href="#">내통계</a></li>
+        <li><a href="#">설정</a></li>
+      </ul>
+    </div>
+    <script></script>
+  </body>
+</html>
