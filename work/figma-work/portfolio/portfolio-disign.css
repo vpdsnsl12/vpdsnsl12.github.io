@@ -55,10 +55,7 @@ header {
   align-items: center;
   justify-content: center;
 }
-header::after{
-  content: '프로세스 작업기여도 70% - ';
 
-}
 header ul {
   text-align: right;
   margin-left: 23.5vw;
